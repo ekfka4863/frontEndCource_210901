@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>practice for RGB and HSL</title>
+  <style>
+    div{
+      width: 300px;
+      height: 300px;
+      background-color: #557;
+      /* background-color: #700; */
+      /* 위에 색 설명: red 부분이 7 && 다른 부분은 전부 0 -> 근데 red 본연의 색보다는 약간 칙칙한 색 */
+      /* background-color: #3f3; */
+      /* 위에 색 설명: same as #33ff33, just an abbreviation for the original ver. */
+      /* background-color: #57a; */
+      /* 위에 색 설명: rgb 중에 blue가 가장 많은 수치 -> 전체적으로 파란색! 그리고 가장 낮은 수치인 5인 red가 약간 "밝게 색을 끌어올려준다고 생각!" -> 아래 img 참고!  */
+      /* background-color: #faf; */
+      /* background-color: #73f; */
+      /* background-color: #4494ff; */
+      /* background-color: #44a4ff; */
+    }
+    
+    img {
+      display: block;
+      margin-top: 15px;
+    }
+
+    a{
+      color: rgb(79, 128, 128);
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>RGB랑 HSL 이해하기</h1>
+  <h2>RGB</h2>
+  <p>- r은 red, g는 green, b는 blue를 의미! 이 3가지의 색상을 조합해서 모든 색을 만들어 낼 수 있다는 것이 기본적인 원리.</p>
+  <span>- example: <u>cf. 개발자 검사 열고 볼 것</u>!!</span> 
+  <div></div>  
+  <br />
+  <br />
+  <span>- 쌤 설명 참고:</span> 
+  <img src="./images/rgb_practice.png" alt="explanation for rgb_practice" />
+  <hr />
+  <h2>HSL</h2>
+  <p>
+      - 색의 3대 요소: 색상(hue), 채도(saturation), 명도(lightness):<br />
+    <b>Tip</b>! 컬러를 HSL로 읽을 때는 이유 불문하고 순서 바꿔서 뒤에서 부터 읽어주기! <br />
+    <ul>
+      <li><b>색상</b>: <br />순수한 의미의 색을 의미. 색상은 채도나 명도와 상관없이 색을 구분할 수 있게 하는 성질을 의미한다.</li>
+      <li><b>채도</b>: <br />색의 맑고 탁한 정도. 맑을수록 "채도가 높다"고 말한다.</li>
+      <li><b>명도</b>: <br />색의 밝고 어두운 정도. 밝을 수록 "명도가 높다"고 말한다. <br />
+        명도가 높으면 (100%에 가까우면) 하얀색이 되고, 명도가 낮으면 (0%에 가까우면 가까울수록) 검은색이 된다.</li>
+      <br />
+      <a href="https://meaningone.tistory.com/609" target="_blank">참고 사이트 click!</a>
+    </ul>
+  </p>
+
+</body>
+</html>
