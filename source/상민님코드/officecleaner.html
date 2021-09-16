@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    #wrap{
+      margin: auto;
+      width: 90%;
+      height: auto;
+    }
+    table {
+      margin: auto;
+      width: 100%; 
+      height: auto;
+      min-height: 200px; 
+    }
+    table, tr, td, th {
+      text-align: center;
+      border-spacing: 0; border-collapse: collapse;
+      border-width: 2px; border-style: solid; border-color: #FFF;
+    }
+
+    thead {
+      background-color: #445e9b;
+    }
+    tbody {
+      background-color: #ededed;
+    }
+    th {
+      color: #FFF;
+    }
+    .table_box {
+      margin: 0;
+      width: auto;
+      color: #FFF;
+      background-color: #445e9b;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h2>오피스 클리닝 서비스 가격</h2>
+      <table>
+        <thead>
+          <tr>
+            
+            <th>구분</th>
+            <th>내역</th>
+            <th>단위</th>
+            <th>단가 (원)</th>
+            <th>비고</th>
+          
+          </tr>
+        </thead>
+        <tfoot>
+          
+        </tfoot>
+        <tbody>
+          <tr>
+            <td rowspan="2" class="table_box">사무실 / 업소<br />리모델링 대청소</td>
+            <td rowspan="2" colspan="4"><h2>전화상담 후 무료 방문</h2></td>
+          </tr>
+          <tr></tr>
+          <tr>  
+            <td rowspan="2" class="table_box">준공 청소</td>
+            <td rowspan="2">아파트<br />빌딩</td>
+            <td rowspan="2">m2</td>
+            <td rowspan="2">1,500~3,000</td>
+            <td rowspan="2">전화상담 후 무료방문 견적</td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td rowspan="2" class="table_box">바닥<br />청소 코팅</td>
+            <td rowspan="2">비닐/타일 대리석</td>
+            <td rowspan="2">평</td>
+            <td rowspan="2">6,000<br /> 25,000</td>
+            <td rowspan="2">집기의 유무, 오염정도에 따라<br />가격이 추가될 수 있습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</body>
+</html>

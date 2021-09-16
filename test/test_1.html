@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- test_1.html -->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table tag practice</title>
+    <!-- style -->
+    <style>
+      div {
+        /* background-color: pink; */
+        padding: 15px;
+      }
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+      th, td{
+        border: 1px solid black;
+        padding: 5px;
+      }
+      caption {
+        text-align: left;
+        padding: 20px 0;
+        font-size: 1.4rem;
+        font-weight: bolder;
+      }
+      thead, tbody {
+        text-align: center;
+      }
+      .lighter {
+        font-weight: 400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div>
+      <table summary="2021년 09월 16일 서울, 경기, 제주도의 날씨입니다.">
+        <caption>오늘의 날씨</caption>
+        <thead>
+          <tr>
+            <th class="lighter">지역</th>
+            <th class="lighter">현재기온</th>
+            <th colspan="2">불쾌지수/습도(%)</th>
+            <th class="lighter">풍속</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="2">서울/경기</th>
+            <td>23</td>
+            <td>60</td>
+            <td>80</td>
+            <td>4.7</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>60</td>
+            <td>80</td>
+            <td>5.0</td>
+          </tr>
+          <tr>
+            <th class="lighter">제주도</th>
+            <td>21</td>
+            <td>65</td>
+            <td>85</td>
+            <td>3.6</td>
+          </tr>
+        </tbody>
+        <!-- <tfoot>
+        </tfoot> -->
+      </table>
+    </div>
+
+
+    <!-- script -->
+    <script></script>
+  </body>
+</html>

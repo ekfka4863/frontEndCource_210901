@@ -9,7 +9,7 @@
     <!-- style -->
     <style>
       a {
-        color: black;
+        color:#171717; 
       }
       #wrap {
         /* display: inline; */
@@ -17,6 +17,12 @@
         height: 2000px;
         background-color: khaki;
       }
+
+      /** 
+        기본 display:inline-block요소
+        img, button, input, select, textarea    
+      */
+
       h1 {
         width: 200px;
         height: 50px;
@@ -38,9 +44,10 @@
         margin: auto;
         background-color: #fff;
       }
-      .ex_part2 > a{
-        color: black;
+      div.ex_part h2 {
+        color: #06f;
       }
+
       ul {
         border-width: 1px;
         border-style: dotted;
@@ -49,32 +56,29 @@
       .ex_part ul {
         border-style: solid;
       } 
-      li {
+      .ex_part ul > li {
         margin-bottom: 10px;
         background-color: #ccc;
       }
-      /* .ex-part li:first-child a {
-        color: blue;
-      }
-      .ex-part li:nth-child(2) a {
-        color: red;
-      } */
+      
+      /** 선택자 
+      - 하나의 요소를 선택하여 css를 적용: 타입/요소 선택자 
+        ex:  div {}   ||   p {}   ||   a{}   ||   li {}
+      - 요소 (스페이스) 요소 를 선택하여 css 적용 : 자손(후손) 선택자   
+        ex:  ul li {}  || ol li {}  || div  a {}  ||  #box  li {}  || .test a {}
+      - 요소 > 요소 선택자 : 자식선택자
+        ex:  ul > li {}  ||  div > h3 {}   ||  #box > h2 {}
+      - id/class  :  id -> #id명   ,  class  -> .class명
+      - * 전체선택자 : 가급적 사용 X
+      */
+
       .ex_part a {
         color: #03f;
       }
       .ex_part ol a {
         color: #f30;
       }
-      .ex_part h2 {
-        color: #06f;
-      }
-      /* section이자 클래스가 .ex_part인 것의 컬러를 바꿔주는 것 */
-      section.ex_part > h2 {
-        color: #333;
-      }
-      div.ex_part {
-        border: 1px solid purple;
-      }
+
     </style>
   </head>
 
@@ -97,22 +101,6 @@
           <li>list 3번째</li>
         </ul>
       </div>
-
-      <div class="ex_part2">
-        <h2>글씨 색상을 검은색으로</h2>
-        <ul>
-          <li><a href="#">네이버</a>로 이동</li>
-          <li>
-            붉은색 글씨를 사용 
-            <ol>
-              <li>녹색의 글씨 사용</li>
-              <li><a href="#">다음</a>으로 <span>이동</span></li>
-            </ol>
-          </li>
-          <li>list 3번째</li>
-        </ul>
-      </div>
-    </div>
 
     <section class="ex_part">
       <h2>글씨 색상을 파란색으로</h2>

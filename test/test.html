@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- test.html -->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <!-- style -->
+    <style>
+      table, tr, th, td {
+        /* border-spacing: 0; */
+        /* border-collapse: collapse; */
+      }
+      table {
+        color: rgb(107, 107, 107);
+      }
+      caption {
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        padding: 10px;
+      }
+      caption span {
+        color: rgb(184, 184, 184);
+        font-size: 0.9rem;
+        font-weight: lighter;
+      }
+      thead {
+        background-color: rgb(70, 98, 158);
+        height: 50px;
+        color: white;
+      }
+      th {
+        width: 150px;
+      }
+      th:last-child {
+        width: 200px;
+      }
+      tbody tr {
+        background-color: rgb(235, 235, 235);
+
+      }
+      td {
+        text-align: center;
+      }
+      .category {
+        background-color: rgb(70, 98, 158);
+        border-radius: 5px;
+        color: white;
+        padding: 10px;
+      }
+      .theLargestCell {
+        font-size: 1.6rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <table summary="연습용 테이블 만들기 예제입니다.">
+      <caption>오피스 클리닝 서비스 가격 <span>(Service Price)</span></caption>
+
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>내역</th>
+          <th>단위</th>
+          <th>단가 (원)</th>
+          <th>비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="category">사무실/업소 <br /> 리모델링 대청소</td>
+          <!-- 여기 아이디 말고 클래스가 나음! 왜냐면 중요한게 아니니까~ -> fix 완료 -->
+          <td class="theLargestCell" colspan="4">전화상담 후 무료방문</td>
+        </tr> 
+        <tr>
+          <td class="category">준공 청소</td>
+          <td>아파트 <br /> 빌딩</td>
+          <td>m2</td>
+          <td>1,500~3,000</td>
+          <td>전화상담 후 무료방문견적</td>
+        </tr>
+        <tr>
+          <td class="category">바닥 <br /> 청소 코팅</td>
+          <!-- 이거랑 -->
+          <td >비닐/타일 <br /> 대리석</td>
+          <td>평</td>
+          <!-- 이거랑은 사실 각각 row가 다르다고 볼수도... 생각해보기! -->
+          <td>6,000 <br /> 25,000</td>
+          <td>집기의 유무, 오염정도에 따라 <br /> 가격이 추가될 수 있습니다.</td>
+        </tr>
+      </tbody>
+      <!-- <tfoot>
+
+      </tfoot> -->
+
+    </table>
+
+    <!-- script -->
+    <script></script>
+  </body>
+</html>
