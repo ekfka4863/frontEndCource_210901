@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* b_02_pseudo.css */
+
+/* 
+  선택자 {}
+  @기능 () {} 
+    -> @media screen and (min-width: 320px) {}
+    -> @supports (옵션) {}
+  @기능 {}
+    -> @animation 이름 {}
+  @기능 "역할"
+    -> @charset "UTF-8;
+    -> @import url("data");
+*/
+
+/* 기본 css 및 가상 클래스 */
+li {
+  width: 400px;
+  height: auto;
+  margin: 5px;
+  padding: 10px;
+  background-color: #ddd;
+}
+.on:hover {
+  background-color: #0af;
+}
+.push:active {
+  background-color: #f0c;
+}
+.link > a:visited {
+  color: #f00;
+}
+.go > a:link {
+  /* display: block; */
+  /* width: 100%; */
+  /* height: 100%; */
+  background-color: #fca;
+}
+.go > a:visited {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}
+.none {
+  display: none;
+  width: 100px;
+  height: 300px;
+  background-color: #afa;
+}
+.on:hover > div {
+  display: block;
+}
+.check > a:focus {
+  outline: 0;
+  background-color: #a77;
+  color: #fff;
+}
+
+/* 가상요소 */
+/* https://coding-designer.tistory.com/30 */
+.front {
+  font-weight: 700;
+}
+.front:before,
+.front::before {
+  content: "앞에추가 ";
+  color: #f00;
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  background-color: #fa0;
+}
+.back {
+  color: #505;
+}
+.back:after,
+.back::after {
+  content: " - 뒤에 추가";
+}
+.both:before,
+.both::before {
+  content: "앞에는 빨간색 - ";
+  color: #f00;
+}
+.both:after,
+.both::after {
+  content: " - 뒤에는 노란색";
+  color: #f70;
+  font-style: italic;
+}
+
+/* 
+  정리
+
+  선택자:hover -> 마우스 올릴 경우
+  선택자:active -> 마우스를 누르는 경우 (클릭)
+
+  선택자:visited -> 방문한 적이 있는 (a태그)
+  선택자:focus -> 초점이 맞는 경우 (a, button, input)
+
+  선택자::before  (content: ""') -> 선택자의 내부 내용 이전에...
+  선택자::after (content: ""') -> 선택자의 내부 내용 이후에...
+
+  선택자::first-letter {}
+  선택자::first-line {}
+*/
+
+
+.first::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f06;
+}
+.multi_line {
+  text-decoration: underline;
+  color: #f70;
+}
