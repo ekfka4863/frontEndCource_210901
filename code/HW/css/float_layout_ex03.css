@@ -1,0 +1,34 @@
+@charset "UTF-8";
+/* float_layout_ex03.css */
+
+.box_03 {
+  width: 600px;
+  height: 600px;
+  background-color: #95d6a4;
+  text-align: center;
+}
+.wrap {
+  display: inline-block;
+  width: 200px;
+  height: inherit;
+}
+.inner_01 {
+  width: 200px;
+  height: 50%;
+  background-color: #456ea2;
+}
+
+.inner_02 {
+  width: 200px;
+  height: 50%;
+  background-color: #fff9eb;
+}
+
+/* .box_03::after {
+  content: '';
+  display: block;
+  clear: both;
+} */
+
+/* https://ranidiant.tistory.com/50 */
+
