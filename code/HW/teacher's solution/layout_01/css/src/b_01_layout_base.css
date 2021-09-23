@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* css/src/b_01_layout_base.css */
+
+.ex_part {
+  width: 900px;
+  height: 900px;
+  border: 1px solid #333;
+}
+/* ---------------------------- */
+.box_01 {
+  width: 600px;
+  height: 600px;
+  background-color: #ada;
+  margin: auto;
+  /* border: 5px solid #ada; */
+}
+.box_01 > div {
+  width: 100%;
+  height: 200px;
+}
+.inner_01 {
+  background-color: #55d;
+}
+.inner_02 {
+  background-color: #ddd;
+}
+.inner_03 {
+  background-color: #fa0;
+}
+/* ---------------------------- */
+
+.box_02 {
+  width: 600px;
+  height: 600px;
+  background-color: #ada;
+  margin: auto;
+  /* border: 5px solid #ada; */
+}
+.box_02 > div {
+  width: 200px;
+  height: 100%;
+  float: left;
+}
+.inner_01 {
+  background-color: #55d;
+}
+.inner_02 {
+  background-color: #ddd;
+}
+.inner_03 {
+  background-color: #fa0;
+}
+/* 부모의 높이값이 정해졌으면 clear: both; 필요 없음! */
+
+/* ---------------------------- */
+
+.box_03 {
+  width: 600px;
+  height: 600px;
+  background-color: #ada;
+  margin: auto;
+  /* border: 5px solid #ada; */
+}
+.box_03 > div {
+  width: 200px;
+  height: 50%;
+  margin: auto;
+}
+.inner_01 {
+  background-color: #55d;
+}
+.inner_02 {
+  background-color: #ddd;
+}
+
+/* ---------------------------- */
+
+.box_04 {
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  background-color: #ada;
+  margin: auto;
+  /* border: 5px solid #ada; */
+}
+.box_04 > div {
+  width: 100%;
+  height: 200px;
+}
+.inner_01 .insert {
+  width: 60%;
+  background-color: #fc0;
+  margin: auto;
+}
+.inner_02 .insert {
+  width: 45%;
+  background-color: #d33;
+  margin: auto;
+}
+.inner_03 .insert {
+  width: 60%;
+  background-color: #57f;
+}
+
+.box_04 .insert {
+  /* height: 170px; */
+  height: 200px;
+}
+/* ---------------------------- */
+
+.box_06 {
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  background-color: #ada;
+  margin: auto;
+  /* border: 5px solid #f07; */
+}
+.box_06 > div {
+  width: 100%;
+  height: auto;
+}
+
+.inner_01 .insert_01 {
+  float: left;
+  width: 230px;
+  height: 200px;
+  background-color: #c70;
+}
+.inner_01 .insert_02 {
+  float: right;
+  width: 230px;
+  height: 200px;
+  background-color: #faa;
+}
+
+.box_06 > .inner_01:after,  
+.box_06 > .inner_01::after
+{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 대안 */
+/* .inner_01 hr {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  border: 0px;
+} */
+
+.inner_02 > .insert_01 {
+  float: left;
+  width: 230px;
+  height: 200px;
+  background-color: #345;
+}
+.inner_02 > .insert_02 {
+  float: left;
+  width: 170px;
+  height: 200px;
+  background-color: #f6a;
+}
+.inner_02 > .insert_03 {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-color: #67f;
+}
+
+.box_06 > .inner_02:after,  
+.box_06 > .inner_02::after
+{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.inner_03 > .insert_01 {
+  float: left;
+  width: 300px;
+  height: 200px;
+  background-color: #ddd;
+}
+.inner_03 > .insert_02 {
+  float: left;
+  width: 300px;
+  height: 200px;
+  background-color: #f7f;
+}
+
+.box_06 > .inner_03:after,  
+.box_06 > .inner_03::after
+{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* .clearfix { height: auto; }
+.clearfix:after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+} */
+/* ---------------------------- */

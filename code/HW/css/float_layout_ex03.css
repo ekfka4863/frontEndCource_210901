@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /* float_layout_ex03.css */
 
-.box_03 {
+/* solution - 1 */
+/* .box_03 {
   width: 600px;
   height: 600px;
   background-color: #95d6a4;
@@ -22,7 +23,7 @@
   width: 200px;
   height: 50%;
   background-color: #fff9eb;
-}
+} */
 
 /* .box_03::after {
   content: '';
@@ -32,3 +33,24 @@
 
 /* https://ranidiant.tistory.com/50 */
 
+/* --------------------------------- */
+
+/* solution - 2 */
+.box_03 {
+  width: 600px;
+  height: 600px;
+  background-color: #ada;
+  margin: auto;
+}
+
+.box_03 > div {
+  width: 200px;
+  height: 50%;
+  margin: auto;
+}
+.inner_01 {
+  background-color: #55d;
+}
+.inner_02 {
+  background-color: #ddd;
+}
