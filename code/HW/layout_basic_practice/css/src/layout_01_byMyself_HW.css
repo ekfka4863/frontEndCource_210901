@@ -54,8 +54,14 @@ button {
   height: 100px;
   background-color: #f06;
 }
+#headBox {
+  /* padding: 30px 20px 20px; */
+  border: 1px solid #0af;
+}
   h1 {
     float: left;
+    /* width: 120px;
+    height: 100px; */
     width: 120px;
     height: 100px;
     background-color: lightskyblue;
@@ -63,24 +69,28 @@ button {
   .navigation {
     float: right;
     width: 400px;
-    height: 100px;
-    padding-top: 50px;
-    box-sizing: border-box;
+    /* height: 100px; */
+    height: 50px;
+    /* padding-top: 50px; */
+    /* box-sizing: border-box; */
     background-color: yellow;
   }
     .navigation ul {
       float: right;
       width: auto;
       height: auto;
-      background-color: #fff;
+      /* background-color: #fff; */
     }
       .navigation li {
         float: left;
-        width: 40px;
-        height: 50px;
+        width: 50px;
+        height: 40px;
+        margin-left: 20px;
         background-color: #35a;
         color: #fff;
-        margin-left: 10px;
+        /* width: 40px;
+        height: 50px;
+        margin-left: 10px; */
       }
       .navigation li a {
         /* 클리커블한 영역을 너비와 높이를 100%해서... 확장해준다! */

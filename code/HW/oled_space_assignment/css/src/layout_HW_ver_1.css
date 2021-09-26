@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* layout_HW.css*/
+
+
+/* reset.css
+============================================ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* common.css
+============================================ */
+.clearfix:after, 
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* design
+============================================ */
+body {
+  background-color: rgb(4, 57, 57);
+}
+#wrap {
+  width: 1600px;
+  height: auto;
+  min-height: fit-content;
+  margin: 0 auto;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgb(4, 57, 57);
+}
+
+/* header
+-------------------------------------------- */
+#headBox {
+  width: 100%;
+  height: 150px;
+  background-color: rgb(222, 222, 222);
+  padding-top: 34px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+#headBox > h1, #headBox > nav, #headBox > div {
+  float: left;
+  height: 80px;
+}
+#headBox > h1, #headBox > div {
+  width: 250px;
+  background-color: red;
+}
+#headBox > nav {
+  width: 850px;
+  background-color: rebeccapurple;
+  margin: 0 75px;
+}
+
+
+
+#adViewBox {
+  width: 1600px;
+  height: 750px;
+  background-color: rgb(167, 167, 167);
+  padding-top: 28px;
+  box-sizing: border-box;
+}
+.view_outer {
+  width: 1300px;
+  height: 600px;
+  background-color: cornflowerblue;
+  margin: 0 auto;
+  /* margin-top: 28px; */
+}
+.view_indicator {
+  width: 850px;
+  height: 60px;
+  background-color: cornflowerblue;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+#localNavBox {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 50px;
+  background-color: rgb(222, 222, 222);
+  padding-top: 18px;
+  box-sizing: border-box;
+}
+.local_nav_outer {
+  width: 1500px;
+  height: 196px;
+  margin: 0 auto;
+  background-color: cornflowerblue;
+}
+
+
+
+/* body
+-------------------------------------------- */
+h3, 
+#popularContentBox > div,
+#newContentBox > div,  
+#recommendedContentBox > div,
+#communityBox > div, 
+#miniAdBox > div,
+#footBox > div {
+  margin: 0 auto;
+}
+h3 {
+  width: 1300px;
+  height: 50px;
+  background-color: cornflowerblue;
+  margin-bottom: 30px;
+}
+
+
+
+#popularContentBox {
+  width: 100%;
+  height: 600px;
+  background-color: rgb(167, 167, 167);
+}
+/* #popularContentBox > h3 {} */
+.pop_con_area {
+  width: 1300px;
+  height: 470px;
+  background-color: cornflowerblue;
+}
+
+
+
+#newContentBox {
+  width: 100%;
+  height: 900px;
+  margin-bottom: 80px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  background-color: rgb(222, 222, 222);
+}
+#newContentBox > h3 {
+  margin-top: 30px;
+}
+.new_con_area {
+  width: 1300px;
+  height: 700px;
+  margin-top: 30px;
+  background-color: cornflowerblue;
+}
+
+
+
+#recommendedContentBox {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 80px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  background-color: rgb(167, 167, 167);
+}
+.recom_con_area {
+  width: 1300px;
+  height: 440px;
+  background-color: cornflowerblue;
+}
+
+
+#communityBox {
+  width: 100%;
+  height: 800px;
+  margin-bottom: 80px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  background-color: rgb(222, 222, 222);
+}
+.community_area {
+  width: 1300px;
+  height: 600px;
+  background-color: cornflowerblue;
+}
+
+
+#miniAdBox {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 80px;
+  padding-top: 40px;
+  box-sizing: border-box;
+  background-color: rgb(167, 167, 167);
+}
+.mini_ad_outer {
+  width: 1500px;
+  height: 300px;
+  background-color: cornflowerblue;
+}
+
+
+
+/* footer
+-------------------------------------------- */
+#footBox {
+  width: 100%;
+  height: 200px;
+  padding-top: 22px;
+  box-sizing: border-box;
+  background-color: rgb(121, 121, 121);
+}
+#footBox > div {
+  width: 1300px;
+  height: 140px;
+  background-color: cornflowerblue;
+}
+
+
+
