@@ -1,0 +1,492 @@
+@charset "UTF-8";
+/* b_03_layout_test_02_result.css*/
+
+/* 속성작성요령:
+선택자 {
+  1.  존재유무/형태 -> display, overflow
+  2. 위치 -> position
+  3. 크기 -> width (-> min-width/max-height) -> height  (-> min-height/max-height)
+  4. 공간 -> margin -> box-sizing -> padding -> border (-> box-sizing)
+  5. 서체 -> font-style, font-weight, font-size, line-height, font-family...
+  6. 배경처리 -> background-image, repeat, postion, size, clip, ...
+  7. 기타효과 -> shadow, transform, transition, ...
+} 
+*/
+
+
+/* reset.css
+================================================== */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+html, body, 
+h1, h2, h3, h4, h5, h6,
+div, p, pre, address,
+ul, ol, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  font-family: 'apple SD', 'myriad pro', arial, sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+table, tr, td, th, thead, tbody, tfoot {
+  border: 1px solid #333;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+button {
+  border: 0;
+  cursor: pointer;
+}
+em, address {
+  font-style: normal;
+}
+strong, b {
+  font-weight: normal;
+}
+abbr {
+  text-decoration: none;
+}
+
+
+/* common.css
+==================================================== */
+.clearfix:after, 
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+} 
+.box_space {
+  margin-bottom: 80px;
+}
+.area_title {
+  width: 1300px;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: #0ac;
+}
+.blind {
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* design 
+==================================================== */
+#wrap {
+  /* width: 1600px; */
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+  /* background-color: #ddd; */
+
+  /* 자식 중 첫번째 요소 #headBox에 margin-top을 적용할 때, 만약 부모에 border가 없으면, 자식이 마진을 먹는 것이 아니라... 
+  부모가 margin-top을 먹어버린다. 그래서 이를 해결하기 위해서는 아래와 같이 부모에게 border를 만들어 준다. */
+  /* background-color: #faa;
+  border: 1px solid #333; */
+
+  /* 아니면 부모에 padding-top을 첫번째 자식요소에 marfin-top을 넣은 만큼 넣어서 "밀어준다".
+  그러면 첫번째 자식 요소에 margin-top을 적용할 때 부모에 border가 있는지 없는지를 고려하지 않아도 된다. */
+  /* padding-top: 100px; */
+}
+
+#wrap > div {
+  width: 100%;
+}
+
+/* #headBox
+----------------------------------------------------- */
+#headBox {
+  height: 150px;
+  background-color: #ddd;
+  /* margin-top: 100px; */
+  box-sizing: border-box;
+  padding: 34px 50px 0;
+}
+  h1 {
+    float: left;
+    width: 250px;
+    height: 80px;
+    background-color: #0ac;
+  }
+  .gnb {
+    float: left;
+    width: 850px;
+    height: 80px;
+    margin-left: 75px;
+    background-color: #0ac;
+  }
+    .gnb ul {
+      width: 100%;
+      height: 100%;
+      padding: 5px 10px;
+    }
+    .gnb li {
+      float: left;
+      width: 150px;
+      height: 70px;
+      margin-right: 20px;
+      background-color: #fd0;
+    }
+    .gnb li:last-child {
+      margin-right: 0;
+    }
+
+  .unb {
+    float: right;
+    width: 250px;
+    height: 80px;
+    background-color: #0ac;
+  }
+
+
+/* #adViewBox
+----------------------------------------------------- */
+#adViewBox {
+  height: 750px;
+  box-sizing: border-box;
+  padding-top: 28px;
+  background-color: #aaa;
+}
+  .view_outer {
+    width: 1300px;
+    height: 600px;
+    margin: auto;
+    margin-bottom: 28px;
+    background-color: #0ac;
+  }
+  .view_indicator {
+    width: 850px;
+    height: 60px;
+    margin: auto;
+    background-color: #0ac;
+  }
+    .view_indicator ul {
+      width: 100%;
+      height: auto;
+    }
+    .view_indicator li {
+      float: left;
+      width: 120px;
+      height: 40px;
+      margin-right: 20px;
+      background-color: #fd0;
+      margin: 10px 20px 10px 0px;
+
+    }
+    .view_indicator li:last-child {
+      margin-right: 0;
+    }
+    .view_indicator li:first-child {
+      margin-left: 15px;
+    }
+    
+
+
+/* #localNavBox
+----------------------------------------------------- */
+#localNavBox {
+  height: 250px; 
+  margin-bottom:50px; 
+  box-sizing: border-box; 
+  padding-top: 18px;
+  background-color: #999;
+}
+  .local_nav_outer {
+    width: 1500px; 
+    height: 196px;
+    margin:auto;
+    background-color: #0ac;
+  }
+    .local_nav_outer ul {
+      width: 100%;
+      height: auto;
+      box-sizing: border-box;
+      padding: 23px 75px;
+    }
+    .local_nav_outer li {
+      float: left;
+      width: 200px;
+      height: 150px;
+      margin-right: 30px;
+      background-color: #fd0;
+    }
+    .local_nav_outer li:last-child {
+      margin-right: 0;
+    }
+
+
+/* =================================================== */
+/* .content_box_wrap 
+      #popularContetnBox
+      #newContentBox
+      #recommendedContentBox
+*/
+.content_box_wrap {
+  width: 100%;
+  height: auto;
+}
+
+
+/* #popularContetnBox
+----------------------------------------------------- */
+#popularContetnBox {
+  height: 600px;
+  background-color: #aaa;
+  /* margin-top: 50px; */
+}
+  h3 {
+    width: 1300px;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: #0ac;
+  }
+  .pop_con_area {
+    width: 1300px;
+    height: 470px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 20px 63px;
+    background-color: #0ac;
+  }
+    .pop_con_card {
+      float: left;
+      width: 350px;
+      height: 430px;
+      margin-right: 62px;
+      background-color: #fcf;
+    }
+    .pop_con_card:last-of-type {
+      margin-right: 0;
+    }
+    .pop_con_card > div {
+      width: 330px;
+      height: 200px;
+      background-color: #f5f;
+    }
+    .pop_con_img, .pop_con_text {
+      margin: 8px 10px 14px 10px;
+      /* margin-top: 8px; */
+      /* margin-bottom: 14px; */
+    }
+    /* .pop_con_text {
+      
+    } */
+
+
+/* #newContentBox
+----------------------------------------------------- */
+#newContentBox {
+  height: 900px;
+  /* margin-bottom: 80px; */
+  box-sizing: border-box;
+  padding-top: 60px;
+  background-color: #ddd;
+}
+  .new_con_area {
+    width: 1300px;
+    height: 700px;
+    margin: auto;
+    background-color: #0ac;
+  }
+    .new_con_title_area {
+      float: left;
+      width: 640px;
+      height: 700px;
+      background-color: #da0;
+    } 
+      .new_con_title_img {
+        width: 100%;
+        height: 350px;
+        background-color: #aca;
+      }
+      .new_con_title_text {
+        width: 100%;
+        height: 350px;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: #aff;
+        background-clip: content-box;
+        /* 
+        background-clip: 배경색상을 칠하는 범위; 
+        border-box   : 내용만 칠해라
+        padding-box  : padding 범위까지 칠해라 
+        content-box  : 외곽선까지 칠해라 
+        cf. https://developer.mozilla.org/ko/docs/Web/CSS/background-clip
+        */
+      }
+    .new_con_more_area {
+      float: right;
+      width: 630px;
+      height: 400px;
+      background-color: #da0;
+    }
+
+
+
+/* #recommendedContentBox
+----------------------------------------------------- */
+#recommendedContentBox {
+  height: 600px;
+  /* margin-bottom: 80px; */
+  box-sizing: border-box;
+  padding-top: 30px;
+  background-color: #aaa;
+}
+  .recom_con_area {
+    width: 1300px;
+    height: 440px;
+    margin: auto;
+    background-color: #0ac;
+  }
+    .recom_con_area ul {
+      width: 100%;
+      height: auto;
+    }
+    .recom_con_area li {
+      float: left;
+      width: 300px;
+      height: 400px;
+      margin-right: 33px;
+      background-color: #fcf;
+    }
+    .recom_con_area li:last-child {
+      margin-right: 0;
+    }
+    .recom_img {
+      width: 100%;
+      height: 210px;
+      background-color: #a5a;
+    }
+    .recom_content {
+      width: 100%;
+      height: 190px;
+      height: calc(100% - 210px);
+      box-sizing: border-box;
+      padding: 15px;
+      background-color: #a8a;
+      background-clip: content-box;
+    }
+
+
+/* =================================================== */
+
+
+/* #communityBox
+----------------------------------------------------- */
+#communityBox {
+  height: 800px;
+  /* margin-bottom: 80px; */
+  box-sizing: border-box; 
+  padding-top: 60px;
+  background-color: #ddd;
+}
+  .community_area {
+    width: 1300px;
+    height: 600px;
+    margin: auto;
+    background-color: #0ac;
+  }
+    .community_area ul {
+      width: 100%;
+      height: auto;
+    }
+    .community_con {
+      width: 100%;
+      height: 160px;
+      margin-bottom: 60px;
+      background-color: #dd0;
+    }
+    .community_con:last-child {
+      margin-bottom: 0px;
+    }
+    .community_con:before,
+    .community_con::before {
+      content: 'Q & A';
+      float: left;
+      /* 이때, float을 먹이면 어떤 요소도 블록 요소가 된다는 포인트 하나! 
+      그리고, ::before는 가상요소기 때문에 float, position 등의 속성이 모두 적용되지만
+      clear: both;와 같이 float을 상쇄시켜주는 속성으로 "뒷처리"를 하지 않아줘도 된다. 
+      왜? 가상요소는 실체/실제 요소가 아니니까~ 그냥 쉽게 그렇게 생각하기! */
+      /* display: block; */
+      width: 300px;
+      height: 160px;
+      font-size: 50px;
+      text-align: center;
+      line-height: 160px;
+      background-color: #faf;
+    } 
+      .community_con > dl {
+        width: 980px;
+        width: calc(100% - 320px);
+        height: 100px;
+        margin-left: 320px;
+        padding-top: 30px;
+        /* background-color: #afa; */
+      }
+      .community_con > dt {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        background-color: #fa0;
+      }
+      .community_con > dd {
+        width: 100%;
+        height: 60px;
+        background-color: #fa0;
+      }
+
+
+
+
+/* #miniAdBox
+----------------------------------------------------- */
+#miniAdBox {
+  height: 400px;
+  /* margin-bottom: 80px; */
+  box-sizing: border-box; 
+  padding-top: 40px;
+  background-color: #aaa;
+}
+  .mini_ad_outer {
+    width: 1500px;
+    height: 300px;
+    margin: auto;
+    background-color: #0ac;
+  }
+
+
+/* #footBox
+----------------------------------------------------- */
+
+#footBox {
+  height: 200px;
+  box-sizing: border-box;
+  padding-top: 22px;
+  background-color: #999;
+}
+  .foot_outer {
+    width: 1300px;
+    height: 140px;
+    margin: auto;
+    background-color: #0ac;
+  }
+
+
+
+
+
+

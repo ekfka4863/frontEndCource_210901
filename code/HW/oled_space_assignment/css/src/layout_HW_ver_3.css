@@ -66,47 +66,48 @@ table {
   display: block;
   clear: both;
 }
+.box_space {
+  margin-bottom: 80px;
+}
+
 
 
 /* design
 ============================================ */
 body {
-  background-color: rgb(4, 57, 57);
+  background-color: rgb(190, 240, 240);
 }
 #wrap {
   width: 1600px;
   height: auto;
   min-height: fit-content;
   margin: 0 auto;
-  /* background-color: rgb(255, 255, 255); */
-  background-color: rgb(4, 57, 57);
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(4, 57, 57); */
   /* padding-bottom: 500px; */
+}
+#wrap > div {
+  width: 100%;
 }
 
 /* header
 -------------------------------------------- */
 #headBox {
-  width: 100%;
   height: 150px;
   background-color: rgb(222, 222, 222);
-  padding-top: 34px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 34px 50px 0;
   box-sizing: border-box;
 }
   #headBox > h1, #headBox > nav, #headBox > div {
     float: left;
     height: 80px;
+    background-color: cornflowerblue;
   }
   #headBox > h1, #headBox > div {
     width: 250px;
-    /* background-color: red; */
-    background-color: cornflowerblue;
   }
   #headBox > nav {
     width: 850px;
-    /* background-color: rebeccapurple; */
-    background-color: cornflowerblue;
     margin: 0 75px;
   }
   .nav_boxes {
@@ -206,12 +207,19 @@ h3,
   margin: 0 auto;
 }
 h3 {
-  width: 1300px;
+  /* width: 1300px; */
   height: 50px;
   background-color: cornflowerblue;
   margin-bottom: 30px;
 }
-
+h3,
+#popularContentBox > div,
+#newContentBox > div,  
+#recommendedContentBox > div,
+#communityBox > div,
+#footBox > div {
+  width: 1300px;
+}
 
 
 #popularContentBox {
@@ -219,9 +227,8 @@ h3 {
   height: 600px;
   background-color: rgb(167, 167, 167);
 }
-/* #popularContentBox > h3 {} */
 .pop_con_area {
-  width: 1300px;
+  /* width: 1300px; */
   height: 470px;
   padding-top: 20px;
   box-sizing: border-box;
@@ -248,7 +255,6 @@ h3 {
   margin: 0 auto;
   margin-top: 8px;
   margin-bottom: 14px;
-  /* box-sizing: border-box; */
   background-color: rgb(245, 72, 245);
 
 }
@@ -264,7 +270,7 @@ h3 {
 #newContentBox {
   width: 100%;
   height: 900px;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   padding-top: 60px;
   box-sizing: border-box;
   background-color: rgb(222, 222, 222);
@@ -273,7 +279,7 @@ h3 {
   margin-top: 30px;
 }
 .new_con_area {
-  width: 1300px;
+  /* width: 1300px; */
   height: 700px;
   margin-top: 30px;
   background-color: cornflowerblue;
@@ -360,13 +366,13 @@ h3 {
 #recommendedContentBox {
   width: 100%;
   height: 600px;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   padding-top: 30px;
   box-sizing: border-box;
   background-color: rgb(167, 167, 167);
 }
   .recom_con_area {
-    width: 1300px;
+    /* width: 1300px; */
     height: 440px;
     background-color: cornflowerblue;
   }
@@ -392,8 +398,9 @@ h3 {
       .re_con_part_text {
         width: 100%;
         height: 210px;
-        padding: 15px;
         box-sizing: border-box;
+        padding: 15px;
+        /* background-clip: content-box; */
         background-color: rgb(172, 63, 172);
       }
 
@@ -403,13 +410,13 @@ h3 {
 #communityBox {
   width: 100%;
   height: 800px;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   padding-top: 60px;
   box-sizing: border-box;
   background-color: rgb(222, 222, 222);
 }
   .community_area {
-    width: 1300px;
+    /* width: 1300px; */
     height: 600px;
     background-color: cornflowerblue;
   }
@@ -451,7 +458,7 @@ h3 {
 #miniAdBox {
   width: 100%;
   height: 400px;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   padding-top: 40px;
   box-sizing: border-box;
   background-color: rgb(167, 167, 167);
@@ -486,7 +493,7 @@ h3 {
   background-color: rgb(121, 121, 121);
 }
 .foot_box_outer {
-  width: 1300px;
+  /* width: 1300px; */
   height: 140px;
   background-color: cornflowerblue;
 }
@@ -503,6 +510,3 @@ h3 {
   margin-top: 32px;
   background-color: bisque;
 }
-
-
-
