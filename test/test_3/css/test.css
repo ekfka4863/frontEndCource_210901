@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/* test.css*/
+
+/* reset.css
+=============================================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* common.css
+=============================================== */
+.clearfix:after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* design
+=============================================== */
+#wrap {
+  width: 960px;
+  /* height: 1200px; */
+  height: auto;
+  margin: 0 auto;
+  background-color: #3cf;
+}
+
+/* header
+----------------------------------------------- */
+#headBox {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #faf;
+}
+  h1, .gnb, .unb {
+    float: right;
+    background-color: #fff;
+  }
+  h1 {
+    float: left;
+  }
+  h1 {
+    width: 150px;
+    height: 100px;
+  }
+  .gnb {
+    width: 500px;
+    height: 50px;
+    margin-top: 50px;
+  }
+  .unb {
+    width: 220px;
+    height: 40px;
+    margin-right: -500px;
+  }
+
+
+#viewBox {
+  width: 100%;
+  height: 450px;
+  background-color: #f80;
+} 
+
+/* main
+----------------------------------------------- */
+#contentBox {
+  width: 100%;
+  height: 500px;
+  background-color: #2ae;
+}
+  .content_box_list {
+    float: left;
+    width: 200px;
+    height: 500px;
+    background-color: #25e;
+  }
+    #contentBox li {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 20px;
+      background-color: #d5e;
+    }
+    #contentBox li:first-child {
+      /* 아래의 마진탑은 가이드라인에는 없는 부분 */
+      margin-top: 20px;
+    }
+    #contentBox li:last-child {
+      margin-bottom: 0;
+    }
+  .lnb_list {
+    float: left;
+    width: 760px;
+    height: 200px;
+    background-color: #2c0;
+  }
+  .lnb_content {
+    float: left;
+    width: 760px;
+    /* height: 300px; */
+    height: auto;
+    background-color: #243;
+  }
+    .lnb_content > div {
+      float: left;
+      width: 380px;
+      height: 300px;
+      background-color: #c83;
+    }
+    .lnb_content > div:last-child {
+      background-color: #c43;
+    }
+
+
+/* footer
+----------------------------------------------- */
+#footBox {
+  width: 100%;
+  height: 130px;
+  background-color: #777;
+}
