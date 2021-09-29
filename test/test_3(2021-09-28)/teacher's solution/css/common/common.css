@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* common.css*/
+
+.clearfix {
+  height: auto;
+}
+.clearfix:after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700;500;300&display=swap'); */
+
+/* test_3.css*/
+/* with 선생님 */
+
+
+/* font -> 웬만하면 link 태그로 하기! 근데 만약에 @import로 할거면 파일의 상단에 위치하게 할 것! 
+단, 주석 전에 사용해야지 주석 이후에 임포트하면 적용 안되니까 조심! 
+단, @charset은 이유불문 1순위! 그니까 폰트 임포트는 그 뒤에다가~ 
+================================================ */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700;500;300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap'); */
+
+/* reset.css
+=============================================== */
+/* @import url(../css/common/reset.css); */
+
+/* common.css
+=============================================== */
+.heading_2 {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+}
+
+.btn {
+  /* border: 0; */
+  outline: 0;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  /* cursor: pointer; */
+  /* background-color: transparent; */
+}
+
+
+/* design
+=============================================== */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: rgba(119, 136, 153, 0.331);
+  --color-gray1: #c4c4c4;
+  /* --color-sample1: transparent; */
+  --color-sample1: rgba(20, 100, 255, 0.2);
+}
+
+#wrap {
+  width: 1440px;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+  /* background-color: #C4C4C4; */
+}
+
+/* ======================================= */
+
+/* #headBox 
+================================================ */
+#headBox {
+  width: 100%;
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #c4c4c4;
+}
+.head_inner {
+  width: 1100px;
+  height: 100%;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+  h1 {
+    float: left;
+    width: 120px;
+    height: 70px;
+    background-color: #555;
+  }
+  #navigation {
+    float: right;
+    width: 510px;
+    height: 70px;
+    background-color: var(--color-sample1);
+  }
+  /* 유의!
+    글씨가 많이 들어가거나, 
+    박스의 값이 100% 맞아떨어지면,
+    일부 웹의 환경에서는 마지막 요소가 아래로 떨어질 수 있다!! 
+    그러니까 티나지 않는다면 2-3px 정도는 남겨둘 수 있다면 그렇게 하기 ~~
+  */
+
+
+/* #viewBox 
+================================================ */
+#viewBox {
+  width: 100%;
+  height: 600px;
+  padding-top: 100px;
+  background-color: #868686;
+}
+.view_inner {
+  width: 780px;
+  height: 400px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+.view_inner dl {
+  float: left;
+  width: 300px;
+  height: 270px;
+  margin-top: 70px;
+  background-color: var(--color-sample1);
+}
+.view_inner dt {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  font-size: 40px;
+}
+.view_inner dd {
+  width: 100%;
+  height: 140px;
+  background-color: var(--color-sample1);
+}
+.view_inner dd:last-of-type {
+  height: 50px;
+  margin-top: 50px;
+  background-color: var(--color-sample1);
+}
+.view_inner dd:last-of-type a {
+  /* 방법 1 */
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 방법 2 */
+  /* padding: 10px 20px;
+  padding-right: 50px; */
+  font-size: 18px;
+  background-color: #fff;
+}
+.img_source {
+  float: right;
+  width: 380px;
+  height: 400px;
+  background-color: var(--color-sample1);
+}
+
+
+/* #newBox 
+    ================================================ */
+#newBox {
+  width: 100%;
+  height: 700px;
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+.new_inner {
+  width: 940px;
+  height: 570px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+
+/* #subAdBox 
+    ================================================ */
+#subAdBox {
+  width: 100%;
+  height: 350px;
+  padding-top: 50px;
+  background-color: #777;
+}
+
+.sub_inner {
+  width: 1100px;
+  height: 300px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+
+/* #bestBox
+    ================================================ */
+#bestBox {
+  width: 100%;
+  height: 700px;
+  padding-top: 175px;
+}
+
+.best_inner {
+  width: 1100px;
+  height: 380px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+
+/* #galleryBox 
+================================================ */
+#galleryBox {
+  width: 100%;
+  height: 750px;
+  padding-top: 80px;
+  background-color: #c4c4c4;
+}
+
+.gallery_inner {
+  width: 940px;
+  height: 540px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+
+/* #sponsorBox 
+================================================ */
+#sponsorBox {
+  width: 100%;
+  height: 100px;
+  padding-top: 10px;
+  background-color: #777;
+}
+
+.sponsor_inner {
+  width: 940px;
+  height: 80px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}
+
+/* #footBox 
+================================================ */
+#footBox {
+  width: 100%;
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 140px;
+  background-color: #333;
+}
+
+.foot_inner {
+  width: 940px;
+  height: 250px;
+  margin: auto;
+  background-color: var(--color-sample1);
+}

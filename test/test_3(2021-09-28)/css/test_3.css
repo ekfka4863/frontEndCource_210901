@@ -45,6 +45,7 @@ header, nav, article, section, aside, menu,footer, figure, figcaption {
   clear: both;
 }
 .blind {
+  display: block;
   width: 0;
   height: 0;
   overflow: hidden;
