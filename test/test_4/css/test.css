@@ -78,6 +78,7 @@ ul, ol, dl {
   position: relative;
   width: 800px;
   height: 600px;
+  margin: 50px auto;
   background-color: #f0a;
 }
 .q_9 > .side_indicator {
