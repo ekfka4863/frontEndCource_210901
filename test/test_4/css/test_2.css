@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* test_2.css*/
+
+/* reset.css
+=============================================== */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ul, ol, dl {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* common.css
+=============================================== */
+.clearfix:after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* design
+=============================================== */
+.q_10 {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  margin:50px auto;
+  background-color: #f0a;
+}
+.q_10 .side_indicator {
+  position: absolute;
+  right: 30px;
+  top: 30%;
+
+  width: 50px;
+  height: auto;
+  background-color: #0af;
+} 
+
+
+
+
+.q_10 span {
+  position: absolute;
+  top: 50%;
+  margin-top: -165px;
+  right: 40px;
+  z-index: 1;
+  /* display: ; */
+  /* display: block; */
+
+  /* width: 200px;
+  height: 40px; */
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 102, 204, 0.414);
+}
+/* .q_10 span:hover {
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+
+  top: 50%;
+  margin-top: -175px;
+  right: 80px;
+  background-color: #06c;
+} */
+
+
+
+.q_10  ul {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.q_10 li{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.q_10 li:last-child {
+  margin-bottom: 0;
+}
+.q_10 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+.q_10 span {
+  display: none;
+  /* display: block; */
+  position: absolute;
+  right: 50px;
+  top: 160px;
+  /* top: -5%; */
+  padding: 8px;
+  box-sizing: border-box;
+
+  width: 200px;
+  height: 40px;
+  color: #fff;
+  background-color: #06c;
+}
+.q_10 a:hover + span {
+  display: block;
+}
+
+
+
+/* ----------------------------------- */
+.siblings {
+  width: 400px;
+  height: 800px;
+  margin: auto;
+  border: 1px solid #777;
+}
+
+.siblings:hover > dt {
+  background-color: #ccf;
+}
+
+.siblings > dt:hover ~ dd {
+  background-color: #afa;
+}
+.siblings > dt:hover + dd {
+  background-color: #faa;
+}

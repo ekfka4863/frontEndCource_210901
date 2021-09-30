@@ -1,0 +1,359 @@
+@charset "UTF-8";
+/* test.css*/
+
+/* reset.css
+=============================================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border: 0;
+  /* border-radius: ; */
+  background-color: transparent;
+}
+/* * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ul, ol, dl {
+  list-style: none;
+} */
+
+/* common.css
+=============================================== */
+.clearfix:after,
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* design
+=============================================== */
+#wrap {
+  width: 1200px;
+  height: auto;
+  min-height: 700px;
+  margin: auto;
+  /* background-color: #ddd; */
+}
+
+/* header 
+------------------------------------------------*/
+#headBox {
+  width: 100%;
+  height: 100px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  background-color: #ccc;
+} 
+  h1 {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: #555;
+  }
+  #navigation {
+    float: right;
+    width: 600px;
+    height: 40px;
+    background-color: #fff;
+  }
+    .gnb {
+      width: 100%;
+      height: 100%;
+    }
+    .gnb li {
+      float: left;
+      /* width: 25%; */
+      width: 150px;
+      height: 100%;
+      padding: 0 5px;
+      box-sizing: border-box;
+      text-align: center;
+      line-height: 40px;
+    }
+    /* .gnb li:hover {
+      font-size: 1.2rem;
+      transition: ease;
+      transition-duration: 0.3s;
+    }
+    .gnb li:focus {
+      outline-color: red;
+      font-size: 1.2rem;
+      font-weight: 800;
+    } */
+
+    .gnb a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #eee;
+    }
+
+  
+
+
+/* ---------------- */
+#viewBox {
+  width: 100%;
+  height: 300px;
+  background-color: rgb(92, 152, 235);
+}
+
+
+
+/* main
+------------------------------------------------*/
+#conBox {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+
+/* con_inner_01 */
+  .con_inner_01 {
+    float: left;
+    width: 400px;
+    height: 200px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: rgb(113, 113, 113);
+  }
+
+  .tab_title_area {
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+  }
+  .tab_title_area ul {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #333;
+  }
+  .tab_title_area li {
+    float: left;
+    width: 100px;
+    /* height: 30px; */
+    padding: 0 5px;
+    box-sizing: border-box;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+    background-color: #fff;
+  }
+  /* 나중에 자바스크립트로 컨트롤해서 클래스를 부여할 때~  */
+  .tab_title_area li.action {
+    border: 1px solid #333;
+    border-bottom: 0;
+  }
+  .tab_title_area button {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .tab_content_area {
+    width: 100%;
+    height: 150px;
+    background-color: #f88;
+  }
+  /* 이벤트 컨트롤 */
+  .tab_content_area > div.action {
+    display: block;
+  }
+
+  .tab_detail_01 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #77e;
+  }
+  .tab_detail_02 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #245377;
+  }
+
+/* con_inner_02 */
+  .con_inner_02 {
+    float: left;
+    width: 400px;
+    height: 200px;
+    background-color: #aaa;
+  }
+
+/* con_inner_03 */
+  .con_inner_03 {
+    float: left;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #eee;
+  }
+  .con_inner_03 .btn {
+    width: 100%;
+    height: 30px;
+  }
+  .con_inner_03 button {
+    width: 100%;
+    height: 100%;
+    background-color: #fd0;
+  }
+  .con_inner_03 button:hover {
+    font-weight: 700;
+    background-color: #fa0;
+  }
+  .con_inner_03 button:focus {
+    outline: 0;
+    border-bottom: 3px solid #f06;
+    box-shadow: 3px 3px 3px #333;
+    /* box-shadwo: x y blur color; */
+  }
+
+  /* modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    width: 100%;
+    height: 100%;
+    /* background-color: #daa; */
+  }
+  /* 모달창 여는 이벤트 */
+  .modal.action {
+    display: block;
+  }
+  .modal_message {
+    /* 위에 픽스드 했으니까 여기는 앱솔루트로~ */
+    position: absolute;
+    /* 방법 1 */
+    /* top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -150px; */
+
+    /* 방법 2 - 부모의 높이가 확실할때만 사용 가능! */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+
+    
+    width: 500px;
+    height: 300px;
+    border: 1px solid #333;
+    background-color: #fff;
+  }
+  .modal_bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0,5);
+  }
+
+
+
+  .close {
+
+  }
+  
+  /* .modal_message {}
+  .modal_bg {} */
+  /* .modal {} */
+  /* .close {} */
+
+
+
+
+/* footer 
+------------------------------------------------*/
+#footBox {
+  width: 100%;
+  /* height: 100px; */
+  height: auto;
+  padding: 30px 20px;
+  /* padding-top: 30px; */
+  box-sizing: border-box;
+  background-color: #528541;
+}
+#footBox > h2 {
+  float: left;
+  width: 200px;
+  height: 40px;
+  background-color: #777;
+  }
+  address {
+    float: left;
+    width: 600px;
+    height: 40px;
+    margin-left: 100px;
+    background-color: rgb(215, 215, 215);
+  }
+  .sns {
+    float: right;
+    width: 200px;
+    height: 40px;
+    background-color: #ccc;
+  }

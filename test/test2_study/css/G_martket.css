@@ -1,0 +1,254 @@
+@charset "UTF-8";
+/* G_martket.css*/
+
+
+/* reset.css
+============================================ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* common.css
+============================================ */
+.clearfix:after, 
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.blind {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+/* design
+============================================ */
+body {
+  background-color: rgb(190, 240, 240);
+}
+#wrap {
+  width: 1600px;
+  height: 100%;
+  min-height: 2000px;
+  margin: auto;
+  background-color: #aaa;
+}
+
+
+/* header 
+-----------------------------------------------*/
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+}
+.headBox_inner {
+  position: relative;
+  width: 1200px;
+  height: 150px;
+  margin: auto;
+  /* background-color: rebeccapurple; */
+}
+h1 {
+  float: left;
+  width: 200px;
+  height: 150px;
+  background-image: url(../images/logo.png); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-color: chartreuse; */
+}
+.search_box {
+  float: left;
+  width: 560px;
+  height: 50px;
+  margin: 25px 380px 0 50px;
+  box-sizing: border-box;
+    border: 3px solid blue;
+    border-radius: 35px;
+  }
+  .catetory_menu {
+    float: left;
+    position: absolute;
+    top: 90px;
+    /* left: 0; */
+    width: 226px;
+    height: 60px;
+    background-color: red;
+  }
+  .gnb_wrapper {
+    float: left;
+    width: 540px;
+    height: 60px;
+  }
+    .gnb_wrapper ul {
+      width: 100%;
+      height: 60px;
+      margin-top: 15px;
+      margin-left: 60px;
+      /* background-color: yellow; */
+    }
+      .gnb_wrapper li {
+        float: left;
+        padding: 25px 10px 0;
+        box-sizing: border-box;
+        cursor: pointer;
+      }
+      .gnb_wrapper li:first-child {
+        padding-left: 25px;
+      }
+      .gnb_wrapper li:last-child {
+        padding-right: 0;
+      }
+  .unb_wrapper {
+    float: right;
+    width: 240px;
+    height: 60px;
+  }
+    .unb_wrapper ul {
+      width: 100%;
+      height: 60px;
+      margin-top: 15px;
+      /* background-color: orange; */
+    }
+      .unb_wrapper li {
+        float: left;
+        padding: 25px 6px;
+        box-sizing: border-box;
+        font-size: 0.8rem;
+        cursor: pointer;
+      }
+      .unb_wrapper li:last-child {
+        padding-right: 0;
+      }
+
+
+/* section 
+-----------------------------------------------*/
+#viewBox {
+
+}
+  .view_box_slider {
+    position: relative;
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+    margin-top: 150px;
+    background-color: #fff;  
+  }
+  .view_box_slider_img {
+    width: 100%;
+    height: 100%;
+    /* background-color: royalbslue; */
+  }
+
+  .prev_btn {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 100px;
+    padding: 20px;
+    border: 0;
+    background-color: red;
+  }
+  .prev_btn > span, 
+  .next_btn > span {
+    font-size: 2rem;
+  }
+  .next_btn {
+    position: absolute;
+    top: 300px;
+    right: 50px;
+    width: 100px;
+    padding: 20px;
+    border: 0;
+    background-color: red;
+
+  }
+
+  .view_box_slider_controler {
+    width: 100%;
+    /* padding: 20px; */
+    position: absolute;
+    bottom: 30px;
+    right: -1000px;
+  }
+  .pause_btn {
+    float: left;
+    margin-right: 10px;
+    border: 0;
+    background-color: red;
+  }
+  .indicator {
+    float: left;
+    /* margin-top: 5px; */
+    margin-right: 10px;
+    border: 0;
+    background-color: red;
+  }
+  .plus_btn {
+    float: left;
+    border: 0;
+    background-color: red;
+  }
+
+
+/* https://www.figma.com/file/lZHBNps94z9wq3B4V0vM8I/Botique-Travel-Website-Wireframes-(Community)?node-id=1%3A141 */
