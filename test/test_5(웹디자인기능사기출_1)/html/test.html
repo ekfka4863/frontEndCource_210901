@@ -37,8 +37,31 @@
       <main id="mainBox" class="clearfix">
         <h2 class="blind">주요 내용</h2>
         <article class="main_notice_and_gallery">
-          <h3>공지사항/갤러리</h3>
-          <div class="notice_wrapper">
+          <h3 class="blind">공지사항/갤러리</h3>
+
+          <!-- 선생님이 가이드해주신 코드 구조 -->
+          <!-- dl>((dt>button[type="button"])+dd)*2 -->
+          <dl class="notice_and_gallery_area">
+            <dt class="notice_area">
+              <button type="button" class="notice_btn tab_btn active">공지사항</button>
+            </dt>
+            <dd class="notice_detail">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id repellat rem eum quod commodi vero saepe inventore nihil, ratione, maxime a. Velit, iste dolore! Adipisci incidunt quibusdam velit. Tempora, laboriosam!</p>
+            </dd>
+            <dt class="gallery_area">
+              <button type="button" class="gallery_btn tab_btn">갤러리</button>
+            </dt>
+            <dd class="gallery_detail">
+              <dl class="clearfix">
+                <dd class="gallery_detail_con"></dd>
+                <dd class="gallery_detail_con"></dd>
+                <dd class="gallery_detail_con"></dd>
+              </dl>
+            </dd>
+          </dl>
+
+          <!-- 아래 코드 삭제... -->
+          <!-- <div class="notice_wrapper">
             <button type="button" class="tab_btn tab1">공지사항</button>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus accusantium provident exercitationem deleniti, blanditiis esse recusandae ducimus aspernatur quos sapiente ullam consequuntur magnam</p>
           </div>
@@ -47,8 +70,13 @@
             <div></div>
             <div></div>
             <div></div>
-          </div>
+          </div> -->
+
+          <!--  -->
+
+
         </article>
+
         <article class="main_con">
           <h3>배너</h3>
         </article>
@@ -56,7 +84,7 @@
           <h3>바로가기</h3>
         </article>
       </main>
-       
+      
       <!-- footer -->
       <footer id="footBox">
         <h2>logo</h2>

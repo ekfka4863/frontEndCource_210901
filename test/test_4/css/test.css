@@ -21,6 +21,7 @@ ul, ol, dl {
   clear: both;
 }
 .blind {
+  display: block;
   width: 0;
   height: 0;
   overflow: hidden;
@@ -28,94 +29,83 @@ ul, ol, dl {
 
 /* design
 =============================================== */
-.q_8 {
+.wrap {
+  position: relative;
+
   width: 800px;
   height: 600px;
-  margin: auto;
+  margin: 50px auto;
+
+  /* 방법 1-2 */
+  /* padding-top: 225px;
+  box-sizing: border-box; */
+  /* 위에서 세로로 정렬했으면 아래에서는 가로로 정렬! 
+  부모의 너비 800px - 자식의 너비 500px = 300px 이고, 여기서 반을 옆으로 옯겨야 하니까 총 150px 옮기기! */
+  /* padding-left: 150px; */
+
   background-color: #f0a;
-
-  /* 방법 2 */
-  position: relative;
-  
-  /* 방법 1 */
-  /* border-top: 1px solid #f0a; */
-
-  /* 방법 1 - 2 */
-  padding-top: 225px;
-  padding-left: 150px;
-  box-sizing: border-box;
 }
 
-.q_8 > .modal {
-  /* 응용: 변수 선언 및 할당 */
-  --width: 500px; 
+.modal {
+  /* 가장 간단하게 세로 기준 가운데로 요소를 옮기는 방법 1 */
+  /* 부모 높이값 - 현 요소 높이값 = 450px을 나누기 2하면 225px */
+  /* position: absolute;
+  top: 225px; */
+  /* 부모 너비값 - 현 요소 너비값 = 300px 나누기 2하면 150px */
+  /* left: 150px; */
 
-  width: 500px;
-  height: 150px;
-  background-color: #0af;
+
+  /* 방법 1-2 */
+  /* top: 50%; */
+  /* 부모 요소의 전체 높이가 600이고 현재 요소의 높이가 150이면 -> 450이 남는데, 여기서 절반을 내려와야 하니까 -> 총 2250px 내려와야지 세로로 가운데 정렬이 가능! */
+  /* margin-top: 225px; */
+  /* 단, 이 조건은 부모에게 border 가 있을 경우에만 사용 가능하다. 
+  옵션 1: 부모에게 border를 1px solid #현재부모의색상; 으로 적용한다
+  옵션 2: 아니면 margin-top 말고 그냥 부모의 padding-top과 box-sizing: border-box; 를 사용한다. 
+  (cf. 여기서 결국 사용할 코드는 옵션 2이다. 위의 .wrap 스타일링 확인! )*/
 
   /* 방법 2 */
   position: absolute;
   top: 30%;
+  left: 0;
   left: 50%;
-  /* margin-left: -250px; */
-  /* 응용: 변수로 게산 */
-  /* margin-left: calc(var(--width) / -2); */
-  /* 응용: transform: translate(); 사용 */
-  /* transform: translate(-50%, 0); */
+  transform: translateX(-50%);
 
-  /* 방법 1 - 포지션 사용 안하고...  */
-  /* margin-top: 225px;
-  margin-left: 150px; */
-
+  width: 500px;
+  height: 150px;
+  background-color: #0af;
 }
 
 
-
-
-/* design */
+/* ---------------------------------------- */
 .wrap {
   position: relative;
+
   width: 800px;
   height: 600px;
   margin: 50px auto;
   background-color: #f0a;
 }
-.q_9 > .side_indicator {
+.side_indicator {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(0, -50%);
+
+  padding: 10px;
+  box-sizing: border-box;
+
   width: 50px;
   height: 350px;
   background-color: #0af;
-
-  position: absolute;
-  right: 30px;
-
-  /* 방법 1 */
-  /* 부모 높이값 - 현 요소 높이값 = 250px을 나누기 2하면 125px */
-  /* top: 125px; */
-
-  /* 방법 2 */
-  top: 50%;
-  /* 전체 높이가 100이고 현재 요소의 높이가 50이면 -> 150을 내려오고도 25를 더 내려와야지 세로로 가운데 정렬이 가능! */
-  margin-top: -175px;
 }
-.q_9  ul {
-  width: 100%;
-  height: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.q_9  li {
+.indicator {
   width: 30px;
   height: 30px;
-  margin: 0 auto;
-  margin-bottom: 30px;
   border-radius: 100%;
-  text-align: center;
-  line-height: 30px;
+  margin-bottom: 40px;
   background-color: #fff;
 }
-.q_9 li:last-child {
-  margin-bottom: 0;
+.indicator:first-child {
+  margin-top: 10px;
 }
-
-

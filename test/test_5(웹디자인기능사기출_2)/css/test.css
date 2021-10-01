@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/* test.css*/
+
+
+/* design
+=============================================== */
+#wrap {
+  width: 1200px;
+  height: auto;
+  min-height: 700px;
+  margin: 50px auto;
+}
+
+
+/* #headBox
+-----------------------------------------------------*/
+#headBox {
+  width: 100%;
+  height: 100px;
+  padding: 60px 20px 0;
+  background-color: #ccc;
+}
+  h1 {
+    float: left;
+    width: 200px;
+    height: 40px;
+    background-color: #afa;
+  }
+  .navigation {
+    float: right;
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+    background-color: #aff;
+  }
+
+
+/* #viewBox 
+-----------------------------------------------------*/
+#viewBox {
+  width: 100%;
+  height: 300px;
+  background-color: #aaa;
+}
+
+
+
+
+/* #contentBox 
+-----------------------------------------------------*/
+#contentBox {
+  width: 100%;
+  height: 200px;
+}
+  #contentBox > div {
+    float: left;
+    width: 400px;
+    height: 200px;
+  }
+  .notice_area {
+    background-color: #afd;
+  }
+  .gallery_area {
+    background-color: #daf;
+  }
+  .commercial_area {
+    background-color: #afd;
+  }
+
+
+
+
+
+
+
+/* #footBox
+-----------------------------------------------------*/
+#footBox {
+  width: 100%;
+  height: 100px;
+  padding-top: 30px 20px;
+  padding-bottom: 50px;
+  background-color: #999;
+}
+#footBox > h2 {
+  float: left;
+  width: 200px;
+  height: 40px;
+  background-color: #faa;
+}
+address {
+  float: left;
+  width: 600px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 100px;
+  background-color: #afa;
+}
+.family { 
+  float: right;
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #aaf;
+}
+
+
+
+
+
+/* 
+#headBox {}
+#viewBox {}
+#cnBox {}
+#footBox {} */
+
