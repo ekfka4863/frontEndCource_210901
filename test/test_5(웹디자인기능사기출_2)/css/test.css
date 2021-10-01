@@ -28,24 +28,48 @@
   }
   .navigation {
     float: right;
-    width: 400px;
+    width: 600px;
     height: 30px;
     margin-top: 10px;
     background-color: #aff;
   }
-    .navigation ul {
+  /* event */
+  /* .navigation:hover .nav_list {
+    display: block;
+  } */
+  .navigation > ul > li:hover > .nav_list {
+    display: block;
+  }
+  .nav_title:hover {
+    background-color: #171717;
+    color: #fff;
+  }
+  /* 아래의 방법 3 코드는 문제가 있음!!
+  왜냐면 인접 형제 요소라서... 클릭이 안된다.
+  하지만 위의 방법 2개는 ... 부모와 자식 요소라서
+  부모요소에 호버를 해도 클릭을 해도 자식 요소를 포함해서 건드리게 된다! */
+  /* .nav_title:hover + .nav_list {
+    display: block;
+  } */
+    .navigation > ul {
       width: 100%;
-      height: 100%;
+      /* height: 100%; */
+      height: auto;
       background-color: #999;
     }
-    .navigation li {
+    .navigation > ul > li {
       float: left;
       width: 25%;
-      height: 100%;
+      /* height: 100%; */
+      height: auto;
       padding: 0 5px;
-      /* background-color: #fff; */
     }
-    .navigation a {
+    .nav_title {
+      width: 100%;
+      /* navigation과 동일한 height 적용 -> 그래야 .nav_title a 에서 높이와 너비 100%로 설정해도 문제 없음! */
+      height: 30px;
+    }
+    .nav_title a {
       display: block;
       width: 100%;
       height: 100%;
@@ -53,6 +77,28 @@
       line-height: 30px;
       background-color: #faa;
     }
+    .nav_list {
+      display: none;
+      width: 100%;
+      height: auto;
+      color: #fff;
+      background-color: #333;
+      /* background-color: #dfd; */
+    }
+    .nav_list li {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 10px;
+      text-align: center;
+      line-height: 40px;
+      /* background-color: #dff; */
+    }
+    .nav_list a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
 
 
 /* #viewBox 
