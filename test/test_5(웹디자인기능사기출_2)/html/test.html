@@ -7,26 +7,52 @@
     <link rel="stylesheet" href="../css/common/reset.css">
     <link rel="stylesheet" href="../css/common/common.css">
     <link rel="stylesheet" href="../css/test.css" />
+    <script src="../js/common/modernizr-custom.js"></script>
     <title>web design practice</title>
   </head>
   <body>
     
     <div id="wrap"> 
-      <div id="headBox">
+      <header id="headBox">
         <h1>site name</h1>
-        <div class="navigation"></div>
-      </div>
-      <div id="viewBox"></div>
-      <div id="contentBox">
-        <div class="notice_area"></div>
-        <div class="gallery_area"></div>
-        <div class="commercial_area"></div>
-      </div>
-      <div id="footBox">
+        <nav class="navigation clearfix">
+          <h2 class="blind">네비게이션</h2>
+          <ul>
+            <li>
+              <a href="#">재단소개</a>
+            </li>
+            <li>
+              <a href="#">후원하기</a>
+            </li>
+            <li>
+              <a href="#">자료실</a>
+            </li>
+            <li>
+              <a href="#">스토리</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section id="viewBox">
+        <h2 class="blind">광고</h2>
+      </section>
+      <main id="contentBox">
+        <h2 class="blind">본문</h2>
+        <section class="con_area notice_area">
+          <h3 class="blind">notice</h3>
+        </section>
+        <section class="con_area gallery_area">
+          <h3 class="blind">gallery</h3>
+        </section>
+        <section class="con_area commercial_area">
+          <h3 class="blind">commercial</h3>
+        </section>
+      </main>
+      <footer id="footBox">
         <h2>사이트이름</h2>
         <address></address>
         <div class="family"></div>
-      </div>
+      </footer>
     </div>
 
       
