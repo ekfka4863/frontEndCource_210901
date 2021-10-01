@@ -8,18 +8,67 @@
   width: 1200px;
   height: auto;
   min-height: 700px;
-  margin: 50px auto;
+  margin: 0 auto;
+  /* padding-top: 100px; */
 }
 
 
 /* #headBox
 -----------------------------------------------------*/
 #headBox {
+  /* tip!! 아래 :before랑 같이 가는 코드~ 일단 이 요소를 정중앙에 위치하게 한뒤 ... 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 9999; */
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* left: 50%; */
+  /* transform: translate(-50%); */
+  /* margin-left: -600px; */
+
   width: 100%;
+  /* width: 1200px; */
   height: 100px;
-  padding: 60px 20px 0;
-  background-color: #ccc;
+  /* padding: 60px 20px 0; */
+  padding: 0 20px;
+  padding-top: 60px;
+  box-sizing: border-box;
+  background-color: rgba(200, 200, 200, 0.5);
 }
+
+/* tip!! 
+아래의 :before 코드는 위에 #haedBox 요소를 정중앙에 위치하게 하는 코드랑 같이 가는 코드 ...  
+단!!!! 이때 중요한 것은 ... 
+:before/:after를 사용하면 #headBox의 자식 요소로 들어간다는 사실!!!! 
+유의!!!
+*/
+/* #headBox::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  width: 100vw;
+  height: 100%;
+  margin-left: 50%;
+  z-index: -1;
+
+  background-color: #aaf;
+} */
+
+.head_wrapper {
+  width: 1200px;
+  height: 40px;
+  margin: auto;
+}
+
   h1 {
     float: left;
     width: 200px;
@@ -33,6 +82,20 @@
     margin-top: 10px;
     background-color: #aff;
   }
+  .navigation > ul {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    background-color: #999;
+  }
+  .navigation > ul > li {
+    float: left;
+    width: 25%;
+    /* height: 100%; */
+    height: auto;
+    padding: 0 5px;
+  }
+
   /* event */
   /* .navigation:hover .nav_list {
     display: block;
@@ -51,19 +114,7 @@
   /* .nav_title:hover + .nav_list {
     display: block;
   } */
-    .navigation > ul {
-      width: 100%;
-      /* height: 100%; */
-      height: auto;
-      background-color: #999;
-    }
-    .navigation > ul > li {
-      float: left;
-      width: 25%;
-      /* height: 100%; */
-      height: auto;
-      padding: 0 5px;
-    }
+    
     .nav_title {
       width: 100%;
       /* navigation과 동일한 height 적용 -> 그래야 .nav_title a 에서 높이와 너비 100%로 설정해도 문제 없음! */
@@ -75,7 +126,7 @@
       height: 100%;
       text-align: center;
       line-height: 30px;
-      background-color: #faa;
+      /* background-color: #faa; */
     }
     .nav_list {
       display: none;
@@ -89,24 +140,27 @@
       width: 100%;
       height: 40px;
       margin-bottom: 10px;
-      text-align: center;
-      line-height: 40px;
       /* background-color: #dff; */
     }
     .nav_list a {
       display: block;
       width: 100%;
       height: 100%;
+      text-align: center;
+      line-height: 40px;
     }
 
-
+    
 
 /* #viewBox 
 -----------------------------------------------------*/
 #viewBox {
   width: 100%;
   height: 300px;
+  /* margin-top: 100px; */
   background-color: #aaa;
+  padding-top: 100px;
+  box-sizing: content-box;
 }
 
 
@@ -122,20 +176,86 @@
     float: left;
     width: 400px;
     height: 200px;
+    padding: 10px 30px; box-sizing: border-box;
   }
   .notice_area {
     background-color: #afd;
   }
+  .con_part {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #777;
+  }
+  .con_part ul {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+  }
+  .notice_area ul {
+    list-style-type: decimal;
+    padding: 10px;
+    padding-left: 30px; box-sizing: border-box;
+  }
+  .notice_area li {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+
   .gallery_area {
     background-color: #daf;
+
+    counter-reset: gal_li;
   }
+  /* tip! */
+  /* .gallery_area li:nth-child(1)::before { content: '1.'; }
+  .gallery_area li:nth-child(2)::before { content: '2.'; }
+  .gallery_area li:nth-child(3)::before { content: '3.'; } */
+  /* 하지만 이거 말고... 더 좋은 거... */
+  .gallery_area li::before {  
+    counter-increment: gal_li ;
+    /* content: counter(gal_li); */
+    content: counter(gal_li) ". ";
+  }
+  .gallery_area ul {
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #fff; */
+  }
+  .gallery_area li {
+    /* float: left; */
+    width: 100px;
+    height: 150px;
+    /* margin-right: 18px; */
+    background-color: #fff;
+  }
+  .gallery_area li:last-child {
+    margin-right: 0;
+  }
+
   .commercial_area {
     background-color: #afd;
   }
 
+  /* 탭메뉴 event 설정 가이드 */
+  .con_part {
+    display: none;
+  }
+  .con_area > h3:active + .con_part {
+    display: block;
+  }
 
 
 
+
+/* #otherBox
+-----------------------------------------------------*/
+#otherBox {
+  width: 900px;
+  height: 800px;
+  margin: 30px auto;
+  background-image: linear-gradient(#aaf, #faa);
+}
 
 
 
@@ -169,14 +289,3 @@ address {
   margin-top: 10px;
   background-color: #aaf;
 }
-
-
-
-
-
-/* 
-#headBox {}
-#viewBox {}
-#cnBox {}
-#footBox {} */
-
