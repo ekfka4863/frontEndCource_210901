@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* test.css*/
+/* 수업시간 중 짠 코드 */
+
+
+/* design
+=============================================== */
+#wrap {
+  width: 1000px;
+  height: auto;
+  min-height: 650px;
+  background-color: #ddd;
+}
+
+
+/* header  
+------------------------------------------------*/
+#headBox {
+  float: left;
+
+  width: 100px;
+  height: 350px;
+  background-color: #eee;
+}
+
+.sub_menu {
+  display: none;
+}
+
+/* #viewBox */
+#viewBox {
+  float: right;
+
+  width: 900px;
+  height: 350px;
+  background-color: #eee;
+}
+
+
+/* main
+------------------------------------------------*/
+#mainBox {
+  float: right;
+
+  width: 900px;
+  height: 200px;
+  background-color: #eee;
+}
+  #noticeAndGalleryBox {
+    width: 600px;
+    height: 200px;
+    background-color: #faa;
+  }
+
+
+/* #asideBox */
+#asideBox {
+  width: 300px;
+  height: 200px;
+  background-color: #faf;
+}
+
+/* footer 
+------------------------------------------------*/
+#footBox {
+  float: right;
+
+  width: 900px;
+  height: 100px;
+  background-color: #eee;
+}
+
+
+
+
+/* 
+#headBox {}
+#viewBox {}
+#mainBox {}
+#noticeBox {}
+#galleryBox {}
+#asideBox {}
+#footBox {} */

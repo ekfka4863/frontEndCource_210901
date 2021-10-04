@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test.css" />
+    <title>web design practice 3 - 1</title>
+  </head>
+  <body>
+    <!-- 수업시간중 짠 코드 -->
+
+    <!-- layout -->
+    <div id="wrap" class="clearfix"> 
+      <header id="headBox">
+        <h1><a href="#">웹</a></h1>
+
+        <!-- 메인 메뉴바 -->
+        <nav class="navigation">
+          <h2 class="blind">네비게이션</h2>
+          <!-- 아래와 같이 하면 dd들의 위치의 반정도로 y축을 기준으로 dd 크기의 반을 옮기게 할 수 있다~~ -->
+          <!-- 그래서 그냥 dl>dt+dd+dt+dd+dt+dd 이렇게 작성하는 것보다 이것을 더 추천하심! -->
+          <!-- ul>li*4>dl>dt{제목_$$}+dd>a*4[href="#"]{sub_title_$$} -->
+          <!-- https://aoa.gitbook.io/skymimo/aoa-2019/tips-2/dl-dt-dd-. -->
+          <ul>
+            <li>
+              <dl>
+                <dt><a href="#">제목_01</a></dt>
+                <dd>
+                  <a href="#">sub_title_01</a>
+                  <a href="#">sub_title_02</a>
+                  <a href="#">sub_title_03</a>
+                  <a href="#">sub_title_04</a>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="#">제목_02</a></dt>
+                <dd>
+                  <a href="#">sub_title_01</a>
+                  <a href="#">sub_title_02</a>
+                  <a href="#">sub_title_03</a>
+                  <a href="#">sub_title_04</a>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="#">제목_03</a></dt>
+                <dd>
+                  <a href="#">sub_title_01</a>
+                  <a href="#">sub_title_02</a>
+                  <a href="#">sub_title_03</a>
+                  <a href="#">sub_title_04</a>
+                </dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt><a href="#">제목_04</a></dt>
+                <dd>
+                  <a href="#">sub_title_01</a>
+                  <a href="#">sub_title_02</a>
+                  <a href="#">sub_title_03</a>
+                  <a href="#">sub_title_04</a>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+
+
+        </nav>
+      </header><!-- // #headBox -->
+
+      <section id="viewBox" class="container">
+        <h2>이미지 슬라이드</h2>
+      </section><!-- // #viewBox -->
+
+      <article id="conBox" class="container">
+        <h2 class="blind">본문 내용</h2>
+        <div class="notice_gallery">
+          <h3 class="blind">공지사항 및 갤러리</h3>
+          <dl>
+            <dt class="notice action">공지사항</dt>
+            <dd class="notice">공지사항 내용</dd>
+
+            <dt class="gallery">갤러리</dt>
+            <dd class="gallery">갤러리 내용</dd>
+          </dl>
+        </div>
+
+        <!-- 바로가기 영역 -->
+        <div class="location_link">
+          <h3 class="blind">바로가기</h3>
+          <button type="button">
+            모달 바로가기
+          </button>
+          <div class="modal_area" hidden>
+            <div class="modal_message">
+              <h4>바로가기 기능 제목</h4>
+              <p>ipsum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur temporibus eligendi nemo cum magnam totam libero in, maxime vitae, error ab fuga ipsam. Perferendis eos sed veniam, corporis incidunt repellendus.</p>
+              <div class="close">
+                <button type="button">닫기</button>
+              </div>
+            </div>
+            <div class="modal_bg"></div>
+          </div>
+        </div>
+      </article><!--//  #conBox -->
+
+      <footer id="footBox" class="container"></footer><!-- // #footBox -->
+
+    </div>      
+
+  </body>
+  
+  <!-- script -->
+  <script>
+    // var modalArea = document.getElementsByClassName('modal_area')[0];
+    // var closeBtn = document.getElementsByClassName('close')[0];
+    var modalArea = document.querySelector('.modal_area');
+    var closeBtn = document.querySelector('.close');
+
+    closeBtn.addEventListener('click', function (e) {
+      e.preventDefault(); 
+      modalArea.style.display = 'none';
+    });
+  </script>
+</html>

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* test_modal.css*/
+
+
+/* modal 창이 뜨는 html 영역 */
+
+.location_link {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: #ddd;
+}
+.location_link button {
+  /* width: 50px; */
+  width: auto;
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  line-height: 10px;
+  cursor: pointer;
+  background-color: rgb(246, 255, 71);
+}
+
+/* modal */
+.modal_window {
+  position: fixed;
+  /* top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  z-index: 9999;
+  
+  width: auto;
+  height: auto;
+  background-color: #eee;
+}
+.modal_message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px rgba(77, 77, 77, 0.9);
+
+  width: 350px;
+  height: 300px;
+  background-color: #fff;
+}
+.modal_message .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0;
+  margin: auto; */
+}
+
+
+
+/* div */
+.box_wrapper {
+  position: relative;
+
+  width: 500px;
+  height: 1000px;
+  background-color: orange;
+}
+.header_alike {
+  position: fixed;
+  top: 7px;
+  left: 7px;
+  width: 500px;
+  height: 100px;
+  /* background-color: transparent; */
+  background-color: royalblue;
+}
+.box_inner_1 {
+  width: 100%;
+  /* height: auto; */
+  /* height: 600px; */
+  padding-top: 100px;
+  background-color: rebeccapurple;
+}
+.box_inner_1 > div {
+  float: left;
+  width: calc(500px / 3);
+  height: 300px;
+  /* height: 100%; */
+  /* width: 100%; */
+  /* height: 200px; */
+}
+.box_inner_1 > div:first-child {
+  /* margin: 10px; */
+  /* padding: 50px; */
+  box-sizing: border-box;
+  /* border: 1px solid #333; */
+  background-color: #aaa;
+}
+.box_inner_1 > div:last-child {
+  background-color: #faf;
+}
+
+button {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: royalblue;
+}
+
+button a {
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+button:hover {
+  color: royalblue;
+  background-color: #fff;
+}
+button:active {
+  color: red;
+  background-color: blue;
+}
+button:focus {
+  border: 5px dashed pink;
+}
