@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- <link rel="stylesheet" href="../../../fontawesome/css/all.min.css"> -->
+  <link rel="stylesheet" href="../fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/test.css" />
@@ -16,13 +19,22 @@
   <div id="wrap">
     <header id="headBox">
       <h1><a href="./a_content.html">해운대 빛축제</a></h1>
+      
+      <!-- fontawesome 사용법 연습 -->
+      <!-- <div class="btn">
+        <button type="button">
+          <i class="fas fa-bars" aria-hidden="true"></i> 
+          <span class="blind">메뉴</span>
+        </button>
+      </div> -->
 
       <nav class="navigation">
         <h2 class="blind">네비게이션</h2>
-        <ul>
-          <li>
+        <ul role="menu">
+          <li role="listitem">
             <dl>
-              <dt><a href="#">이용안내</a></dt>
+              <!-- aria-hidden -> 스크린리더에게 읽지말라고 하는 것~ -->
+              <dt><a href="#"><i class="fas fa-bars" aria-hidden="true"></i> 이용안내</a></dt>
               <dd>
                 <a href="#">sub_01-1</a>
                 <a href="#">sub_01-2</a>
@@ -30,10 +42,9 @@
               </dd>
             </dl>
           </li>
-
-          <li>
+          <li role="listitem">
             <dl>
-              <dt><a href="#">이벤트정보</a></dt>
+              <dt><a href="#"><i class="fas fa-bars" aria-hidden="true"></i> 이벤트정보</a></dt>
               <dd>
                 <a href="#">sub_02-1</a>
                 <a href="#">sub_02-2</a>
@@ -41,9 +52,9 @@
               </dd>
             </dl>
           </li>
-          <li>
+          <li role="listitem">
             <dl>
-              <dt><a href="#">프로그램</a></dt>
+              <dt><a href="#"><i class="fas fa-bars" aria-hidden="true"></i> 프로그램</a></dt>
               <dd>
                 <a href="#">sub_03-1</a>
                 <a href="#">sub_03-2</a>
@@ -51,9 +62,9 @@
               </dd>
             </dl>
           </li>
-          <li>
+          <li role="listitem">
             <dl>
-              <dt><a href="#">고객센터</a></dt>
+              <dt><a href="#"><i class="fas fa-bars" aria-hidden="true"></i> 고객센터</a></dt>
               <dd>
                 <a href="#">sub_04-1</a>
                 <a href="#">sub_04-2</a>
