@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* practice_1.css*/
+
+/* reset.css 
+=========================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* common.css 
+=========================================== */
+/* animation */
+@keyframes move {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+
+/* design 
+========================================== */
+/* .photo_wrapper {
+  width: 100vw;
+  height: 200px;
+} */
+
+.photo_wrapper {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-top: 15vh;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: move 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+
+
+
+
+/* https://codepen.io/ekfka/pen/YzQoLdb?editors=1100 */

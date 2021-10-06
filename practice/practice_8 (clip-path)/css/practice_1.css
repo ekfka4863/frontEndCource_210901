@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* practice_1.css*/
+
+/* reset.css 
+=========================================== */
+* {
+  box-sizing: border-box;
+}
+/* https://fonts.google.com/specimen/Montserrat */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* common.css 
+=========================================== */
+
+
+
+/* design 
+========================================== */
+.frame {
+  display: flex;
+  gap: 40px;
+}
+  .hexagon {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+    /* border: 1px solid #000; */
+    transition: 0.5s;
+  }
+  .shape {
+    position: absolute;
+    /* https://bennettfeely.com/clippy/ */
+    clip-path: polygon(50% 0, 100% 30%, 100% 70%, 50% 100%, 0 70%, 0 30%);
+    
+    width: inherit;
+    height: inherit;
+    /* border: 1px solid red; */
+    /* background-color: red; */
+    overflow: hidden;
+  }
+  .shape img {
+    width: inherit;
+    height: inherit;  
+    object-fit: cover;
+    object-position: right;
+  }
+  
+  .hexagon .caption {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    /* background: linear-gradient(to top, crimson, transparent); */
+  }
+  /* 호버시 이벤트 */
+  .hexagon:hover .caption {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  /* 호버시 올라가면서 약간의 shadow 효과 */
+  .hexagon:hover {
+    transform: translateY(-60px);
+  }
+  .hexagon::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    background: radial-gradient(rgba(0, 0, 0, 0.3)), transparent, transparent;
+    bottom: -70px;
+    transition: 0.5s;
+  }
+  .hexagon:hover::before {
+    opacity: 0.6;
+    transform: scale(0.8);
+    bottom: -130px;
+  }
+
+  
+  .hexagon .caption h2 {
+    font-size: 2em;
+  }
+  .hexagon:nth-child(1) .caption {
+    background: linear-gradient(to top, crimson, transparent);
+  }
+  .hexagon:nth-child(2) .caption {
+    background: linear-gradient(to top, royalblue, transparent);
+  }
+  .hexagon:nth-child(3) .caption {
+    background: linear-gradient(to top, yellowgreen, transparent);
+  }

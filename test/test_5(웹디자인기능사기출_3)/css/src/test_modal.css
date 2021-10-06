@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* test_modal.css*/
+
+
+/* modal 창이 뜨는 html 영역 */
+
+.location_link {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: #ddd;
+}
+.location_link button {
+  /* width: 50px; */
+  width: auto;
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  line-height: 10px;
+  cursor: pointer;
+  background-color: rgb(246, 255, 71);
+}
+
+/* modal */
+.modal_window {
+  position: fixed;
+  /* top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  z-index: 9999;
+  
+  width: auto;
+  height: auto;
+  background-color: #eee;
+}
+.modal_message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 5px rgba(77, 77, 77, 0.9);
+
+  width: 350px;
+  height: 300px;
+  background-color: #fff;
+}
+.modal_message .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0;
+  margin: auto; */
+}
+
