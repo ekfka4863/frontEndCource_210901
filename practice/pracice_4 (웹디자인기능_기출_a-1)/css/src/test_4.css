@@ -1,183 +1,178 @@
-
 @charset "UTF-8";
-/* test_3.css*/
+/* test_4.css*/
 
-
+/* design 
+=================================*/
 #wrap {
-  width: 1200px; 
-  height:auto;
+  width: 1200px;
   height: 700px;
   margin: auto;
-  background-color: #ccc;
+  background-color: #eee;
 }
-/* 
+
+
+/* #headBox 
+---------------------------------- */
 #headBox {
-  width: 100%; height: 100px;
-  padding:30px 20px;
-  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
   background-color: #ccc;
 }
   h1 {
-    float:left;
-    width: 200px; height: 40px;
-    background-color: #555;
+    float: left;
+
+    width: 100px;
+    height: 100px;
+    background-color: #faa;
   }
-  #navigation {
-    float:right;
-    width:600px; height:40px;
-    background-color: #777;
+  nav {
+    float: right;
+
+    width: 800px;
+    height: 60px;
+    margin-top: 20px;
+    background-color: #faf;
+  }
+  dl {
+    float: left;
+
+    width: 200px;
+    height: 60px;
+    background-color: aqua;
+  }
+  dt {
+    text-align: center;
+    line-height: 60px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: aquamarine;
+  }
+  nav dl dd {
+    display: none;
+  }
+  nav dl dd a {
+    display: block;
+    width: 190px;
+    height: 40px;
+    margin-left: 5px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #333;
+    border-collapse: collapse;
+    background-color: #faa;
+  }
+  /* event */
+  /* tip! nav:hover 를 하면 전체 메뉴가 나온다! */
+  dl:hover dt + dd {
+    display: block;
   }
 
-    .gnb { width: 100%; height: 100%;}
-    .gnb li{
-      float:left;
-      width: 25%; height:100%; 
-      box-sizing: border-box; 
-      padding:0 5px;
-      text-align: center; 
-      line-height:40px;
-    }
-    .gnb a {
-      display: block;
-      width: 100%; height: 100%;
-      background-color: #efefef;
-    } */
 
-/* #viewBox
-  ============================================ */
-/* #viewBox {
-  width: 100%; height: 300px;
-  background-color: #3C85DF;
-} */
+/* #viewBox 
+---------------------------------- */
+#viewBox {}
 
 
-/* #conBox
-  =========================== */
-#conBox {
-  width: 600px; 
+/* #mainBox 
+---------------------------------- */
+/* #mainBox {} */
+
+
+/* #noticeAndGallery 
+---------------------------------- */
+#noticeAndGallery {
+  width: 600px;
   height: 200px;
+  margin: 30px auto;
   background-color: #fff;
 }
-
-/* .con_inner_01  */
-/* .con_inner_01 {
-  float:left; width:400px; height:200px;
-  padding:10px 20px; box-sizing: border-box;
-  background-color: #ccc;
-}
-
-  .tab_title_area {
-    width: 100%; height: 30px;
-    background-color: #eee;
-  }
-  .tab_title_area ul {
-    width: 100%; height: 100%;
-    box-sizing: border-box;
-    border-bottom:1px solid #333;
-  }
-  .tab_title_area li {
-    float:left;
-    width:100px; height:100%;
-    box-sizing: border-box; padding:0 5px;
-    text-align: center; line-height:30px;
-    background-color: #fff;
-  }
-  .tab_title_area li.action {
-    border:1px solid #333;
-    border-bottom:0;
-  }
-  .tab_title_area button {
-    width: 100%; height: 100%;
+  #noticeAndGallery button {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(235, 152, 235);
   }
 
-  .tab_content_area {
-    width: 100%; height:150px;
-  }
-    .tab_content_area > div.action{ display: block; }
-    .tab_detail_01{ 
-      display:none;
-      width: 100%; height: 100%;
-      background-color: #77FE74;
+    .notice_and_gallery_cons {
+      width: inherit;
+      height: inherit;
+      padding: 30px;
+      box-sizing: border-box;
+      background-color: rgb(150, 111, 150);
     }
-    .tab_detail_02{ 
-      display:none;
-      width: 100%; height: 100%;
-      background-color: #245377;
-    } */
+    .notice_con, 
+    .gallery_con {
+      display: none;
+    }
+    .notice_con.active, 
+    .gallery_con.active {
+      display: block;
+    }
+    .gallery_con_box {
+      float: left;
 
-/* .con_inner_02 */
-/* .con_inner_02 {
-  float:left; width:400px; height:200px;
-  background-color: #aaa;
-} */
+      width: 100px;
+      height: 100px;
+      margin-right: 50px;
+      background-color: #fea;
+    }
 
-/* .con_inner_03 */
-/* .con_inner_03 {
-  float:right; width:400px; height:200px;
-  padding:20px; box-sizing: border-box;
-  background-color: #eee;
+
+
+/* #subViewBox 
+---------------------------------- */
+/* #subViewBox {} */
+
+
+/* #shortcutBox 
+---------------------------------- */
+/* #shortcutBox {} */
+.modal_area {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
 }
-.con_inner_03 .btn {
-  width: 100%; height: 30px;}
-.con_inner_03 button {
-  width: 100%; height: 100%; 
-  background-color: #fd0;}
-.con_inner_03 button:hover {
-  font-weight: 700;
-  background-color: #fa0;}
-.con_inner_03 button:focus {
-  outline:0;
-  border-bottom:3px solid #f06;
-  box-shadow:3px 3px 3px #333;
-  } */
-
-  /* .modal */
-  /* .modal {
-    display:none;
-    position: fixed; top: 0; left: 0; z-index:1000;
-    width: 100%; height: 100%;
-  }
-  .modal.action { display: block;}
-
-  .modal_message {
-    position: absolute; 
-
-    top: 50%; left: 50%; 
-    margin-left:-250px; margin-top: -150px;
-
-
-    width: 500px; height: 300px; 
-    padding:30px; 
-    border:1px solid #333;
-    background-color: #fff;
-  }
-  .modal_bg {
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5);
-  } */
-
-/* #footBox
-  ======================= */
-/* #footBox {
-  width: 100%; height: 100px;
-  padding: 30px 20px; 
+.modal_message {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-top: -200px;
+  margin-right: -200px;
+  
+  width: 400px;
+  height: 400px;
+  padding: 20px;
   box-sizing: border-box;
-  background-color: #528541;
+  background-color: #fff;
+}
+.close {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #faf;
+}
+.modal_bg {
+  /* position: fixed; */
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-#footBox > h2 {
-  float:left; 
-  width: 200px; height: 40px;
-  background-color: #ccc;
-}
-address {
-  float:left; 
-  width: 600px; height: 40px;
-  margin-left:100px;
-  background-color: #aaa;
-}
-.social {
-  float:right; 
-  width: 200px; height: 40px;
-  background-color: #ccc;
-} */
+
+
+/* #footBox 
+---------------------------------- */
+#footBox {}
+
+
+

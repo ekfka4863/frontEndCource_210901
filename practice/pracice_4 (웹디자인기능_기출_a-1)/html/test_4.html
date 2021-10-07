@@ -1,98 +1,139 @@
 <!DOCTYPE html>
+<!-- test_4.html -->
 <html lang="ko-KR" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
   <link rel="stylesheet" href="../css/common/reset.css">
   <link rel="stylesheet" href="../css/common/common.css">
   <link rel="stylesheet" href="../css/src/test_4.css">
-  <title>Document</title>
+  <title>정아랑 연습_a-1</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
 </head>
+
 <body>
-  <!-- layout -->
-  <div id="wrap">
-    <div id="headBox" hidden>
-      <h1>사이트</h1>
-      <div id="navigation">
-        <h2 class="blind">navigation</h2>
-        <ul class="gnb">
-          <li><a href="#">탑</a></li>
-          <li><a href="#">아우터</a></li>
-          <li><a href="#">팬츠</a></li>
-          <li><a href="#">악세서리</a></li>          
-        </ul>
-      </div>
-    </div>
+    <!-- layout -->
+    <div id="wrap">
 
-    <div id="viewBox" hidden>
-      <h2 class="blind">광고</h2>
-    </div>
+      <!-- #headBox -->
+      <header id="headBox" class="clearfix">
+        <h1>로고</h1>
+        <nav>
+          <dl>
+            <dt>탑</dt>
+            <dd>
+              <a href="#">블라우스</a>
+              <a href="#">티</a>
+              <a href="#">셔츠</a>
+              <a href="#">니트</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>아우터</dt>
+            <dd>
+              <a href="#">자켓</a>
+              <a href="#">코트</a>
+              <a href="#">가디건</a>
+              <a href="#">머플러</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>팬츠</dt>
+            <dd>
+              <a href="#">청바지</a>
+              <a href="#">짧은바지</a>
+              <a href="#">긴바지</a>
+              <a href="#">레깅스</a>
+            </dd>
+          </dl>
+          <dl>
+            <dt>악세서리</dt>
+            <dd>
+              <a href="#">귀고리</a>
+              <a href="#">목걸이</a>
+              <a href="#">반지</a>
+              <a href="#">팔찌</a>
+            </dd>
+          </dl>
+        </nav>
+      </header>
+      <section id="viewBox"></section>
 
-    <!-- #conBox -->
-    <div id="conBox">
-      <h2 class="blind">본문내용</h2>
-      <div class="con_inner_01">
-        <h3 class="blind">공지사항 및 갤러리</h3>
+      <!-- #mainBox -->
+      <main id="mainBox">
 
-        <div class="tab_title_area">
-          <ul>
-            <li>
-              <button type="button">공지 사항</button>
-            </li>
-            <li class="action">
-              <button type="button">갤러리</button>
-            </li>
-          </ul>
-        </div>
-        <div class="tab_content_area">
-          <div class="tab_detail_01"></div>
-          <div class="tab_detail_02 action"></div>
-        </div>
-      </div>
+        <!-- 공지사항 및 갤러리 -->
+        <article id="noticeAndGallery">
+          <h2 class="blind">공지사항 및 갤러리</h2>
 
-      <div class="con_inner_02" hidden>
-        <h3 class="blind">배너</h3>
-      </div>
+          <!-- 버튼 구역 따로 -->
+          <div class="notice_and_gallery_btns">
+            <button type="button" class="notice_btn active">공지사항</button>
+            <button type="button" class="gallery_btn">갤러리</button>
+          </div>
 
-      <div class="con_inner_03" hidden>
-        <h3 class="blind">바로가기</h3>
-        <div class="btn">
-          <button type="button">상세 보기</button>
-        </div>
-
-        <div class="modal">
-          <div class="modal_message">
-            <h4>modal title</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat laudantium non ea atque amet nam dolorum, aperiam temporibus voluptatibus quod.</p>
-            <div class="close">
-              <button type="button" autofocus>닫기</button>
+          <!-- 디테일 구역 따로 -->
+          <div class="notice_and_gallery_cons">
+            <div class="notice_con">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ea laborum est?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ea laborum est?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus exercitationem aliquid blanditiis quidem maiores a nihil ducimus earum unde, doloribus repellendus hic, quaerat doloremque necessitatibus? Excepturi voluptas harum unde consequuntur
+              </p>
             </div>
-          </div><!-- // .modal_message -->
-          <div class="modal_bg"></div>
-        </div><!-- // .modal -->
-      </div>
-    </div><!-- // #conBox -->
+            <div class="gallery_con clearfix">
+              <div class="gallery_con_box"></div>
+              <div class="gallery_con_box"></div>
+              <div class="gallery_con_box"></div>
+            </div>
+          </div>
+        </article>
 
-    <div id="footBox" hidden>
-      <h2>com info</h2>
-      <address></address>
-      <div class="social"></div>
+
+        <article id="subViewBox"></article>
+
+        <article id="shortcutBox">
+          <!-- 모달창 -->
+          <div class="modal_area" hidden>
+            <div class="modal_message">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quo odio. Atque aut officia quo non! Sunt hic doloribus unde quo vero a libero, atque reprehenderit, voluptatibus quidem quod et.</p>
+              <div><button type="button" class="close">닫아랏!</button></div>
+            </div>
+            <!-- 배경 -->
+            <div class="modal_bg"></div>
+          </div>
+        </article>
+
+      </main>
+
+      <!-- #footBox -->
+      <footer id="footBox"></footer>
     </div>
-  </div>
 
+    <!-- script -->
+    <script>
+      const btn_wrap = document.querySelector('.notice_and_gallery_btns');    // 버튼들을 선택하였다 
+      const btn = btn_wrap.querySelectorAll('button');                        // 버튼이라는 요소를 전부 선택 
+      const con = document.querySelector('.notice_and_gallery_cons');         // 노티스와 갤러리의 내용이 담긴 div를 선택 
+      const conData = con.querySelectorAll('div');                            // 
+
+      btn.forEach( (data, i) => {
+        data.addEventListener('click', (e) => {
+          e.preventDefault();
+          // console.log(data, i);
+          conData.forEach((d,j)=>{
+            conData[j].classList.remove('active');
+          })
+          conData[i].classList.add('active');
+        })
+      });
+
+
+    </script>
 </body>
 </html>
-
-
-<!-- 
-<dl>
-  <dt><button type="button">공지사항</button></dt>
-  <dd>공지사항 내용</dd>
-  <dt><button type="button">갤러리</button></dt>
-  <dd>갤러리 내용</dd>
-</dl>
-dl {position:relative;}
-dt { float:left; }
-dd {display:none; position:absolute;}
-dt.action + dd {display:block;} -->
