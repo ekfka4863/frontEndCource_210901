@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test.css" />
+    <title>이미지 슬라이더 배너 만드는 방법 총정리</title>
+  </head>
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="#">웹</a></h1>
+
+      <div class="slide">
+        <h2>slide position</h2>
+
+        <div class="slide_wrapper">
+          <!-- 버튼 영역 > 버튼 요소 -->
+          <div class="btn clearfix">
+            <button type="button" class="next">next</button>
+            <button type="button" class="prev">prev</button>
+          </div>
+
+          <!-- 인디케이터 영역 > ul > Li * 갯수 > a > span.blind  -->
+          <div class="indicator clearfix">
+            <ul>
+              <li class="active"><a href="#slide_01"><span class="blind">01</span></a></li>
+              <li><a href="#slide_02"><span class="blind">02</span></a></li>
+              <li><a href="#slide_03"><span class="blind">03</span></a></li>
+              <li><a href="#slide_04"><span class="blind">04</span></a></li>
+              <li><a href="#slide_05"><span class="blind">05</span></a></li>
+            </ul>
+          </div>
+
+          <!-- 슬라이드 이미지 영역 > 슬라이드 이미지의 실체를 감싸는 div > () -->
+          <div class="slide_content">
+            <div class="slide_con_wrap">
+              <!-- div#slide_$$*5>a[href=#]{slide_$$} -->
+              <!-- 이때, 상황에 따라 이미지의 순서가 뒤바뀔수 있으미 div 에다가 id값 붙여서 
+              위의 인디케이터의 a 태그와 연동시키기! 팁! -->
+              <div id="slide_01"><a href="#">slide_01</a></div>
+              <div id="slide_02"><a href="#">slide_02</a></div>
+              <div id="slide_03"><a href="#">slide_03</a></div>
+              <div id="slide_04"><a href="#">slide_04</a></div>
+              <div id="slide_05"><a href="#">slide_05</a></div>
+            </div>
+          </div><!-- // .slide_content -->
+        </div><!-- // .slide_wrapper -->
+      </div><!-- // .slide -->
+
+
+
+
+      <!-- <div class="slide"></div> -->
+
+
+    </div>
+
+  </body>
+</html>

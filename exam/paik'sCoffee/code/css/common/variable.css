@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* variable.css*/
+
+
+:root {
+  font-size: 16px;
+
+  /* color */
+  --color-white: #fff;
+  --color-black: #171717;
+  --color-gray1: #eee;
+  --color-gray2: #ccc;
+  --color-gray3: #a9a9a9;
+  --color-gray4: #777;
+  --color-gray5: #555;
+  --color-primary1: #fbe601;
+  --color-primary2: #0b1f60;
+  /* --color-hover: #0af;
+  --color-focus: #057; */
+
+
+  /* font */
+  --font-h2: 45px;
+  /* --font-h3: 36px; */
+  --font-btn: 26px;
+
+
+  /* size */
+  --width-320: 320px;
+  --width-768: 768px;
+  --width-1280: 1280px;
+  --width-1440: 1440px;
+  --width-1920: 1920px;
+
+
+  /* border */
+
+  /* @supports () {} */
+}
+

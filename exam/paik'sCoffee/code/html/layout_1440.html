@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- ayout_1440.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/layout_1280.css">
+
+  <!-- font:   https://fonts.google.com/specimen/Sunflower?preview.text_type=custom&preview.text=%EB%B9%BD%EB%8B%A4%EB%B0%A9%20%ED%99%98%EC%98%81%ED%95%A9%EB%8B%88%EB%8B%A4!%20&subset=korean -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <title>Paik's Coffee (1280px)</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.jpeg">
+  <link rel="apple-touch-icon" href="../images/favicon.jpeg">
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+
+      <!-- #headBox -->
+      <header id="headBox">
+        <div class="head_box_inner clearfix">
+          <h1>
+            <a href="#">
+            <span class="blind">빽다방</span>
+            <!-- <img src="../images/logo_1330_1920.svg" alt="빽다방 로고"> -->
+            </a>
+          </h1>
+          <nav>
+            <h2 class="blind">navigation</h2>
+            <ul class="gnb clearfix">
+              <li><a href="#">menu_01</a></li>
+              <li><a href="#">menu_02</a></li>
+              <li><a href="#">menu_03</a></li>
+              <li><a href="#">menu_04</a></li>
+              <li><a href="#">menu_05</a></li>
+              <li><a href="#">menu_06</a></li>
+              <li><a href="#">menu_07</a></li>
+              <li><a href="#">menu_08</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- #viewBox -->
+      <section id="viewBox">
+        <!-- 스팬태그 불필요! -->
+        <h2><span class="blind">viewBox</span></h2>
+        <div class="view_box_inner">
+          <div class="view_box_img">
+            <button type="button" class="prev_btn"><img src="../images/prev_btn.svg" alt=""><span class="blind">이전 이미지 버튼</span></button>
+            <button type="button" class="next_btn"><img src="../images/next_btn.svg" alt=""><span class="blind">다음 이미지 버튼</span></button>
+          </div>
+          <div class="view_box_indicator_bar clearfix">
+            <div class="indicator_circle showing"><a href="#">01</a></div>
+            <div class="indicator_circle"><a href="#">02</a></div>
+            <div class="indicator_circle"><a href="#">03</a></div>
+            <div class="indicator_circle"><a href="#">04</a></div>
+            <div class="indicator_circle"><a href="#">05</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- #mainBox -->
+      <main id="mainBox">
+        <div class="main_box_inner">
+          <article id="productBox">
+            <h2>Product</h2>
+            <div class="product_box_img_1">
+              <button type="button"><img src="../images/prev_btn.svg" alt="이전 상품 보기 버튼"><span class="blind">이전 상품 보기 버튼</span></button>
+              <button type="button"><img src="../images/next_btn.svg" alt="다음 상품 보기 버튼"><span class="blind">다음 상품 보기 버튼</span></button>
+            </div>
+            <div class="product_box_img_2">
+              <button type="button"><img src="../images/prev_btn.svg" alt="이전 상품 보기 버튼"><span class="blind">이전 상품 보기 버튼</span></button>
+              <button type="button"><img src="../images/next_btn.svg" alt="다음 상품 보기 버튼"><span class="blind">다음 상품 보기 버튼</span></button>
+            </div>
+          </article>
+          <article id="eventBox">
+            <h2>Event</h2>
+          </article>
+          <article id="snsBox">
+            <h2>SNS</h2>
+          </article>
+          <article id="familysitesBox">
+            <h2><span class="blind">familysitesBox</span></h2>
+            <div class="familysites_box_inner">
+              <ul class="clearfix">
+                <li class="familysite"><a href="#">familysite_01</a></li>
+                <li class="familysite"><a href="#">familysite_02</a></li>
+                <li class="familysite"><a href="#">familysite_03</a></li>
+                <li class="familysite"><a href="#">familysite_04</a></li>
+                <li class="familysite"><a href="#">familysite_05</a></li>
+                <li class="familysite"><a href="#">familysite_06</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </main>
+
+      <!-- #oftenSearchedBtns -->
+      <aside id="oftenSearchedBtns">
+        <h2><span class="blind">oftenSearchedBtns</span></h2>
+        <div class="often_searched_btns_inner clearfix">
+          <button type="button"><span>매장 찾기</span></button>
+          <button type="button"><span>창업 안내</span></button>
+          <button type="button"><span>고객 안내</span></button>
+        </div>
+      </aside>
+
+      <!-- #footBox -->
+      <footer id="footBox">
+        <div class="foot_box_inner clearfix">
+          <h2>
+            <a href="#">
+              <span class="blind">footBox</span>
+            </a>
+          </h2>
+          <div class="foot_box_content clearfix">
+            <div class="company_info"></div>
+            <div class="familysites_and_sns">
+              <div>
+                <button type="button" class="drop_down_menu_icon"></button>
+              </div>
+              <div class="sns_icon_set clearfix">
+                <button type="button" class="chat_icon"></button>
+                <button type="button" class="facebook_icon"></button>
+                <button type="button" class="instagram_icon"></button>
+              </div>
+            </div>
+            <address>&copy; All rights reserved ...</address>
+          </div>
+        </div>
+      </footer>
+
+
+
+
+    </div>
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>
+
+
+
+<!-- 초기 layout 구조 -->
+<!-- 
+<div id="wrap">
+  <header id="headBox"></header>
+  <section id="viewBox"></section>
+  <main id="mainBox">
+    <article id="productBox"></article>
+    <article id="eventBox"></article>
+    <article id="snsBox"></article>
+    <article id="familysitesBox"></article>
+  </main>
+  <aside id="essential_btns"></aside>
+  <footer id="footBox"></footer> -->

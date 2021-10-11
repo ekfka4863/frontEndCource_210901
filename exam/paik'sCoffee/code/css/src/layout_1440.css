@@ -1,0 +1,418 @@
+@charset "UTF-8";
+/* layout_1440.css*/
+
+
+/* 변수랑 폰트(눈누) 사용! */
+
+
+/* font - 나중에 common.css 에 옮기기!? */
+h2 {
+  font-size: 45px;
+  font-weight: 300;
+  text-align: center;
+}
+/* design
+============================================= */
+body {
+  background-color: #444;
+}
+#wrap {
+  width: 1440px;
+  height: auto;
+  min-height: 3330px;
+  margin: auto;
+  /* background-color: rgb(79, 220, 255); */
+}
+
+/* header 
+--------------------------------------------- */
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  width: 100%;
+  height: 130px;
+  background-color: #fff;
+}
+.head_box_inner {
+  width: 1240px;
+  /* height: 130px; */
+  height: auto;
+  margin: auto;
+  /* background-color: #aaa; */
+}
+  h1 {
+    float: left;
+
+    width: 300px;
+    height: 130px;
+    /* padding: 10px;
+    box-sizing: border-box; */
+    background-image: url(../../images/logo_1330_1920.svg);
+    /* background-color: #666; */
+  }
+  h1 > a {
+    display: block;
+    /* width: 300px; */
+    width: 100%;
+    /* height: 130px; */
+    height: 100%;
+    /* background-color: red; */
+  }
+  .head_box_inner > div {
+    float: right;
+
+    width: 881px;
+    height: 130px;
+    /* background-color: #666; */
+  }
+    .gnb {
+      width: inherit;
+      height: inherit;
+      padding: 45px 0 45px 36px;
+      /* background-color: #000; */
+    }
+      .gnb li {
+        float: left;
+        width: 100px;
+        height: 40px;
+        margin-right: 15px;
+        background-color: #aaa;
+      }
+      .gnb li:last-child {
+        width: 40px;
+        height: 40px;
+        margin-right: 0;
+        background: url(../../images/search_icon.svg);
+      }
+
+
+/* #viewBox */
+#viewBox {
+  width: 100%;
+  /* height: 700px; */
+  height: auto;
+  padding-top: 130px;
+  /* padding-bottom: 45psx; */
+  box-sizing: border-box;
+  background-color: #ddd;
+}
+  /* .view_box_inner {} */
+    .view_box_img {
+      position: relative;
+
+      width: 100%;
+      height: 600px;
+      background: url(../../images/view_box_img_1220_1440_1920.jpg) no-repeat left;
+      /* background-size: cover; */
+      background-size: 140% 100%;
+      /* background-color: #efa; */
+    }
+      .view_box_img button {
+        position: absolute;
+        top: 325px;
+        
+        width: auto;
+        height: auto;
+      }
+      .prev_btn {
+        left: 100px;
+      }
+      .next_btn {
+        right: 100px;
+      }
+    .view_box_indicator_bar {
+      width: auto;
+      height: 100px;
+      padding: 45px 0px;
+      background-color: #fff;
+    }
+    .indicator_circle {
+      float: left;
+      
+      width: 10px;
+      height: 10px;
+      margin-right: 20px;
+      border-radius: 100%;
+      background: #a9a9a9;
+    }
+      .indicator_circle:first-child {
+        margin-left: 638px;
+      }
+      .indicator_circle:last-child {
+        margin-right: 0;
+      }
+      /* indicator_circle event 관리 */
+      .indicator_circle.showing {
+        width: 50px;
+        height: 10px;
+        border-radius: 20px;
+        padding: 2.5px 0px;
+        background-color: #061F60;
+      }
+
+/* main
+--------------------------------------------- */
+#mainBox {
+  width: 1440px;
+  height: auto;
+  /* padding-top: 90px; */
+  background-color: #fff;
+}
+  .main_box_inner {
+    width: 1240px;
+    height: auto;
+    margin: auto;
+  }
+
+
+/* #productBox */
+  #productBox {
+    width: 100%;
+    height: 1000px;
+    background-color: #eee;
+  }
+    #productBox > h2 {
+      padding: 90px 0px;
+      box-sizing: border-box;
+    }
+    .product_box_img_1, 
+    .product_box_img_2 {
+      position: relative;
+
+      width: 100%;
+      height: 300px;
+      background-color: #a9a9a9;
+    }
+    .product_box_img_1 {
+      margin-bottom: 90px;
+    }
+    .product_box_img_1  button:first-child {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    } 
+    .product_box_img_1  button:last-child {
+      position: absolute;
+      top: 100px;
+      right: 100px;
+    } 
+    .product_box_img_2  button:first-child {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+    .product_box_img_2  button:last-child {
+      position: absolute;
+      top: 100px;
+      right: 100px;
+    }
+
+
+
+
+
+/* #eventBox */
+  #eventBox {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+  }
+  #eventBox > h2 {
+    padding: 52px 0px;
+    box-sizing: border-box;
+  }
+
+
+
+
+/* #snsBox */
+  #snsBox {
+    width: 100%;
+    height: 400px;
+    background-color: #eee;
+  }
+  #snsBox > h2 {
+    padding: 70px 0px;
+    box-sizing: border-box;
+  }
+
+
+
+/* #familysitesBox */
+  #familysitesBox {
+    width: 100%;
+    height: 150px;
+    background-color: #cdcdcd;
+  }
+  .familysites_box_inner {
+    padding: 35px 20px;
+    box-sizing: border-box;
+  }
+  .familysite {
+    float: left;
+
+    width: 150px;
+    height: 80px;
+    margin-right: 60px;
+    background-color: #7f7f7f;
+  }
+  .familysite:last-child {
+    margin-right: 0;
+  }
+
+/* #oftenSearchedBtns */
+#oftenSearchedBtns {
+  width: 100%;
+  height: 150px;
+  background-color: #eee;
+}
+  .often_searched_btns_inner {
+    width: 1240px;
+    height: inherit;
+    margin: auto;
+    padding: 35px 215px;
+    box-sizing: border-box;
+    background-color: #aaa;
+  }
+    .often_searched_btns_inner button {
+      float: left;
+
+      width: 150px;
+      height: 80px;
+      font-size: 26px;
+      font-weight: 500;
+      text-align: center;
+      border-radius: 10px;
+      margin-right: 180px;
+      background-color: #c4c4c4;
+    }
+    .often_searched_btns_inner button:last-child {
+      margin-right: 0;
+    }
+
+
+/* footer
+--------------------------------------------- */
+#footBox {
+  width: 100%;
+  height: 500px;
+  padding-top: 40px;
+  background-color: #fff;
+}
+  #footBox h2 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    background: url(../../images/the_born_logo_1200_1440_1920.svg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+  h2 a {
+    display: block;
+    width: 400px;
+    height: 80px;
+    /* background-color: red; */
+  }
+  .foot_box_inner {
+    width: 1240px;
+    height: auto;
+    margin: auto;
+    /* background-color: #ffa; */
+  }
+  .foot_box_content {
+    padding: 0px 120px;
+    box-sizing: border-box;  
+  }
+  
+    .company_info {
+      float: left;
+
+      width: 604px;
+      height: 220px;
+      margin-right: 50px;
+      margin-bottom: 40px;
+
+      background-color: #eee;
+    }
+
+    .familysites_and_sns {
+      float: left;
+
+      width: 346px;
+      height: 120px;
+      padding: 20px 25px;
+      box-sizing: border-box;
+      background-color: #eee;
+    }
+    .familysites_and_sns > div:first-child {
+      position: relative;
+      
+      width: 296px;
+      height: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+
+      .drop_down_menu_icon {
+        position: absolute;
+        right: 0;
+        
+        width: 20px;
+        height: 20px;
+        background: url(../../images/drop_down_icon.svg) no-repeat;
+    }
+
+      .sns_icon_set {
+        width: 296px;
+        height: 40px;
+        background-color: #fff;
+      }
+        .sns_icon_set button {
+          width: 40px;
+          height: 40px;
+        }
+        .chat_icon {
+          float: left;
+          background: url(../../images/chat_icon.svg) no-repeat;
+        }
+        .facebook_icon {
+          float: left;
+          background: url(../../images/facebook_icon.svg) no-repeat;
+        }
+        .instagram_icon {
+          float: left;
+          background: url(../../images/instagram_icon.svg) no-repeat;
+        }
+    
+    address {
+      float: left;
+
+      width: 1000px;
+      height: 30px;
+      text-indent: 5px;
+      line-height: 30px;
+      margin-bottom: 50px;
+      background-color: #eee
+    }
+
+
+
+
+
+/* 
+#headBox {}
+
+#viewBox {}
+
+#mainBox {}
+
+  #productBox {}
+  #eventBox {}
+  #snsBox {}
+  #familysitesBox {}
+
+#oftenSearchedBtns{}
+
+#footBox {} */
