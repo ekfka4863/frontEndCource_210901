@@ -1,0 +1,215 @@
+@charset "UTF-8";
+/* test.css*/
+
+
+/* design 
+-------------------------------------*/
+#wrap {
+  width: 1280px;
+  height: aut o;
+  padding-bottom: 700px;
+}
+h1 {
+  width: auto;
+  height: auto;
+  border-bottom: 1px solid #000;
+  margin-bottom: 30px;
+}
+.slide {
+  width: 900px;
+  height: 750px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 30px 10px;
+  border: 1px solid #333;
+}
+.slide_wrapper {
+  /* 슬라이드의 버튼과 인디케이터의 기준이 되게끔... */
+  position: relative;
+
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  background-color: #ccc;
+}
+
+/* 버튼 
+-------------------------------------*/
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 114%;
+  height: 10px;
+  background-color: #aaa;
+}
+.btn button {
+  /* margin-top: -20px; */
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #acf;
+}
+.next {
+  float: right;
+}
+.prev {
+  float: left;
+}
+/* 버튼에 마우스 올렸을 때와 포커스가 갈때의 효과 지정 */
+.btn button:hover {
+  box-shadow: 3px 3px 3px #59a;
+}
+.btn button:focus {
+  box-shadow: 3px 3px 3px #157 inset;
+  background-color: #7aa;
+}
+
+
+/* 인디케이터
+-------------------------------------*/
+.indicator {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  box-sizing: content-box;
+  background-color: #555;
+}
+.indicator ul {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height:0;
+}
+.indicator li {
+  /* float: left; */
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 30px;
+  line-height:0;
+}
+.indicator li:last-child {
+  margin-right: 0;
+}
+
+.indicator a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #fd7;
+}
+
+/* 인디케이터가 가리키는 이미지가 있을 때 해당 li 태그에는 .active라는 클래스가 
+들어가는데.... 근데 그렇게 되면 아래와 같이 a태그와 li 태그를 스타일링 한다...  */
+.indicator li.active > a {
+  border-radius: 30px;
+  box-sizing: border-box;
+  background-color: #d05;
+}
+.indicator li.active {
+  /* 이때, width 값을 변경할 때는 a 태그를 직접건드리는게 
+  아니고 a 태그는 width 도 height 도 100%니까 a태그를 감싸고 있는 
+  li 태그를 건드리는 것이 맞다! */
+  width: 60px;
+}
+
+/* 인디케이터를 호버하거나 포커스를 줬을 때의 효과 지정 */
+.indicator a:hover {
+  box-shadow: 3px 3px 3px #d05;
+}
+.indicator a:focus {
+  border: 3px solid #310;
+  outline: 0;
+}
+
+
+
+
+/* 슬라이드 이미지들 
+-------------------------------------*/
+.slide_content {
+  width: 100%;
+  height: 100%;
+  /* 필수! */
+  overflow: hidden;
+}
+.slide_con_wrap {
+  /* 안에 들어올 각 슬라이드 이미지들의 기준점이 되준다. */
+  position: relative;
+
+  height: 100%;
+}
+
+
+
+
+
+/* ===================================================== */
+/* 슬라이드 이미지는 absolute 처리에 width값이랑 height값 100% 처리하기 */
+.position_slide .slide_con_wrap > div {
+  /* 슬라이드 이미지가 전부 보일 필요는 없으니까 일단 display: none; 처리하고... */
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  /* width: auto;
+  height: auto; */
+}
+/* 대신 여기서 .active 라는 클래스를 갖는 슬라이드 이미지만 보이게끔 스타일링... */
+.position_slide .slide_con_wrap > div.active {
+  display: block;
+  z-index: 10;
+}
+
+/* 각 슬라이드 이미지에 랜덤 색상을 적용해서 구별할 수 있게한다 */
+#slide_01 {
+  background-color: #B1BAD2;
+}
+#slide_02 {
+  background-color: #EF2D4D;
+}
+#slide_03 {
+  background-color: #EEB29E;
+}
+#slide_04 {
+  background-color: #837A08;
+}
+#slide_05 {
+  background-color: #4861FE;
+}
+
+
+
+
+
+/* ===================================================== */
+/* 가로형 슬라이드 */
+.horizontal_slide .slide_con_wrap {
+  --slide_len: 5;
+  width: 500%;
+  width: calc(100% * var(--slide_len));
+  height: 100%;
+  
+}
+.horizontal_slide .slide_con_wrap > div {
+  float: left;
+  width: 20%;
+  width: calc(100% / var(--slide_len));
+  height: 100%;
+}
+
