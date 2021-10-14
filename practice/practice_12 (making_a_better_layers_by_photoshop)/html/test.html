@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test.css" />
+    <title>디자이너에게 받은 시안을 활용하여 레이아웃 구성하는 연습</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+
+        <!-- #sideBox -->
+        <aside id="sideBox" class="clearfix">
+          <div class="side_inner">
+            <ul class="clearfix">
+              <li><a href="#">home</a></li>
+              <li><a href="#">study</a></li>
+              <li><a href="#">education<span class="blind">더 보러가려면 클릭</span></a></li>
+            </ul>
+          </div>
+        </aside><!-- // #sideBox -->
+
+      <div class="main_wrapper clearfix">
+        <!-- #headBox -->
+        <header id="headBox">
+          <!-- <div class="head_box_inner"> -->
+            <h1><a href="#">gcass</a></h1>
+            <nav class="navigation">
+              <ul>  
+                <li><a href="#"><span>about</span></a></li>
+                <li><a href="#"><span>study</span></a></li>
+                <li><a href="#"><span>photo</span></a></li>
+                <li><a href="#"><span>blog</span></a></li>
+                <li><a href="#"><span>press</span></a></li>
+                <li><a href="#"><span><abbr title="질의응답란">q &amp; a</abbr></span></a></li>
+              </ul>
+            </nav>
+          <!-- </div> -->
+        </header><!-- // #headBox -->
+
+        <!-- #viewBox -->
+        <section id="viewBox">
+          <div class="view_box_inner">
+            <div class="view_box_img_1">
+              <span class="blind">뷰박스 이미지 1</span>
+            </div>
+            <div class="view_box_img_2">
+              <span class="blind">뷰박스 이미지 2</span>
+            </div>
+          </div>
+        </section><!-- // #viewBox -->
+      </div>
+
+      <!-- #footBox -->
+      <footer id="footBox">
+        <div class="foot_box_inner clearfix">
+          <h2><a href="#">gcass</a></h2>
+          <!-- linked elements -->
+          <!-- div>ul>li*4>a -->
+          <div class="foot_box_linked_elems clearfix">
+            <!-- location이랑 facebooK 아이콘만 따로 묶고... -->
+            <div class="linked_icons">
+              <!-- 나중에 요기 아래 부분 ul말고 dl로 바꾸는 것 고려! -->
+              <ul class="clearfix">
+                <li class="location_linked">
+                  <a href="#"><span class="blind">location</span></a>
+                </li>
+                <li class="facebook_linked">
+                  <a href="#"><span class="blind">facebook</span></a>
+                </li>
+              </ul>
+            </div>
+            <!-- webpage랑 portfolio는 또 따로 묶기 -->
+            <div class="linked_url_boxes">
+              <dl>
+                <!-- <dt><span class="blind">webpage</span></dt> -->
+                <dt>webpage</dt>
+                <dd><a href="#">http://xidoweb.co.kr</a></dd>
+                <dt>portfolio</dt>
+                <dd><a href="#">http://webportfolio.github.io</a></dd>
+              </dl> 
+            </div>
+          </div>
+          <address class="address">
+            <p class="company_location">경기도 안양시 만얀구 안양 1동 599-21 만안빌딩 2층</p>
+            <p class="copyright">&copy; (C) 2021. xidoweb. All right reserved.</p>
+          </address>
+          <div class="foot_box_notification">
+            <p class="notification_text">본 페이지는 학습용으로 제작되었습니다.</p>
+          </div>
+        </div>
+
+      </footer><!-- // #footBox -->
+
+    </div><!-- #wrap -->    
+  </body>
+</html>

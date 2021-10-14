@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test_2.css" />
+    <title>디자이너에게 받은 시안을 활용하여 레이아웃 구성하는 연습</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+
+      <header id="headBox">
+        <h1 class="blind_wrap">
+          <a href="#">
+            <span>gcass</span>
+          </a>
+        </h1>
+        <nav class="gnb">
+          <h2 class="blind">navigation</h2>
+          <ul>
+            <li><a href="#">about
+              <i class="fas fa-caret-right"></i>
+            </a></li>
+            <li><a href="#">study
+              <i class="fas fa-caret-right"></i>
+            </a></li>
+            <li><a href="#">photo
+              <i class="fas fa-caret-right"></i>
+            </a></li>
+            <li><a href="#">blog
+              <i class="fas fa-caret-right"></i>
+            </a></li> 
+            <li><a href="#">press
+              <i class="fas fa-caret-right"></i>
+            </a></li>
+            <li><a href="#"><abbr title="질의응답">Q<span>&amp;</span>A</abbr></a></li>
+          </ul>
+        </nav>
+      </header><!-- // #headBox-->
+
+      <section id="viewBox">
+        <h2 class="blind">gcass 대표광고</h2>
+        <div class="view_img_1">
+          <!-- 광고용 이미지 처리 -->
+        </div>
+        <div class="view_img_2">
+          <!-- 광고용 이미지 처리 -->
+          <p class="blind">
+            Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. Aut eum, 
+            voluptas saepe voluptate velit possimus 
+            suscipit, aspernatur vel, deserunt fugit 
+            repellat illum corrupti dolores voluptates 
+            consequuntur odio ex iste eius!
+          </p>
+        </div>
+      </section><!-- // #viewBox-->
+
+      <aside id="sideBox">
+        <h2 class="blind">utility navigation</h2>
+        <ul class="unb">
+          <li class="home"><a href="#">home</a></li>
+          <li class="study"><a href="#">study</a></li>
+          <li class="education"><a href="#">education<span></span></a></li>
+        </ul>
+      </aside><!-- // #sideBox-->
+
+      <footer id="footBox" class="clearfix"> 
+        <h2><span class="blind">gcass information</span></h2>
+        <div class="site_service"></div>
+          <h3 class="blind">회사 위치 및 관련</h3>
+        <address></address>
+        <div class="other">
+          <h3 class="blind">family site 및 추가 내용</h3>
+        </div>
+      </footer><!-- // #footBox-->
+
+    </div><!-- #wrap -->    
+
+  </body>
+</html>

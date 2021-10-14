@@ -181,7 +181,7 @@ h1 {
 .links_inner > a::after {
   /* 엔티티 코드 말고... 
   유니코드는 사용해도 됨! */
-  content: '\007c';
+  content: '\0x96';
   font-size: 2px;
   /* 솔루션: 래핑하는 요소 ul>li든 span태그든 필요! 
   그리고 그 래핑요소를 기준으로 가상 요소를 만들어서 
@@ -311,3 +311,59 @@ h1 {
   height: 50px; */
   background-color: #7ff;
 }
+
+
+
+
+
+/* test */
+.test_ul {
+  width: 400px;
+  height: 50px;
+  background-color: #efe;
+}
+  .test_ul > li {
+    position: relative;
+
+    width: calc(400px / 4);
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 30px;
+    background-color: #faf;
+  }
+  .test_ul a {
+    display: block;
+    
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #fff;
+    background-color: #fd5;
+  }
+    .test_ul span {
+      color: #fff;
+    }
+
+
+  /* 이제 가상요소를 추가... */
+  .test_ul li:after,
+  .test_ul li::after {
+    position: absolute;
+    content: '\25B6';
+    /* content: '>'; */
+    /* 패딩 뺀 알맹이 a의 높이값 나누기 2는 15px */
+    top: 15px;
+    right: 10px;
+    z-index: 10;
+
+    width: 15px;
+    height: 20px;
+
+    /* padding-top: 2px;
+    padding-left: 2px;
+    box-sizing: border-box; */
+    line-height: 20px;
+
+    /* background-color: #19a; */
+  }
