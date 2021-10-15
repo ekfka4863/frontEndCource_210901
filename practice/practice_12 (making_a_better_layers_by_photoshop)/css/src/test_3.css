@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* test_3.css*/
+
+
+#wrap {
+  width: 900px;
+  height: auto;
+  /* margin: auto; */
+  padding-bottom: 1000px;
+  box-sizing: content-box;
+}
+
+.part {
+  width: 100%;
+  height: 400px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  background-color: #ddd;
+}
+
+.bg_01 {
+  /* 기준: 작성중인 css 문서 */
+  /* ""를 사용하는 것을 권장! 그리고 css는 쌍따옴표를 권장! */
+  background-image: url("../../images/icons/arrow.svg");
+  /* repeat || no-repeat || repeat-x || repeat-y */
+  background-repeat: no-repeat;
+  /* 기본 백그라운드 위치는 0 0 
+    0 0 || left top || right top || right bottom || left center ... X 
+    -> 이런 값들은 쓰지 않는 것을 권장!
+    -> 일단 텍스트 값이기 떄문에 숫자로 된 단위보다 느리게 반응하고, 정확한 수치가 없다는 점이 단점... 
+      그래서 차라리 %가 더 낫다! 
+      하지만 이게 또 문제인게... 이 퍼센트 에이지가 이미지 크기를 나눈것만큼 비례하기 때문에 %의 기준점이 바뀔수 있다는 단점이 ... 
+      다시, 예를 들어 탑, 바텀, 라이트, 레프트는 각각 그 기준/시작점이 똑같다. 하지만 %는 그게 아니라는 점. 
+  */
+  /* background-position: 0 0;
+  background-position: right top; */
+  background-position: center;
+}
+.bg_02 {
+  background-image: url("../../images/background/stairs.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* contain || cover || 단위 
+    이미지 전체 무조건 다 보이게 || 요소에 빈틈없이 꽉차게 || (정한 단위값의 크기값으로), width/height값이 존재한다 
+  */
+  background-size: auto 100%;
+}
+.bg_03 {
+  background-image: url("../../images/icons/chinchilla.png");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-position: 50% 100%;
+  /* background-size: 50px auto; */
+  background-size: initial;
+}
+.bg_04 {
+  background-image: url("../../images/icons/whale.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: 100px 50%;
+  
+}
+.bg_05 {
+  /* background: url('../../images/icons/pig.png') no-repeat 50% 50%;
+  background-size: initial; */
+  /* 이때, 몇몇 구형 브라우저는 축약형이 안나올수도 있다는 단점이 있음.
+  그리고 보기에도 불편한 단점이 있다. 
+  아래의 예시를 보자... */
+
+  /* 이미지 겹치기 반복 가능 */
+  background-image: url("../../images/icons/arrow.svg"), url("../../images/icons/chinchilla.png"), url("../../images/icons/pig.png");
+  background-repeat: no-repeat, repeat-x, repeat-y;
+  background-position: 50% 0, 50% 50%, 100% 80%;
+  background-size: 20px auto, 50px auto, auto 25px;
+
+  /* background: url('../../images/icons/arrow.svg') no-repeat 50% 0,
+              url('../../images/icons/chinchilla.png') repeat-x 50% 50%,
+              url('../../images/icons/pig.png') no-repeat 100% 80% ;
+  background-size: 20px auto, 50px auto, auto 25px;  */
+  /* 아래의 축약형은 너어무 정신이 없다! 
+  그러니까 이해가 된다면 상관없지만... 그냥 위에 따로 일일이 다 적어주는 것을 추천!
+  but 선택은 나의 몫... */
+}
+.bg_06 {
+  /* background-image: linear-gradient(각도, colorA, colorB); */
+  /* background-image: linear-gradient(45deg, #bbb, #fc0, #f07, #547, rgba(45, 200, 45, 0.2)); */
+  /* 같은 퍼센트에 두개의 색상을 주면... 컷팅이 일어난다... */
+  background-image: linear-gradient(45deg, #bbb 30%, #f50 40%, #fc0 40%);
+  /* 같은 퍼센트에 두개의 색상을 주면... 컷팅이 일어난다... 
+  그리고 그 이후를 투명색으로 줘서 어떠한 효과/트릭을 만들 수 있음! 
+  응용 버전! */
+  background-image: linear-gradient(45deg, #bbb 30%, #f50 40%, rgba(0, 0, 0, 0) 40%);
+}
+.bg_07 {
+  /* 가운데를 중심으로 색이 퍼져나가는 그라데이션 
+    - closest-side -> 무조건 정 가운데서 넘치지 않게끔, side에 가장 근접한 부분까지/그걸 리미트로
+                      radial한 그라데이션을 만들어 주는 것! 
+    - circle at 100% -> 여기서 at이 쉽게 말하면 위치라고 보면 된다... 
+                        위의 예시는 x축에서 100%라는 말이고, 만약 div가 있고 at 100% 0이라고 헀으면 
+                        div의 오른쪽 상단 모서리를 중심으로 캔버스 돌리듯이 radial한 그라데이션을 만들게 될 것!
+    - ellipse 도 있 는데 이거는 어디서 부터 중심을 잡고 radial 한 그라데이션을 만들지 좌표를 찍어주는 역할까지 한다 ... 
+      https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient()
+  */
+  background-image: radial-gradient(closest-side, #fa0 10%, #77a, #fff);
+  background-image: radial-gradient(circle at 100%, #af0, #a70);
+}
+.bg_08 {
+  background-image: url("../../images/background/bread.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  /* background-attachment: scroll;  -> 우리가 아는 그거~  */
+  /* 아래의 속성을 조심해야함! 우리가 포지션 픽스드 하면 브라우저를 기준으로 
+  해버리듯이 백그라운드 어태치먼트의 픽스드도 브라우저를 기준으로 한다. 그래서 
+  해당 속성을 적용한 뒤 스크롤을 내리면 ... 픽스드 된 것을 확인할 수 있다~!  */
+  background-attachment: fixed;
+  /* 픽스드를 하면 브라우저를 기준으로 한다고 했는데, 그 말은 더 정확히 하자면 
+  지금 켜져 있는 브라우저 크기 만큼을 e.g. background-size가 cover면 브라우저 크기만큼 전체 
+  채우고 있을텐데, 해당 브라우저를 마우스로 좀 더 키우면 그 크기만큼 더 늘어난다.
+  그래서 비록 브라우저가 아닌 요소의 백그라운드 이미지로 줬을지언정...
+  브라우저를 기준으로 백그라운드 이미지 사이즈와 위치가 설정된다는 사실을 기억하자!*/
+} 
+
+.bg_09 {
+  /* width: 114px;
+  height: 112px; */
+  width: 80px;
+  height: 80px;
+  background-image: url("../../images/icons/business_icons.jpg");
+  background-repeat: no-repeat;
+  /* 틀(html)의 역할인 요소는 가만히 있고, 스프라이프 이미지를 움직여야하는 것을 이해하는 것이 포인트! 
+  즉, .bg_09라는 틀은 가만히 있고... 이미지가 왼쪽으로 움직어야하니까 -값이 아오는 것... 그리고 또 Y축을 기준으로 
+  위로 올라가야 하니까 또 -값을 갖게 되는 것이다! */
+  /* background-position: -50px -4px; */
+  background-position: -190px -230px;
+  background-size: initial;
+} 
+.bg_10 {
+  width: 58px;
+  height: 58px;
+  background-image: url("../../images/icons/istock_icon.jpg");
+  background-repeat: no-repeat;
+  /* background-position: -16px -16px; */
+  /* background-position: -18px -190px; */
+  /* background-position: -18px -305px; */
+  background-position: -16px -16px;
+  /* background-position: -16px -16px; */
+  /* background-position: -378px -16px; */
+  background-size: initial;
+}
+
+
+
+/* is 기법 */
+/* div.part */
+button {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: #fd0;
+  border-radius: 4px;
+  background-image: url("../../images/icons/istock_icon.jpg");
+  background-repeat: no-repeat;
+  background-position-x: -20px;
+}
+.test1 {
+  /* background-position: -20px -19px; */
+  background-position-y: -19px;
+  transition: all 300ms ease;
+}
+.test1:hover {
+  background-position-x: -240px;
+}
+.test1:active {
+  background-position-x: -380px;
+}
+.test2 {
+  /* background-position: -20px -192px; */
+  background-position-y: -192px;
+}
+.test2:hover {
+  background-position-x: -240px;
+}
+.test2:active {
+  background-position-x: -380px;
+}
+.test3 {
+  /* background-position: -20px -249px; */
+  background-position-y: -249px;
+}
+.test3:hover {
+  background-position-x: -159px;
+}
+.test3:active {
+  background-position: -308px -249px;
+  background-position-x: -308px;
+}
+
+
+
+
+
+
+/* is 기법 개인 연습 */
+.prac > button {
+  width: 102px;
+  height: 86px;
+  background-color: #efa;
+}
