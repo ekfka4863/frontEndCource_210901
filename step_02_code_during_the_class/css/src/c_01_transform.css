@@ -1,0 +1,311 @@
+
+#wrap {
+  width: 800px;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+  padding-bottom: 500px;
+}
+h1 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+h2 {
+  border-bottom: 1px solid #171717;
+}
+.part {
+  width: 95%;
+  height: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 8px;
+  border: 1px solid #333;
+}
+h3 {
+  background-color: #ddf;
+}
+.part ul {
+  width: 100%;
+  height: auto;
+  background-color: #faa;
+}
+.part li {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  border: 1px solid #fa0;
+  margin: 8px;
+  color: #fff;
+  list-style: none;
+  background-color: #07a;
+}
+
+/* ====================================================== */
+/* translate - (단순히) 위치를 이동 시키는 아이 */
+.translate li {
+  /* event */
+  transition: all 500ms linear;
+}
+.translate:hover li:nth-child(1) {
+  transform: translateX(100px);
+}
+.translate:hover li:nth-child(2) {
+  transform: translateY(-100px);
+}
+.translate:hover li:nth-child(3) {
+  transform: translate(-120px, 50px);
+}
+.translate:hover li:nth-child(4) {
+  transform: translateZ(500px);
+}
+/* transform의 기준 오로지 자신의 크기를 기준으로 본다.
+즉, 부모를 기준으로 50%가 아니고... 
+자신의 크기의 50%만큼 움직이는 것이다!  */
+.translate:hover li:nth-child(5) {
+  transform: translate(50%);
+}
+
+
+/* --------------------------- */
+/* scale - 크기를 변경 시키는 아이 */
+.scale li {
+  margin: 30px;
+  transition: all 400ms ease;
+}
+/* 안에 있는 글짜/내용이 그대로 같이 커진다는 점을 조심! */
+.scale:hover li:nth-child(1) {
+  transform: scale(1.2);
+  /* transform: scale(120%); */
+}
+.scale:hover li:nth-child(2) {
+  /* transform: scaleX(1.5); */
+  transform: scaleX(150%);
+}
+.scale:hover li:nth-child(3) {
+  /* transform: scaleY(0.7); */
+  transform: scaleY(70%);
+}
+.scale:hover li:nth-child(4) {
+  transform: scale(0.5, 1.5); 
+}
+.scale:hover li:nth-child(5) {
+  transform: scaleZ(2);
+}
+
+
+/* --------------------------- */
+/* skew - 왜곡. 단, 안에 내용도 같이 왜곡이 된다. */
+.skew li {
+  margin: 30px;
+  transition: all 300ms ease-in;
+}
+.skew li:nth-child(1) {
+  transform: skew(30deg);
+}
+.skew li:nth-child(2) {
+  transform: skewY(30deg);
+}
+.skew li:nth-child(3) {
+  transform: skew(30deg, 15deg);
+}
+.skew li:nth-child(4) {
+  transform: skewX(45deg);
+}
+/* 만약 안에 있는 내용은 왜곡을 주고 싶지 않으면, 반대로 skew 주면된다.
+단, span은 인라인이라 블록요소로 만든 후 skew를 적용할 수 있다. */
+.skew li:nth-child(4) span {
+  display: block;
+  transform: skewX(-45deg);
+}
+
+
+/* --------------------------- */
+/* rotate - 특정 각도만큼 돌아간다. 대신 ...
+기준점이 z축이다. 가운데를 콕 찔러서 돌아가는 형식이니까!
+(cf. 다른 것들은 기본축이 x축인 경우가 ...) */
+.rotate {
+  margin: 40px;
+  transition: all 30px ease-in;
+}
+.rotate:hover li:nth-child(1) {
+  transform: rotate(45deg);
+}
+.rotate:hover li:nth-child(2) {
+  transform: rotateY(180deg);
+}
+.rotate:hover li:nth-child(3) {
+  transform: rotateX(30deg);
+}
+.rotate:hover li:nth-child(4) {
+  /* 기본축이 z축이기 때문에 각도를 여러개를 사용하고 싶다면 rotate3D라고 해줘야함.
+  transform: rotate3d(x, y, z, a) */
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+/* 하지만, 이쯤되면... 그냥 메트릭스를 사용하는 것이 나을 수도 ... */
+.rotate:hover li:nth-child(5) {
+  /* 팁! 간혹 플로트를 사용한 경우 transform rotate가 안먹힐 때가 있는데... 
+  그때 그냥.. 1도라도 적게 해서 돌려주면 나타나기도... */
+  /* transform: rotateY(179deg); */
+  /* transform: rotateY(180deg); */
+  /* 뒷면을 보이게한다... */
+  /* backface-visibility: hidden; */
+}
+
+.rotate li:nth-child(5) {
+  position: relative;
+  width: 200px;
+  height: 150px;
+}
+.rotate li div {
+  width: 100%;
+  height: 100%;
+}
+.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  
+  transform: rotateY(0deg);
+  background-color: #fa0;
+  backface-visibility: hidden;
+}
+.back {
+  background-color: #acf;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.rotate li:hover .front { 
+  transform: rotateY(180deg);
+}
+.rotate li:hover .back {
+  transform: rotateY(360deg);
+}
+
+/* 카드 뒤집기 문제 발생 - 확인하기!!! */
+
+
+/* --------------------------- */
+.rotate2 {
+  /* flaot left를 감싸고 있는 부모가 같이 float left를 갖으면 
+  자동으로 높이값을 갖게된다.  */
+  /* float: left; */
+}
+/* 그리고 아래와 같이 앞에 .part를 붙여주면 콤팩트한 사이즈로 만들어줌... */
+.part .rotate2 {
+  /* perspective: 10px;  */
+  /* perspective: 100px;  */
+  /* perspective: 1000px;  */
+  perspective: 500px; 
+  float: left;
+  width: auto;
+}
+.rotate2 li {
+  float: left;
+  transition: all 1500ms linear;
+  text-align: center;
+  line-height: 100px;
+}
+.rotate2:hover li {
+  transform: rotateY(360deg);
+  /* transform: rotateX(360deg); */
+}
+
+/* --------------------------- */
+.part .rotate3 {
+  float: left;
+  width: auto;
+  margin-top: 40px;
+}
+.rotate3 li {
+  float: left;
+  transition: all 1500ms linear;
+  text-align: center;
+  line-height: 100px;
+}
+
+.rotate3:hover li {
+  /* li 각각 원근법이 다르게 먹혔다는 말! 
+  위의 예시에서는 .rotate2 전체에 원근법이 적용된 것과는 다름!  */
+  transform: perspective(500px) rotateX(180deg);
+}
+
+
+/* =============================================== */
+/* 복합수행/- 사용 - 순서가 의미가 있음! */
+.multi_tr li {
+  /* transition: all 1000ms ease; */
+  transition: all 2000ms ease;
+}
+.multi_tr:hover li {
+
+}
+.multi_tr:hover li:nth-child(1) {
+  /* 이동을 먼저한 뒤/하면서 회전 */
+  transform: translateX(500px) rotate(180deg);
+
+}
+.multi_tr:hover li:nth-child(2) {
+  /* 회전을 먼저한 뒤/하면서 이동 */
+  /* transform: rotate(180deg) translateX(500px); */
+  transform: rotate(360deg) translateX(500px);
+}
+/* 회전 기준을 정하는 아이가 transform-origin */
+.multi_tr li:nth-child(3) {
+  transform-origin: 100% 100%;
+}
+.multi_tr:hover li:nth-child(2) {
+  transform: rotate(360deg);
+}
+
+/* 정리 */
+/* 
+  transform: translate() || scale() || skew() || rotate() || perspective();
+  perspective: 숫자가 작을수록 가까운처리;
+  transform-origin: 기준의 좌표를 지정하는 형태;
+  backface-visibility: hidden || visible; -> 뒷면을 보일거냐 말거냐를 정할 수 있음!
+*/
+
+
+
+/* ============================================== */
+#perspectiveWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+  min-width:  1440px;
+  height: 400px;
+  padding-bottom: 500px;
+  padding-top: 50px;
+  box-sizing: content-box;
+  background-color: #eee;
+}
+.pers_card {
+  width: 250px;
+  height: 400px;
+  background-color: #acf;
+  background-image: linear-gradient(45deg, #acf, #fac);
+  border-radius: 5px;
+  /* transition: all 2s linear; */
+  transition: all 1s linear;
+}
+#perspectiveWrap {
+  /* 감싸는 박스에 perspective를 통으로 준다... */
+  transform: perspective(500px);
+
+  /* 이런것도 있음~ */
+  /* perspective-origin: left; */
+}
+#perspectiveWrap:hover .pers_card {
+  /* transform: rotateY(360deg); */
+  /* transform: rotateY(45deg); */
+  /* #perspectiveWrap에 perspective를 주면 아래와 같이 그 자식 요소들에게
+  로테이트를 따로 주어야 한다 ... */
+  /* transform: rotateX(45deg); */
+  /* 개별적으로 모두에게 perspective를 주는 것...  */
+  transform: perspective(500px) rotateX(45deg);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- ~/Documents/dev/frontEndCourse_210901/step_02_code_during_the_class/html/b_02_video.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <link rel="stylesheet" href="../css/src/b_02_video.css">
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../../favicon.png">
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="./a_content.html">웹</a></h1>
+
+      <div class="part">
+        <h2>영상첨부</h2>
+        <div class="movie">
+          <!-- poster 로 썸네일 같이 사진을 정할 수 있음... -->
+          <!-- <video class="video" poster="../img/dog-g28a1e863a_1920.jpg"> -->
+          <video class="video" muted autoplay loop preload>
+            <!-- webm이 실행되면 뒤에꺼는 실행 안됨... 마치 font-family 처럼... -->
+            <source src="../multi/video/video_with_sound/video.webm" type="video/webm" />
+            <source src="../multi/video/video_with_sound/video.ogg" type="video/ogg" />
+            <source src="../multi/video/video_with_sound/video.mp4" type="video/mp4" />
+            <p>현재 사용하고 계신 브라우저는 영상을 지원하지 않습니다. <br />
+            <a href="https://google.com/chrome/">최신 브라우저</a>를 이용하여 주세요.</p>
+          </video>
+        </div> 
+      </div><!-- // .part -->
+      
+      <div class="part">
+        <h2>iframe - 외부 문서 불러오기</h2>
+        <div class="movie">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4Vq-l-bdQvU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div><!-- // .part -->
+
+    </div><!-- // #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

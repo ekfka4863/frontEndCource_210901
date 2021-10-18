@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- ~/Documents/dev/frontEndCourse_210901/step_02_code_during_the_class/html/b_01_audio.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../fonts/IBMPlex/IBMPlex.css">
+  <link rel="stylesheet" href="../css/src/b_01_audio.css">
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="./a_content.html">웹</a></h1>
+
+      <div class="part">
+        <h2>audio 불러오기</h2>
+        <p>audio는 음성파일을 불러오는 태그이다.</p>
+        <!-- 오디오 불러오는 방법 1 -->
+        <div class="sound" controls preload loop muted>
+          <audio src="../multi/audio/sound_effect/jazz-loopwav-7163.mp3" controls>
+          <!-- 만약 구형 브라우저에서 audio가 지원이 안돼서 안 보일경우 보이게될 메세지 -->
+          <p>
+            현재 사용하고 있는 브라우저는 audio 파일을 지원하지 않습니다. <br />
+            <a href="https://google.com/chrome">최신 브라우저</a>를 사용하세요.
+          </p>
+        </audio>
+        </div>
+        <!-- 오디오 불러오는 방법 2 -->
+        <div class="sound">
+          <!-- 나중에 실질적인 컨트롤은 아래와 같이 .audio_btn부를 만들서 js를 통해 컨트롤하는 것! -->
+          <div class="audio_btn">
+            <button type="button">재생&sol;일시정지</button>
+            <button type="button">음소거</button>
+          </div>
+          <!-- !ogg가 지원되면 밑에 mp3가 실행 X! -->
+          <!-- 왜냐면...
+          html은 먼저 처리하는 것을 수행하고, 동일하지만 나중에 오는 요소를 배제하기 때문.
+          css는 하나의 속성에서 여러개를 작성하는 경우, 앞의 것을 수행한 뒤, 뒤어 것으 배제시킨다.
+          e.g. font-family -> 앞에 적용되는게 있으면 뒤에 것은 적용 안됨!
+          css에서 동일 속성이 여러개 존재하면 이전 속성은 사라지고 뒤에오는 속성을 처리한다. 
+          e.g. width: 100%; width: 40px;가 있으면 실제로 작동하는 거는 40px이다.  -->
+          <audio controls>
+            <source src="../multi/audio/sound_effect/140-bpm-amen-break-original-processed-6945.ogg">
+            <source src="../multi/audio/sound_effect/140-bpm-amen-break-original-processed-6945.mp3" />
+            <p>
+              현재 사용하고 있는 브라우저는 audio 파일을 지원하지 않습니다. <br />
+              <a href="https://google.com/chrome">최신 브라우저</a>를 사용하세요.
+            </p>
+          </audio>
+        </div>
+      </div><!-- // .part -->
+
+    </div><!-- // #wrap -->
+
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* b_02_video.css*/
+
+
+#wrap {
+  width: 800px;
+  height: auto;
+  margin: auto; 
+}
+
+.part {
+  width: 100%;
+  height: 500px;
+  margin: 50px auto;
+  padding: 8px;
+  border: 1px solid #333;
+}
+
+
+/* 응용편 */
+.movie {
+  position: relative;
+
+  width: 100%;
+  height: 450px;
+  background-color: #ddd;
+
+  /* video에 poster 외에도 ... 아예 배경이미지로 ... */
+  /* poster는 영상이 로드가 되야지 보여지는 아이기 때문에 ...
+  영상이 다 다운 받아지기 전에는 사실 빈박스만 보이게 된다...
+  그러니까 이때 배경이미지로 이미지를 넣어주면 ... 그러면 빈 박스만 
+  보이는 일은 없을 것~!! */
+  background-image: url("../../img/dog-g28a1e863a_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  /* 넘쳐흘러진 영역을 hidden */
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* translate은 자기 자신의 크기를 기준으로 한다... */
+  transform: translate(-50%, -50%);
+
+  /* 전체 화면이 될 수 있게... 마치 엔터테이먼트 안테나처럼... */
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  max-width: 120%;
+  min-height: 100%;
+  max-height: 120%;
+}
+
+/* 백그라운드 강아지 이미지 확인차... */
+/* video {
+  display: none;
+} */
+/* 
+  display: none;의 의미
+  존재하지 않도록 처리하는 속성 (하지만 태그는 여전히 존재!)
+    - 스크린리더에서 동작하지 않도록 처리하는 기능 
+    - audio/video 요소의 기능은 소리가 담겨져 있거나, 재생이 되는 요소이기 때문에 ...
+    이렇게 하기! 
+      1. 무조건 muted를 꼭 넣어준다. 꼭! 
+      또는 volume="0" 또는 "false"를 꼭 써준다... 
+      2. 하지만 video/audio가 아예 나타나지 않아야 하는 상황이라면...
+      그러면 가장 좋은 방법은 js로 video/audio 코드 자체를 아예 삽입/삭제 해주는 것이 좋다!
+*/
+
+
+.movie iframe {
+  /* width: 560px;
+  height: 315px; */
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
+}
