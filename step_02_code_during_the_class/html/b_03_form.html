@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- b_03_form.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_03_form.css">
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="./a_content.html">웹</a></h1>
+      <hr />
+
+      <div class="part">
+        <h2>form</h2>
+
+        <p>무언가를 입력, 선택, 자료를 전송하게 만드는 기능을 가진 요소</p>
+        <p>
+          <del>이런 것을 또 다른 말로는</del> 양방향 전송 방식이라고 한다.<br />
+          양방향 전송방식: 입력 - 보내기 - 받아서 처리 - 결과를 피드백
+        </p>
+        <p>e.g. 검색, 로그인, 회원가입, 구매, 게시판, etc. 에서 폼태그가 사용됨.</p>
+
+        <ol>
+          <!-- 검색창에서 검색할 때의 일련의 과정들... -->
+          <li>검색하기 위해 필요한 단어/문장을 작성 (-> 글을 작성할 수 있는 영역이 필요)</li>
+          <li>전송버튼을 클릭 (-> a는 data를 보내는 능력 x, data를 보내는 능력을 가진 버튼)</li>
+          <li>데이터를 전송받을 곳으로 전송 (-> 어디로 보낼지 체크, 공개/비공개/삭제/수정/... 등의 대한 옵션을 걸어야한다.)</li>
+          <li>전송받은 곳에서 무언가 수행(backend)</li>
+          <li>수행에 대한 결과를 피드백 (다시 앞단에 보내줌)</li>
+          <li>피드백 받은 결과를 도출</li>
+        </ol>
+
+        <hr />
+
+        <!-- 폼태그를 담는 div를 하나 만들면 컨트롤이 쉬워진다. -->
+        <div class="content_input_area">
+          <!-- 폼태그는 action 그리고 method를 속성으로 갖는다. 
+                method는 전송 방법을 설정하는 속성이다. 
+                get이 기본값이고 가장 1차적으로 최소한의 것만 공개/비공개 할지를 정한다. 
+                post로 적으면 데이터를 url (브라우저 주소창)에 공개하지 않고 숨겨서 전송하게 한다. 
+                보통 method 안에 오는 값은 대문자로 쓰곤한다. 필수는 아님!  -->
+          <form action="#" method="POST">
+            <!-- 폼 태그 안에 관련 있는 폼 엘리먼트들을 그룹화 할 때 사용하는 태그. -->
+            <fieldset>
+              <legend>각 영역별 기능 구분</legend>
+              <!-- input 타입으로 텍스트에서 value라는 속성에는 
+                우리가 입력하는 값이 자동으로 담겨지게 된다.  
+                근데, 반대로 이미 value에 값을 넣어두면 텍스트를 입력하려해도 못하게 된다. -->
+              <!-- <input type="text" value="" name="content"/> -->
+              <!-- 만약 내가 텍스트 창에 hi!!! 라고 적어서 제출을 하면 ... 
+                실제로 전송되는 것은 contentl hi!!! 가 된다. -->
+              <!-- 그래서 만약 아래와 같이 출력하고 싶으면...
+                userName: xido
+                userGender: male 
+                userOld: 10
+
+                -> 마치 name 속성은 키처럼... 그리고 value는 값으로 ... 들감.
+              -->
+              <label for="userName">사용자 이름</label>
+              <input type="text" id="userName" value="" name="userName"/>
+              
+              <label for="userGender">성별</label>
+              <input type="text" id="userGender" value="" name="userGender"/>
+
+              <label for="userOld">나이
+                <span class="blind">를 태어난 해를 기준으로 입력하세요.</span>
+              </label>
+              <input type="text" id="userOld" value="" name="userOld"/>
+
+              <!-- 비밀번호 -->
+              <label for="userPW">비밀번호</label>
+              <input type="password" id="userPW" value="" name="userPW" />
+
+              <input type="submit" value="확인" />
+
+            </fieldset>
+            <fieldset>
+              <legend>각 영역별 기능 구분</legend>
+
+            </fieldset>
+            <fieldset>
+              <legend>각 영역별 기능 구분</legend>
+
+            </fieldset>
+            <fieldset>
+              <legend>각 영역별 기능 구분</legend>
+
+            </fieldset>
+          </form>
+          
+        </div>
+
+      </div><!-- // .part -->
+
+
+
+
+    </div><!-- // #wrap -->
+
+    <!-- script -->
+    <script></script>
+</body>
+</html>

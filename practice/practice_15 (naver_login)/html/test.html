@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test.css" />
+    <title>naver login</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <div class="login_area">
+
+        <!-- 폼태그 -->
+        <div class="login_form">
+          <form action="#" method="POST">
+            <fieldset>
+              <legend class="blind">로그인</legend>
+              
+              <div class="user_id_pw_wrapper">
+                <label for="userId">
+                  <!-- 폰트어썸 -->
+                  <!-- <i class="far fa-user"></i> -->
+                </label>
+                <input type="text" id="userId" value="" name="userId" placeholder="아이디" />
+                
+                <label for="userPW"></label>
+                <!-- 폰트어썸 -->
+                <!-- <i class="fas fa-unlock-alt"></i> -->
+                <input type="password" id="userPW" value="" name="userPW" placeholder="비밀번호" />
+              </div>
+              
+              <label for="userStayLoggedIn">
+                <!-- 폰트어썸 -->
+                <!-- <i class="far fa-check-circle"></i>
+                <i class="fas fa-check-circle"></i> -->
+                로그인 상태 유지
+              </label>
+              <input type="button" id="userStayLoggedIn" value="" name="userStayLoggedIn" />
+
+              <!-- <label for="userLogInBtn"></label> -->
+              <input type="submit" id="userLogInBtn" value="로그인" />
+            </fieldset>
+          </form>
+        </div>
+        
+        <!-- .unb -->
+        <nav class="unb">
+          <ul class="clearfix">
+            <li>
+              <a href="#">비밀번호 찾기</a>
+            </li>
+            <li>
+              <a href="#">아이디 찾기</a>
+            </li>
+            <li>
+              <a href="#">회원가입</a>
+            </li>
+          </ul>
+        </nav><!-- // .unb -->
+
+      </div><!-- // .login_area -->
+
+    </div><!-- #wrap -->    
+
+  </body>
+</html>

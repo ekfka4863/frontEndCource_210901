@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* test.css*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap {
+  width: 800px;
+  min-height: 100%;
+  padding-top: 100px;
+  background-color: #eee;
+}
+h1 {
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  /* 아래와 같이 하면 부모를 끌고 내려옴..
+  그래서 부모에서 패딩으로 처리~ */
+  /* margin-top: 200px; */
+  margin-bottom: 100px;
+  background-color: #7a7;
+}
+
+.part {
+  width: 550px;
+  height: auto;
+  margin: auto;
+}
+h2 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #ccc;
+}
+.login_area {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  padding-top: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* ===================================== */
+.form {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+}
+fieldset {
+  /* 스타일 reset */
+  margin: 0; padding: 0; border: 0;
+  
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  margin-bottom: 22px;
+  /* background-color: #dfd; */
+}
+fieldset:last-of-type {
+  margin-bottom: 0;
+}
+.login_part {
+  height: 120px;
+  /* height: auto; */
+}
+  .member {
+    width: 100%;
+    height: 50%;
+    /* height: 60px; */
+    padding: 15px;
+    border: 1px solid #555;
+    /* 한꺼번에 알값 넣고... */
+    border-radius: 0.5rem;
+  }
+  .member_id {
+    /* 따로 따로 없얘기 */
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* 중첩되는 부분도 얇게... */
+    border-bottom: 0;
+  }
+  .member_pw {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+    
+    .member > input {
+      /* input은 기본적으로 인라인 블록이지만 
+      float으로 강제로 블록으로 바꿈. */
+      float: right;
+
+      width: calc(100% - 30px);
+      height: 100%;
+      border: 0;
+      padding: 0;
+
+      text-indent: 0.5rem;
+    }
+    .member > label {
+      float: left;
+      width: 26px;
+      height: 100%;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #aaa;
+      line-height: 1.8; 
+    }
+    .member input::placeholder {
+      color: #7a7;
+    }
+
+    /* focus 효과 */
+    .member input:focus + label {
+      color: #333;
+    }
+    .member input:focus {
+      background-color: #eee;
+      outline: 0;
+    }
+/* focus를 가질 수 있는 요소
+    a, form 내부에 존재하는 입력, 체크, 버튼 역할 하는 요소는 
+    전부 focus가 잡힌다! 
+    (cf. label은 focus X!)
+*/
+/* ----------------------------- */
+.member_status {
+  height: 20px;
+}
+label[for="stateCheck"] {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #575757;
+}
+label[for="stateCheck"] > i {
+  font-size: 1.3rem;
+  margin-right: 0.3rem;
+}
+#stateCheck:checked + label > i {
+  color: #f55;
+  font-weight: 700;
+}
+
+
+
+
+/* ----------------------------- */
+.member_status {
+  height: 20px;
+}
+.ok_btn {
+  height: 60px;
+}
+/* 속성 선택자로 ~ */
+input[type="submit"] {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #393;
+  background-color: #5a5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+
+/* ===================================== */
+.member_more {
+  text-align: center;
+}
+.member_more a {
+  margin-right: 0.5rem;
+}
+.member_more a:last-of-type {
+  margin-right: 0;
+}
+.member_more a:after, 
+.member_more a::after {
+  content: '|';
+} 
+.member_more a:last-of-type:after, 
+.member_more a:last-of-type::after {
+  display: none;
+}
+
+/* ----------------------------- */

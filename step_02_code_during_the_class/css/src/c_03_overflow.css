@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* c_03_overflow.css*/
+
+width: 600px;
+#wrap {
+  height: auto;
+  background-color: #ddd;
+}
+
+.part {
+  width: 90%;
+  height: 400px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #555;
+}
+
+
+/* .over_01 */
+.over_01 {
+  width: 100%;
+  height: 200px;
+  padding: 0.5rem;
+
+  /* 넘친 내용을 hidden 처리하는 방법 1 */
+  overflow: hidden;
+  /* scroll과 auto가 다른 점은... 
+  scroll은 overflow 하지 않아도 미리 스크롤바를 만든다. 
+  하지만 auto를 해놓으면 overflow 되지 않았을 때는 스크롤이 없지만,
+  넘치게 되면 스크롤바가 생기게 된다는 점에서 이 둘은 다른 속성~  */
+  overflow-y: scroll;
+  overflow-y: auto;
+
+  background-color: #caa;
+}
+
+h3 {
+  height: 50px;
+  margin-bottom: 0.3rem;
+}
+p {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  background-color: #dff;
+}
+dl {
+  width: 100%;
+  height: auto;
+  background-color: #fa0;
+}
+dt {
+  background-color: #0aa;
+  color: #fff;
+}
+dd {
+  background-color: #fff;
+}
+li {
+  border-bottom: 1px solid #000;
+  margin-bottom: 1rem;
+}
+
+
+
+/* .over_02 */
+.over_02 {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  margin-top: 4rem;
+  border-radius: 0.2rem;
+  background-color: #5df;
+
+  /* 예를 들어, .con_wrap의 width가 150% 처럼
+  overflow하는 부분이 생기는 경우 ... 
+  스크롤바를 안보이게 하기 위해...
+  여기에도 overflow: hidden;을 사용하는 것!! */
+  overflow: hidden;
+}
+.con_wrap {
+  /* width: 150%; */
+  width: 100%;
+  height: 100%;
+
+  /* 스크롤바는 패딩으로 사라지게 헀지만...
+  스크롤이 가능한... 그런 페이지 만들때 사용하는 기법... */
+  padding-right: 5rem;
+  box-sizing: content-box;
+  /* border: 2px solid #f06; */
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* 이런 기능 언제 사용?? 애플 홈페이지 참고~  
+    https://www.apple.com/kr/store
+*/

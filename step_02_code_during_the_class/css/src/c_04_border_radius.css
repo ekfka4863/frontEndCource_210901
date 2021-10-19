@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* c_04_border_radius.css*/
+
+
+#wrap {
+  width: 1280px;
+  height: auto;
+  background-color: #eee;
+}
+
+.part {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #171717;
+}
+.part h2 {
+  width: 100%;
+  height: auto;
+  padding: 0.3rem 1rem;
+  border-bottom: 1px solid #777;
+}
+.part ul {
+  display: flex;
+  /* 넘치면 자동으로 하는 아이가 flex-wrap  */
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+.part li {
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  background-color: #aca;
+  text-align: center;
+  line-height: 100px;
+  font-size: 1.2rem;
+}
+.part li:nth-child(1) {
+  border-radius: 10px;
+  /* border-radius는 전체 크기가 100px x 100px일때
+  100px을 줘도 50px을 줘도... 또는 그 이상의 크기를 줘도...
+  더 이상 알값을 줄 수 있는 것이 없기 떄문에 그냥 계속 동그라미 모양이된다.  */
+  /* border-radius: 50px;
+  border-radius: 100px; */
+}
+.part li:nth-child(2) {
+  border-radius: 10%;
+  /* border-radius: 50%;
+  border-radius: 100%; */
+}
+.part li:nth-child(3) {
+  width: 300px;
+  /* 위와 마찬가지로 100px이상 더이상 먹지 않는다...?? */
+  border-radius: 100px;
+}
+.part li:nth-child(4) {
+  width: 200px;
+  border-radius: 50%;
+}
+
+/* 응용 - 수치(px)를 먹히는 것은 비율(%)를 적용하는 것과 달리 
+\그 크기 (width, height)가 늘어나도 깨지지 않는다. 
+조금 더 디테일 하고 도형을 4등분한 것 기준 각자의 영역/면에서 
+일정 부분까지 알값을 갖고 그 이상으로 넘어가면 알값이 최고치로 계속 
+유지 되기 때문... 
+하지만 비율은 조금 다르게 적용된다는 점 참고! */
+.part li:nth-child(5) {
+  /* border-radius: 50px; */
+  border-radius: 200px;
+}
+.part li:nth-child(5):hover {
+  width: 300px;
+  background-color: #57a;
+}
+
+.part li:nth-child(6) {
+  border-radius: 0px 100px;
+  border-radius: 0 50px;
+}
+.part li:nth-child(7) {
+  border-radius: 0 50px 30px;
+}
+.part li:nth-child(8) {
+  border-radius: 0 50px 30px 5px;
+}
+.part li:nth-child(9) {
+  /* 방법 1 */
+  border-radius: 30px 0 0 0;
+  /* 방법 2 - border top right left  */
+  /* transform: translate(); */
+}
+.part li:nth-child(10) {
+  /* border-bottom-right-radius: 30px; */
+  /* border-bottom-left-radius: 30px 10px; */
+  /* border-bottom-left-radius: 100px 20px; */
+  border-bottom-left-radius: 100% 50%;
+  border-top-right-radius: 100% 50%;
+}
+
+
+/* -------------------------------------- */
+.r1 {
+  float: left;
+
+  width: 400px;
+  height: 400px;
+  height: 200px;
+  margin: 50px;
+  background-color: #0aa4a7;
+
+  border-top-left-radius: 100% 100%;
+  border-top-left-radius: 100%;
+}
+.r2 {
+  float: left;
+  
+  width: 400px;
+  height: 400px;
+  height: 200px;
+  margin-top: 50px;
+  background-color: #3f4b12;
+
+  border-top-left-radius: 400px 200px; 
+  border-top-left-radius: 400px;
+}
