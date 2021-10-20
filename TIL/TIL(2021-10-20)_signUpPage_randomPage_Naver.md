@@ -11,6 +11,11 @@ date: 2021-10-20-Wednesday
     <img src="./images/sign_up_page_with_form.gif" alt="회원가입 페이지 랜덤으로 골라서 구현" width="" height="" style="padding-left: px;" />
     <br />
 
+  - [x] `form` 태그로 [네이버 회원가입 페이지](https://nid.naver.com/user2/V2Join?token_sjoin=0nEqbe8X7ncizl43&langSelect=ko_KR&chk_all=on&termsService=on&termsPrivacy=on&termsLocation=Y&termsEmail=Y) 클론하기 
+    - 구현한 모습은 아래와 같고, 코드는 클릭 [HTML](https://github.com/ekfka4863/frontEndCourse_210901/blob/main/practice/practice_17%20(signup_system)/html/test_naver_sign_up.html), [CSS](https://github.com/ekfka4863/frontEndCourse_210901/blob/main/practice/practice_17%20(signup_system)/css/src/test_naver_sign_up.css)!       
+    <img src="./images/sign_up_page_with_form_Naver.gif" alt="네이버 회원가입 페이지 구현" width="" height="" style="padding-left: px;" />
+    <br />
+
 <!-- 회원가입 페이지 복습 내용 -->
 
   - [x] `form` 태그 관련... 
