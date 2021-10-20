@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test.css" />
+    <title>naver login</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1>Jobis</h1>
+      <div class="sign_up_area">
+
+        <!-- 폼태그 -->
+        <div class="sign_up_form">
+          <form action="#" method="POST">
+            <fieldset>
+              <legend>회원가입</legend>
+              
+              <input type="text" id="userCompany" value="" name="user__company" placeholder="회사명" />
+              <label for="userCompany"></label>
+              
+              <input type="text" id="userEmail" value="" name="user__email" placeholder="이메일" />
+              <label for="userEmail"></label>
+
+              <input type="password" id="userPw" value="" name="user__pw" placeholder="비밀번호" />
+              <label for="userPw"></label>
+
+              <input type="tel" id="userPhoneNum" value="" name="user__phone_num" placeholder="휴대폰 번호" />
+              <label for="userPhoneNum"></label>
+
+              <div class="notice_area">
+                <p class="sign_up_notice">
+                  잠깐! 이미 자비스에 가입된 회사의 직원이신가요? <br />
+                  담당자가 보낸 초대메일을 먼저 확인해 주세요. <a href="#">자세히보기</a>
+                </p>
+              </div>
+              
+              <input type="submit" id="userSignUp" value="우리회사 계정 만들기" />
+              <label for="userSignUp"></label>
+
+              <div class="notice_area">
+                <p class="sign_up_notice notice_2">
+                  가입하면 <a href="#">이용약관</a>과 <a href="#">개인정보취급방침</a>에 동의한 것으로 봅니다.
+                </p>
+              </div>
+              
+              <div class="notice_area">
+                <p class="sign_up_notice notice_3">
+                  이미 가입하셨나요? <a href="#">로그인</a>
+                </p>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+
+      </div><!-- // .sign_up_area -->
+
+    </div><!-- #wrap -->    
+
+  </body>
+</html>

@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/* test.css*/
+
+
+#wrap {
+  width: 1200px;
+  height: auto;
+  color: #333;
+}
+h1 {
+  width: 100%;
+  height: 50px;
+  padding: 1rem;
+}
+h1 > a {
+  width: 70px;
+  height: 100%;
+  color: #325dff;
+  font-size: 2rem;
+}
+
+#signUp {
+  width: 500px;
+  height: auto;
+  margin: auto;
+  margin-top: 50px;
+  padding: 5px;
+}
+h2 {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  font-size: 1.357rem;
+}
+.sign_content {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  background-color: #eee;
+}
+
+/* ======================================== */
+.make_account {
+  width: 100%;
+  height: 255px;
+  /* background-color: #faa; */
+}
+  .input_text {
+    width: 100%;
+    height: 192px;
+    margin-bottom: 20px;
+  }
+    .input_text ul {
+      width: 100%;
+      height: auto;
+    }
+    .input_text li {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 12px;
+      padding: 0.5rem;
+      border: 1px solid #999;
+      border-radius: 0.3rem;
+      text-indent: 0.5rem;
+      color: #676767;
+      /* background-color: #faa; */
+    }
+    .input_text li:last-child {
+      margin-bottom: 0;
+    }
+  .make_btn {
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    box-sizing: content-box;
+  }
+  .make_btn > button {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-style: 1rem;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.3rem 0.3rem #325eff9d;
+    background-color: #325dff;
+    transition: all 200ms ease;
+  }
+    .make_btn > button:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 0 0.6rem 0.3rem #325eff9d;
+      color: #171717;
+      background-color: #4f75ff;
+    }
+    .make_btn > button:focus {
+      outline: 3px solid #22367e;
+      font-size: 1.3rem;
+    }
+
+
+
+
+
+/* ======================================== */
+p {
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+p > a {
+  font-size: 1rem;
+  color: #325dff;
+  font-weight: 600;
+}
+p:last-of-type {
+  text-align: center;
+}

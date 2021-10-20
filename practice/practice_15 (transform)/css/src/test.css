@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* test.css*/
+
+
+#wrap {
+  width: auto;
+  height: auto;
+  margin: 50px auto;
+  background-color: #ddd;
+}
+.part {
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+  margin-bottom: 30px;
+  background-color: #fad;
+}
+
+
+/* .part .translate 
+---------------------------------*/
+.translate li {
+  width: 100px;
+  height: 100px;
+}
+.translate li:nth-child(1) {
+  transform: translateX(100px);
+  background-color: #8BEAD1;
+}
+.translate li:nth-child(2) {
+  transform: translateY(-100px);
+  background-color: #60614C;
+}
+.translate li:nth-child(3) {
+  transform: translate(-120px, 50px);
+  background-color: #6951D0;
+}
+.translate li:nth-child(4) {
+  transform: translateZ(500px);
+  background-color: #3DAE83;
+}
+/* transform의 기준 오로지 자신의 크기를 기준으로 본다.
+즉, 부모를 기준으로 50%가 아니고... 
+자신의 크기의 50%만큼 움직이는 것이다!  */
+.translate li:nth-child(5) {
+  transform: translate(50%);
+  background-color: #6E0857;
+}
+
+
+/* .part .scale 
+---------------------------------*/
+.scale li {
+  width: 100px;
+  height: 100px;
+  transition: all 400ms ease;
+}
+.scale:hover li:nth-child(1) {
+  /* transform: scale(1.2); */
+  transform: scale(120%);
+  background-color: #871C51;
+}
+.scale:hover li:nth-child(2) {
+  transform: scaleX(1.5);
+  /* transform: scaleX(150%); */
+  background-color: #8AE4DC;
+}
+.scale:hover li:nth-child(3) {
+  transform: scaleY(0.7);
+  /* transform: scaleY(70%); */
+  background-color: #ED8D2D;
+}
+.scale:hover li:nth-child(4) {
+  transform: scale(0.5, 1.5);
+  background-color: #a33c00;
+}
+.scale:hover li:nth-child(5) {
+  transform: scaleZ(2);
+  background-color: #38a506;
+}
+
+
+/* .part .skew 
+---------------------------------*/
+.skew li {
+  width: 100px;
+  height: 100px;
+  transition: all 300ms ease-in;
+}
+.skew li:nth-child(1) {
+  transform: skew(30deg);
+  background-color: #196FD5;
+}
+.skew li:nth-child(2) {
+  transform: skewY(30deg);
+  background-color: #88DEBC;
+}
+.skew li:nth-child(3) {
+  transform: skew(30deg, 15deg);
+  background-color: #D4BA2D;
+}
+.skew li:nth-child(4) {
+  transform: skewX(45deg);
+  background-color: #B2DC6B;
+}
+/* skew를 사용하면 안에 내용도 왜곡이 일어난다.
+그래서 이를 방지하기 위해... 
+span태그로 안에 내용을 감싼 뒤 부모요소에게 왜곡을 적용한 만큼, 
+딱 그만큼만 반대로 적용한다. 
+단. span은 인라인이라 블록요소로 만든 후 transform: skew(); 적용 가능!*/
+.skew li:nth-child(4) span {
+  display: block;
+  transform: skewX(-45deg);
+}
+
+
+/* .part .rotate 
+---------------------------------*/
+/* rotate - 특정 각도만큼 돌아간다. 대신 ...
+기준점이 z축이다. 가운데를 콕 찔러서 돌아가는 형식이니까!
+(cf. 다른 것들은 기본축이 x/y축 ...) */
+.rotate li {
+  width: 100px;
+  height: 100px;
+  transition: all 30px ease-in;
+}
+/* 여기부터 다시 ...  */
+.rotate:hover li:nth-child(1) {}
+.rotate:hover li:nth-child(1) {}
+.rotate:hover li:nth-child(1) {}
+.rotate:hover li:nth-child(1) {}
+.rotate:hover li:nth-child(1) {}
+.rotate:hover li:nth-child(1) {}
+
+
+/* .part .multi 
+---------------------------------*/
+.multi li {
+    height: 100px;
+    height: 100px;
+}
+/* .multi {} */

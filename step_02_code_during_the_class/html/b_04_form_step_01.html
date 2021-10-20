@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- ~/Documents/dev/frontEndCourse_210901/step_02_code_during_the_class/html/b_04_form_step_01.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/b_04_form_step_01.css">
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="./a_content.html">웹</a></h1>
+
+      <!-- form 문서 -->
+      <h2>form 이해</h2>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>입력형태, 특수형</legend>
+          <div>
+            <!-- 난독화 되어있는 코드를 value에 사용 -->
+            <input type="hidden" name="sendName" value="" id="" />
+          </div>
+          <div>
+            <label for="idText">입력할 내용 작성 설명</label>
+            <input type="text" name="id__text" id="idText" value="" 
+                    placeholder="입력할 사항의 예시" maxlength="10" 
+            />
+          </div>
+          <div>
+            <label for="pwText">숨겨지는 글자를 작성</label>
+            <input type="password" name="pw__text" id="pwText" value="" 
+                    placeholder="비밀번호 입력" maxlength="10" 
+            />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>체크항목</legend>
+          <div>
+            <h3>type-radio</h3>
+            <p>다음 중 가장 쉬운 언어는 무엇일까요?</p>
+            <ul>
+              <!-- 이때 input의 name은 같은 값이 들어가야지 모두 선택이 안되고, 서로 연결된다. -->
+              <!-- Name은 전송된 정보에서 키처럼 사용되고, value는 값처럼 보내진다는 점! -->
+              <li>
+                <input type="radio" name="radio__select" id="radio_01" value="javascript" checked />
+                <label for="radio_01">javascript</label>
+              </li>
+              <li>
+                <input type="radio" name="radio__select" id="radio_02" value="python" />
+                <label for="radio_02">python</label>
+              </li>
+              <li>
+                <input type="radio" name="radio__select" id="radio_03" value="java" />
+                <label for="radio_03">java</label>
+              </li>
+              <li>
+                <input type="radio" name="radio__select" id="radio_04" value="c++" />
+                <label for="radio_04">c++</label>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>type-checkbox</h3>
+            <p>이번 주말에 먹고싶은 음식을 고르시오.</p>
+            <ul>
+              <!-- 위의 라디오와 마찬가지로 아래 체크박스 input에 들어가는 name은 같은 이름이어야지 각각 따로가 아닌 같이 전송된다. -->
+
+              <li>
+                <input type="checkbox" name="checkbox__select" id="checkbox_01" value="제육전골" />
+                <label for="checkbox_01">제육전골</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkbox__select" id="checkbox_02" value="족발" />
+                <label for="checkbox_02">족발</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkbox__select" id="checkbox_03" value="보쌈" />
+                <label for="checkbox_03">보쌈</label>
+              </li>
+              <li>
+                <input type="checkbox" name="checkbox__select" id="checkbox_04" value="랍스타" />
+                <label for="checkbox_04">랍스타</label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>버튼형식</legend>
+          <!-- 
+            1. 버튼에서 내용상 구분이 되어야하는 항목에서는 시각형태로도 구분이 되게 처리해야한다. 
+            2. 제출/전송/동의 항목이 존재할 경우, 
+              그에 반하는 버튼도 만들면서 취소를 우선순위로 두어야한다.
+          --> 
+          <input type="reset" value="취소" />
+          <!-- input의 submit은 value만 속성값 넣어주면 충분! -->
+          <!-- 또한 label을 써도 되고 안써도 됨! -->
+          <input type="submit" value="동의 및 전송" /><br />
+          <del><input type="image" src="../img/pawprint.png" alt="이미지 버튼 예시" /></del>
+          <input type="button" value="다음 내용 보기" /><br />
+          <input type="file" name="send__file" value="" id="fileSelect" /><br />
+          <label for="fileSelect">전송할 파일을 선택하세요.</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>멀티형</legend>
+          <div>
+            <label for="multiLine">여러줄 작성가능한 요소 설명</label>
+            <!-- <textarea name="multi__line" id="multiLine" cols="5" rows="10" readonly></textarea> -->
+            <textarea name="multi__line" id="multiLine" cols="5" rows="10"></textarea>
+          </div>
+          <div>
+            <label for="selectProduct">구매할 제품을 선택하세요.</label><br />
+            <select name="select__product" id="selectProduct">
+              <!-- 제일 위에 부분은 선택하라는 거니까 value 값이 있을 필요 없음. -->
+              <option value="">선택하세요</option>
+              <option value="mouse">mouse</option>
+              <option value="keyboard">keyboard</option>
+              <option value="smartphone">smartphone</option>
+              <option value="laptop">laptop</option>
+            </select>
+            <br />
+            <br />
+            <p>
+              select 대안: mac에서는 select가 전혀 다른 디자인이 나오며, 
+              기본 디자인 자체로 select 기능이 원활하게 동작하지 않으므로 다른 형태로 처리한다.
+            </p>
+            <br />
+            <br />
+
+            <!-- 대안 -->
+            <!-- <label for="mySelect">선택한 내용을 ...</label> -->
+            <input type="hidden" id="mySelect" name="my__select" value=" /">
+            <!-- 그래서 나중에 js로 클릭한 부분의 값이 input의 value에 갈 수 있게 처리... -->
+            <dl class="like_select">
+              <dt>상품을 선택하세요.</dt>
+              <dd>
+                <ul>
+                  <!-- data- 라고 시작하는 거는 사용자속성으로 사용자가 만든 속성이다.
+                    https://developer.mozilla.org/ko/docs/Web/CSS/Using_CSS_custom_properties
+                  -->
+                  <li data-select="마우스">마우스</li>
+                  <li data-select="키보드">키보드</li>
+                  <li data-select="스마트폰">스마트폰</li>
+                  <li data-select="태블릿">태블릿</li>
+                  <li data-select="노트북">노트북</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+
+
+          <div>
+            <!-- 사실상 input의 기능과 같아서, 많은 사람들이 그냥 버튼 태그로 사용... -->
+            <button type="submit">확인</button>
+            <button type="reset">취소</button>
+            <button type="button">버튼</button>
+          </div>
+        </fieldset>
+      </form>
+    </div><!-- // #wrap -->
+
+
+    <div class="other">
+      <label for="year">태어난 연도를 선택하세요.</label>
+      <select name="select__year" id="year">
+        <!-- <option value="2021">2021</option> -->
+
+      </select>
+    </div><!-- // .other-->
+
+    <!-- script -->
+    <script>
+      // var yearSelector = document.getElementById('year');
+      // var yearSelector = document.querySelector('#year');
+
+      // 옵션 태그를 만들겠어 
+      // var createOption = document.createElement('option');
+      // var y = 2021;
+      // y = y - 1;
+
+      // 옵션태그를 #year에 추가하겠어
+      // yearSelector.append(createOption);
+
+      // 내부에 글자에 담겠어 
+      // createOption.innerText = y;
+
+      // value 값을 추가하겠어 
+      // createOption.value = y;
+      // createOption.setAttribute('value', y);
+
+
+      // 다시...
+      // 하나의 행동처리를 위한 틀(function)잡기 
+      var yearSelector = document.querySelector('#year');
+      var y = 2021;
+      var createOption; 
+      var makeFn = function() {
+        createOption = document.createElement('option');
+        createOption.innerText = y + '년';
+        createOption.value = y;
+        yearSelector.append(createOption);
+      };
+
+      // 를 수행 
+      // makeFn();
+
+      // 반복수행
+      // for (최초값; 조건비교; 증감) { 수행 }
+      // for (y = 2021; y > 1870; i--) {
+      for (; y > 1870; y--) {
+        makeFn();
+        console.log('done ' + y);
+      }
+      // 설명: 최초의 y값에서 
+
+
+
+
+    </script>
+</body>
+</html>

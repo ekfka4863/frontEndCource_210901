@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* b_04_form_step_01.css*/
+
+#wrap {
+  width: 900px;
+  height: auto;
+  padding-bottom: 500px;
+  min-height: 500px;
+}
+
+form {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  padding-top: 3rem;
+  border: 1px solid #aaa;
+}
+
+fieldset {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 4rem;
+  padding: 0.3rem;
+  background-color: #fdd;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+}
+
+legend {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  border-left: 5px solid #f06;
+  text-indent: 1rem;
+  transform: translateY(-100%);
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+  /* 사이즈 조절하게 하기 싫으면... */
+  resize: none;
+  background-color: #fd7;
+}
+
+
+/* select */
+/* 단, 맥북은 option에는 스타일링 안먹힘...
+그나마 먹는게 select 태그...
+그래서 다르게 안먹힌다는 점... 때문에 ... 실무에서 잘 안씀!
+select 대안: mac에서는 select가 전혀 다른 디자인이 나오며, 
+기본 디자인 자체로 select 기능이 원활하게 동작하지 않으므로 다른 형태로 처리한다.*/
+select {
+  width: 200px;
+  height: 30px;
+  background-color: #0af;
+}
+option {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #aff;
+  background-color: #7aa;
+}
+option:hover {
+  color: #777;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* 대안 */
+.like_select {
+  width: 250px;
+  height: 30px;
+  background-color: #fd7;
+}
+.like_select dt {
+  width: 100%;
+  height: 100%;
+}
+.like_select dd {
+  display: none;
+  width: 100%;
+  height: auto;
+  background-color: #faa;
+}
+.like_select ul {
+  width: 100%;
+  height: auto;
+}
+.like_select li {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #057;
+  margin-bottom: 0.3rem;
+}
+.like_select:hover > dd {
+  display: block;
+}
+/* .like_select ul {}
+.like_select ul {} */
