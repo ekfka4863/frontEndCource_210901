@@ -17,7 +17,7 @@
   <body>
     <!-- layout -->
     <div id="wrap">
-      <h1>naver</h1>
+      <h1><a href="https://naver.com">naver</a></h1>
 
       <div class="sign_up_area">
         <h2 class="blind">네이버 회원가입</h2>
@@ -32,12 +32,20 @@
             </div>
 
             <div>
-              <label for="userPw"><h3>비밀번호</h3></label>
+              <label for="userPw">
+                <h3>비밀번호</h3>
+                <!-- 아이콘 -->
+                <!-- <i class="fas fa-lock"></i> -->
+              </label>
               <input type="password" id="userPw" value="" name="user__pw" placeholder="" />
             </div>
 
             <div>
-              <label for="userPw_2"><h3>비밀번호 재확인</h3></label>
+              <label for="userPw_2">
+                <h3>비밀번호 재확인</h3>
+                <!-- 아이콘 -->
+
+              </label>
               <input type="password" id="userPw_2" value="" name="user__pw_2" placeholder="" />
             </div>
 
@@ -72,7 +80,7 @@
               <input type="" id="birthInfoDay" value="" name="birth__info_day" placeholder="일" />
             </div>
 
-            <div>
+            <div class="user_gender_selector">
               <label for="userGender"><h3>성별</h3></label>
               <select name="gender" id="userGender">
                 <option value="성별">성별</option>
@@ -87,9 +95,12 @@
               <input type="email" id="userEmail" value="" name="user__email" placeholder="선택입력" />
             </div>
             
+            <!-- 쌤이 이 구조 ok 해주심! -->
             <!-- <div class="verification"> -->
             <div class="get_verification_code">
               <label for="userPhoneNum"><h3>휴대전화</h3></label>
+              <!-- select 에도 label 필요! -->
+              <label for="userPhoneCountry"><h3 class="blind">국가 선택</h3></label>
               <select name="user__phone_country" id="userPhoneCountry">
                 <option value="대한민국 +82" selected>대한민국 +82</option>
                 <option value="233">
@@ -736,9 +747,12 @@
                 </option>
               </select>
               <input type="text" id="userPhoneNum" value="" name="user__phone_num" placeholder="전화번호 입력" />
-              <label for="verificationCodeBtn"></label>
+              <!-- <label for="verificationCodeBtn"></label> -->
               <input type="button" id="verificationCodeBtn" value="인증번호 받기" name="varification__code_btn" placeholder="" />
-              <label for="verificationCodeCk"></label>
+
+              <label for="verificationCodeCk">
+                <span class="blind">인증번호를 입력하세요</span>
+              </label>
               <input type="text" id="verificationCodeCk" value="" name="verification__code_ck" placeholder="인증번호 입력하세요" />
             </div>
             <!-- </div> -->
