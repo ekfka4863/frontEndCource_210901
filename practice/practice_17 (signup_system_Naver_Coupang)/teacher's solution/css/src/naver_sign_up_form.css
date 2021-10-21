@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* naver_sign_up_form.css*/
+
+/* 
+  * li class="action" 이 들어가면 input 요소에 focus 될 경우 수행하는 기능 
+  * 인증쪽(??) class="disable"이 들어가면 인증번호 입력 방지 
+  * li class="success" 가 들어가면 p class="message" 안보이게하고, .error가 들어가면 .message 보이기...
+*/
+.message {width: 100%; height: auto; font-size: 0.875rem;}
+.error .message {color: #f00;}
+.success .message {color: #03c75a;}
+
+
+/* ------------------------------------ */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding-top: 40px;
+  background-color: rgba(230, 235, 240, 0.5);
+}
+
+h1 {
+  width: 160px;
+  height: 40px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.2rem;
+  background-color: #03c75a;
+}
+
+/* -------------------------------------------- */
+#joinBox {
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+fieldset {
+  width: 100%;
+  height: auto;
+  min-height: 30px;
+  margin-bottom: 30px;
+}
+
+fieldset > ul {
+  width: 100%;
+  height: auto;
+}
+fieldset li {
+  width: 100%;
+  height: auto;
+  /* 필수 항목이 입력 안되면 메세지가 뜨면서 height가 늘어날 수 있다. */
+  min-height: 52px;
+  margin-bottom: 12px;
+  /* background-color: #fdd; */
+}
+fieldset li:last-child {
+  margin-bottom: 0; 
+}
+
+/* 레이블은 인라인 요소 */
+label {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* height: 22px; */
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  /* background-color: #afa; */
+}
+
+.input_part {
+  width: 100%;
+  height: 52px;
+  padding: 10px 12px;
+  border: 1px solid #c7c7c7;
+  border-radius: 0.1rem;
+  background-color: #fff;
+}
+.input_part input {
+  float: left;
+  width: 325px;
+  height: 100%;
+  background-color: transparent;
+  
+}
+fieldset .full {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.input_part span {
+  float: right;
+  /* span안에 있는 텍스트만큼 너비가 늘어나라고 width: auto; */
+  width: auto;
+  height: 100%;
+  line-height: 30px;
+  color: #777;
+}
+
+.year_part {
+  width: 100%;
+  height: 52px;
+}
+.partition {
+  float: left;
+  width: 146px;
+  height: 100%;
+  margin-right: 10px;
+  padding: 10px 12px;
+  border-radius: 0.1rem;
+  border: 1px solid #c7c7c7;
+  border-radius: 0.1rem;
+  background-color: #fff;
+}
+.partition:last-of-type {
+  margin: 0;
+}
+.birth {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.tel_part {
+  float: left;
+  width: 335px;
+  height: 52px;
+  padding: 10px 12px;
+  border: 1px solid #c7c7c7;
+  border-radius: 0.1rem;
+  background-color: #fff;
+}
+.tel_btn_part {
+  float: right;
+  width: 115px;
+  height: 52px;
+}
+
+
+/* .action */
+fieldset li.action .input_part {
+  outline: 2px solid #7a7;
+  border: transparent;
+  background-color: #efe;
+}
+
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  background-color: #03C75A; 
+  color:#fff; 
+}
+[type="submit"] {
+  width: 100%; 
+  height: 52px;
+  background-color: #03C75A; 
+}
+/* 
+속성선택자 
+  선택 요소의 속성값을 선택하여 처리하여 선택자
+  형태 : 
+    [속성명="속성값"] { }으로 사용 
+    요소[속성명="속성값"] { }으로도 사용 가능 
+    ------------------------------ 
+    요소[속성명^="속성값"] { } 에서 ^(캐럿)은 시작을 속성값으로 하는 아이들을 선택하여 css 적용  
+      e.g. 
+      a[href^="http"] { } -> href가 http로 시작하는 아이들을 선택 
+    
+    요소[속성명$="속성값"] { } 에서 $(달러사인)은 끝을 속성값으로 하는 아이들을 선택하여 css 적용  
+      e.g. 
+      a[href$="http"] { }
+    요소[속성명|="속성값"] { } 에서 |(버티컬바)은 단어 형식의 모든 ...  
+      e.g. 
+      a[class|="full"] { }  -> <a class="full_box wrap"> 
+    요소[속성명*="속성값"] { } 에서 *(아스터리스크)는 모든(전체의) ...
+      e.g. 
+      a[class*="a"] { }
+    요소[속성명~="속성값"] { } 에서 ~(물결)은 분리가능한 단어(값)
+      e.g. 
+      a[class~="full"] { }  -> e.g. <a class="full box_wrap"> 
+
+  cf.
+    https://wallel.com/css-%EC%86%8D%EC%84%B1-%EC%84%A0%ED%83%9D%EC%9E%90-%EC%A0%95%EB%A6%AC-css-attribute-selector/
+    http://tcpschool.com/css/css_selector_attribute
+*/
+
+/* .disable */
+.disable {
+  position: relative;
+  z-index: 100;
+}
+.disable::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(230, 235, 240, 0.5);
+  opacity: 0.5;
+
+  cursor: pointer;
+}
+
+
+
+
+/* -------------------------------------------- */
+#footBox {
+  width: 500px;
+  height: 50px;
+  margin: auto;
+  padding-bottom: 10px;
+  box-sizing: content-box;
+  background-color: #fff;
+}

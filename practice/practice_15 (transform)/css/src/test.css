@@ -127,11 +127,11 @@ span태그로 안에 내용을 감싼 뒤 부모요소에게 왜곡을 적용한
 }
 /* 여기부터 다시 ...  */
 .rotate:hover li:nth-child(1) {}
-.rotate:hover li:nth-child(1) {}
-.rotate:hover li:nth-child(1) {}
-.rotate:hover li:nth-child(1) {}
-.rotate:hover li:nth-child(1) {}
-.rotate:hover li:nth-child(1) {}
+.rotate:hover li:nth-child(2) {}
+.rotate:hover li:nth-child(3) {}
+.rotate:hover li:nth-child(4) {}
+.rotate:hover li:nth-child(5) {}
+.rotate:hover li:nth-child(6) {}
 
 
 /* .part .multi 

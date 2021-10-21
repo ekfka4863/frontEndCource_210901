@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- font -->
+    <link rel="stylesheet" href="../../fonts/IBMPlex/IBMPlex.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/naver_sign_up_form.css" />
+    <title>naver login</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="#">웹</a></h1>
+
+      <!-- 폼태그 없이 만들어보기... -->
+      <article id="joinBox">
+        <h2 class="blind">회원가입</h2>
+
+        <form action="#" method="POST">
+          <fieldset class="make_account">
+            <legend class="blind">아이디 및 비밀번호 생성</legend>
+            <ul class="account_area">
+              <li class="action error">
+                <label for="userId">아이디
+                  <span class="blind">를 입력하세요.</span>
+                </label>
+                <div class="input_part">
+                  <input type="text" name="user__Id" id="userId" value="" />
+                  <span>@naver.com</span>
+                </div>
+                <!-- 에러 메세지 -->
+                <p class="message">필수 입력사항입니다.</p>
+              </li>
+              <li>
+                <label for="userPw">비밀번호
+                  <span class="blind">를 입력하세요.</span>
+                </label>
+                <div class="input_part">
+                  <input type="password" name="user__Pw" id="userPw" value="" />
+                  <span>
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <label for="userPw2">비밀번호 재확인
+                  <span class="blind">입니다. <br />
+                    다시 한번 입력하세요.</span>
+                </label>
+                <div class="input_part">
+                  <input type="password" name="user__Pw2" id="userPw2" value="" />
+                  <span>
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </div>
+              </li>
+            </ul>
+
+          </fieldset><!-- // .make_account -->
+          <fieldset class="private_data">
+            <legend class="blind">개인정보 입력</legend>
+            <ul>
+              <li>
+                <label for="userName">이름
+                  <span class="blind">를 작성해 주세요.</span>
+                </label>
+                <div class="input_part">
+                  <input class="full" type="text" name="user__Name" id="userName" value="" />
+                </div>
+              </li>
+              <li>
+                <label for="birthYear">생년월일
+                  <span class="blind">을 각각 입력해 주세요.</span>
+                </label>
+                <div class="year_part">
+                  <div class="partition">
+                    <input class="birth" type="text" name="birth__Year" id="birthYear" value="" />
+                  </div>
+                  <div class="partition">
+                    <!-- <input type="text" name="birth__Month" id="birthMonth" value="" /> -->
+                    <label for="birthMonth" class="blind">태어난 월 선택</label>
+                    <select class="birth" name="birth__Month" id="birthMonth">
+                      <!-- option[value="$$"]{$$}*13 -->
+                      <option value="">월</option>
+                      <option value="1">1월</option>
+                      <option value="2">2월</option>
+                      <option value="3">3월</option>
+                      <option value="4">4월</option>
+                      <option value="5">5월</option>
+                      <option value="6">6월</option>
+                      <option value="7">7월</option>
+                      <option value="8">8월</option>
+                      <option value="9">9월</option>
+                      <option value="10">10월</option>
+                      <option value="11">11월</option>
+                      <option value="12">12월</option>
+                    </select>
+                  </div>
+                  <div class="partition">
+                    <label for="birthDay" class="blind">태어난 날짜 선택</label>
+                    <input class="birth" type="text" name="birth__Day" id="birthDay" value="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userGender">성별
+                  <span class="blind">를 선택해 주세요.</span>
+                </label>
+                <div class="input_part">
+                  <!-- <input type="text" name="user__Gender" id="userGender" value="" /> -->
+                  <select class="full" name="user__Gender" id="userGender">
+                    <option value="male">남성</option>
+                    <option value="female">여성</option>
+                    <option value="none">선택안함</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <label for="userEmail">본인 확인 이메일
+                  <span class="blind">을 작성해 주세요.</span>
+                  <small>(선택)</small>
+                </label>
+                <div class="input_part">
+                  <input class="full" type="email" name="user__Email" id="userEmail" value="" />
+                </div>
+              </li>
+            </ul>
+          </fieldset><!-- // .private_data -->
+          <fieldset class="certify">
+            <legend class="blind">인증 및 확인</legend>
+            <ul>
+              <li>
+                <label for="userTel">휴대전화
+                  <span class="blind">번호를 입력하여 사용자 인증해 주세요.</span>
+                </label>
+                <div class="input_part">
+                  <!-- <input type="text" name="user__Gender" id="userGender" value="" /> -->
+                  <select class="full" name="user__Tel" id="userTel">
+                    <option selected value="82">대한민국 <small>+82</small></option>
+                    <option value="1">미국 <small>+1</small></option>
+                    <option value="33">프랑스 <small>+33</small></option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <div class="tel_part">
+                  <label for="telNumber" class="blind">
+                    전화번호 입력하시고 버튼을 눌러 인증받으세요. 
+                  </label>
+                  <input class="full" type="tel" name="tel_Number" id="telNumber" value="" placeholder="전화번호 입력" required />
+                </div>
+                <div class="tel_btn_part">
+                  <input class="full tel_number_btn" type="button" value="인증번호 받기" />
+                </div>
+              </li>
+              <li>
+                <label for="cerfifyCk" class="blind">인증번호 확인</label>
+                <div class="input_part disable">
+                  <input class="full" type="text" name="certify__CK" id="certifyCk" value="" placeholder="인증번호를 입력하세요" tabindex="-1" />
+                </div>
+              </li>
+            </ul>
+          </fieldset><!-- // .certify -->
+
+          <fieldset class="join_btn">
+            <legend class="blind">가입동의 버튼</legend>
+            <!-- <input type="submit" value="가입하기" /> -->
+            <button type="submit">가입하기</button>
+          </fieldset><!-- // .join_btn -->
+        </form><!-- form -->
+
+      </article><!-- // #joinBox -->
+      
+      
+      <footer id="footBox"></footer><!-- // #footBox -->
+
+    </div><!-- #wrap -->    
+
+    <!-- script -->
+    <script></script>
+  </body>
+</html>

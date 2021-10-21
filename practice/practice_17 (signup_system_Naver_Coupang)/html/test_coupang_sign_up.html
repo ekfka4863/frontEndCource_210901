@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test_coupang_sign_up.css" />
+    <title>coupang login</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1>
+        <a href="http://www.coupang.com/">
+          <span>cou</span><span>p</span><span>a</span><span>n</span><span>g</span>
+        </a>
+      </h1>
+
+      <section id="loginBox">
+        <h2 class="blind">쿠팡 로그인 페이지</h2>
+
+        <form action="#" method="POST">
+
+          <!-- 로그인 -->
+          <fieldset class="login_section">
+            <legend class="blind">쿠팡 로그인 폼</legend>
+              <ul class="user_id_wrapper">
+                <li>
+                  <label for="userId" class="blind">
+                    아이디를 입력하세요.
+                    <!-- icon -->
+                  </label>
+                  <span class="login_icon"><i class="fas fa-envelope"></i></span>
+                </li>
+                <li class="input_part">
+                  <div>
+                    <input type="email" id="userId" value="" name="user__Id" />
+                    <span class="input_text">아이디<small>(이메일)</small></span>
+                  </div>
+                  <!-- <p class="error_message">아이디(이메일)를 입력해주세요.</p> -->
+                </li>
+              </ul>
+
+              <ul class="user_pw_wrapper">
+                <li>
+                  <label for="userPw" class="blind">
+                    비밀번호를 입력하세요.
+                    <!-- icon -->
+                  </label>
+                  <span class="login_icon"><i class="fas fa-lock"></i></span>
+                </li>
+                <li class="input_part">
+                  <div>
+                    <input type="password" id="userPw" value="" name="user__Pw" />
+                    <span class="input_text">비밀번호</span>
+                    <!-- 인풋 타입을 js로 text -> password 로 바꾸는 기능 -->
+                    <!-- <span class="login_icon"><i class=""></i></span> -->
+                  </div>
+                  <!-- <p class="error_message">비밀번호를 입력해주세요.</p> -->
+                </li>
+              </ul>
+
+              <ul class="auto_login_box clearfix">
+                <li class="input_part auto_login_li">
+                    <input type="checkbox" id="autoLogin" value="" >
+                  <!-- <p class="checkbox_message">개인 정보 보호를 위해 본인 기기에서만 이용해주세요.</p> -->
+                </li>
+                <li class="auto_login_li">
+                  <label for="autoLogin">자동로그인
+                    <span class="blind">을 하시려면 체크박스를 클릭하세요.</span>
+                  </label>
+                </li>
+                <li class="auto_login_li">
+                  <a href="#">
+                    아이디(이메일)/비밀번호 찾기 
+                    <!-- > -->
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="login_btn_box">
+                <li class="input_part">
+                    <input type="button" value="로그인" />
+                </li>
+              </ul>
+            <!-- <div class="login_btn"> 
+              <input type="button" value="로그인" />
+            </div> -->
+          </fieldset>
+
+          <!-- 회원가입 -->
+          <fieldset class="sign_up_section">
+            <legend class="blind">회원가입 링크</legend>
+            <!-- 회원가입 버튼 -->
+            <div class="sign_up_btn_wrapper">
+              <input type="button" value="회원가입" />
+            </div>
+          </fieldset>
+
+        </form><!-- // form -->
+      </section><!-- // #loginBox -->
+
+      <footer id="footBox">
+        <address>
+          <p>&copy; Coupang Corp. All rights reserved.</p>
+        </address>
+      </footer><!-- // #fooBox -->
+
+    </div><!-- #wrap -->    
+
+    <!-- script -->
+    <script></script>
+  </body>
+
+</html>
