@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* test_coupang_sign_up 2.css*/
+/* test_coupang_sign_up.css*/
+
 
 /* common.css */
 input:focus,
@@ -8,9 +9,10 @@ input:active {
   /* border: 0; */
   border-bottom: 2px solid #0174E9;
 }
-
-
-
+h2 {
+  font-size: 0.95rem;
+  padding: 15px 0px;
+}
 
 /* ===================================== */
 a:hover {
@@ -25,16 +27,19 @@ html, body {
   width: 100%;
   height: auto;
   min-height: 100%;
-  padding: 0 100px;
+  padding: 0 180px;
   padding-top: 40px;
   background-color: #fefffe;
 }
-
+#headBox {
+  width: 100%;
+  height: auto;
+  /* background-color: #fdd; */
+}
 h1 {
   width: 230px;
   height: 50px;
   margin: auto;
-  /* margin-bottom: 30px; */
   text-align: center;
   line-height: 40px;
   font-size: 3.5rem;
@@ -45,7 +50,7 @@ h1 a {
   display: block;
   width: 100%;
   height: 100%;
-  /* background: url(https://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png) no-repeat; */
+  /* background-color: #efa; */
 }
 h1 span:nth-child(1) {
   color: #935127;
@@ -64,156 +69,198 @@ h1 span:nth-child(5) {
 }
 
 /* ------------------------------------ */
-section {
+/* #signUpBox */
+#signUpBox {
   width: auto;
   height: auto;
   margin: auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
   /* background-color: #faa; */
 }
 
-fieldset {
+.private {
   width: 100%;
   height: auto;
-  /* min-height: 50px; */
-  margin-bottom: 30px;
-  /* background-color: #e43; */
+  /* background-color: #88CB; */
 }
-fieldset ul {
+.private li {
   position: relative;
 
   width: 100%;
-  height: auto;
+  height: 48px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  border: 1px solid #cbcbcb;
+  /* background-color: #ff2; */
+}
+.private label {
+  float: left;
+  display: block;
+  width: 45px;
+  height: 46px;
+  border-right: 1px solid #cbcbcb;
+  background-color: #f9f9f9;
+}
+.private label i {
+  /* text-align: center; */
+  margin-left: 15px;
+  line-height: 48px;
+  color: #cbcbcb;
   /* background-color: #eee; */
 }
-fieldset li {
-  width: auto;
-  height: auto;
-  /* min-height: 50px; */
-  margin-bottom: 12px;
-}
-fieldset li:last-child {
-  margin-bottom: 0; 
-}
-fieldset li input {
-  width: 100%;
-  height: 50px;
-  border: 1px solid #aaa;
-}
-fieldset .login_icon,
-#userPw .login_icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: block;
-  width: 50px;
-  height: 48px;
-  text-align: center;
-  line-height: 50px;
-  border: 1px solid #aaa;
-  border-collapse: collapse;
-  background-color: #F9F9F9;
-  color: #c7c7c7;
-}
-
-/* .input_text */
-fieldset .input_part .input_text {
-  position: absolute;
-  top: 18px;
-  left: 60px;
-  color: #c7c7c7;
-}
-
-
-/* 자동 로그인 */
-form .auto_login_box {
-  padding-top: 15px;
-}
-form .auto_login_box .auto_login_li {
-  float: left;
-  margin-right: 20px;
-}
-form .auto_login_box .auto_login_li:last-of-type {
+.private input {
   float: right;
-  margin-top: -2px;
-  margin-right: -1px;
-}
-/* form .auto_login_box .auto_login_li:last-of-type > a{
-  color: #0A7AEA;
-} */
-form .auto_login_box .auto_login_li:last-of-type > a::after {
-  content: '>';
-}
-#autoLogin {
-  width: 25px;
-  height: 25px;
-}
-
-.auto_login_li label{
-  font-weight: 300;
-  font-size: 0.95rem;
-  line-height: 30px;
-  margin-left: -10px;
-}
-.auto_login_li > a {
-  color: #0A7AEA;
-  font-size: 0.95rem;
-  line-height: 35px;
-}
+  width: 413px;
+  height: 46px;
+  /* border: 1px solid #cbcbcb; */
+    /* background-color: #fad; */
+  }
+  .private input::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+    text-indent: 0px;
+    color: #a9a9a9;
+  }
 
 
-/* 로그인 버튼 */
-.login_btn_box {
-  position: relative;
-}
-.login_btn_box input {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.1rem;
-  box-shadow: 0.025rem 2px rgb(1, 43, 135);
-  border-radius: 2px;
-  border: 0;
-  background-color: #0174E9;
-}
-.login_btn_box:after,
-.login_btn_box::after {
+/* 가이드 메세지 */
+.guide_message {
+  display: none;
   position: absolute;
-  top: 65px;
-  display: block;
-  content: '';
-  width: 100%;
-  height: 1px;
-  background-color: #ddd;
+  top: 60px;
+  left: 0;
 }
 
-/* 회원가입 */
-.sign_up_btn_wrapper input {
-  width: 100%;
-  height: 50px;
-  color: #0174E9;
-  font-size: 1.1rem;
-  font-weight: 700;
-  box-shadow: 0.025rem 1px rgb(184, 184, 184);
-  border: 1px solid #cbcbcb;
-  border-radius: 2px;
-  background-color: #fff;
-}
 
-/* footer */
-#footBox {
+
+
+/* ------------------------------------ */
+/* #termsBox */
+#termsBox {
   width: auto;
-  height: auto;
-}
-#footBox address {
-  width: 100%;
-  height: 100%;
-
-}
-#footBox p {
-  width: 200px;
   height: auto;
   margin: auto;
-  font-size: 0.8rem;
-  font-weight: 400;
+  padding-top: 15px;
+  /* backgroundcolor: #efa; */
+}
+.check_all {
+  padding-bottom: 20px;
+}
+.terms_resp {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border: 1px solid #cbcbcb;
+}
+#termsBox input {
+  /* display: none; */
+  visibility: hidden;
+  /* width: 20px;
+  height: 20px; */
+  margin: 0;
+}
+#termsBox label {
+  position: relative;
+}
+#termsBox label i {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  color: #909DAA;
+} 
+#termsBox input:checked + label {
+  position: relative;
+  display: inline-block;
+}
+#termsBox input:checked + label::before {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+
+  content: 'v';
+  position: absolute;
+  /* top: 0px; */
+  left: -21px;
+  z-index: 10;
+
+  text-align: center;
+  line-height: 18px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #3369FD;
+  border: 1px solid #333;
+
+  /* transition: all 300ms ease; */
+}
+.check_all_btn {
+  padding-left: 5px;
+}
+.check_all_message {
+  padding-top: 10px;
+  padding-left: 22px;
+  font-size: 0.81rem;
+  color: #545454;
+
+}
+
+/* 체크박스 - 모두 동의합니다 버튼 */
+.check_all_btn span {
+  font-weight: 800;
+} 
+.terms_resp span {
+  display: inline-block;
+  font-size: 0.95rem;
+  padding-left: 3px;
+  padding-bottom: 10px;
+  color: #545454;
+}
+
+/* 선택란들 */
+.checkbox_optional_inner {
+  padding-left: 15px;
+}
+
+
+/* 맨하단 - 동의하고 가입하기 버튼 */
+.sign_up_btn {
+  width: 100%;
+  height: auto;
+  /* background-color: #fda; */
+}
+.btn {
+  width: auto;
+  height: auto;
+  /* background-color: #faa; */
+}
+.btn button {
+  width: 100%;
+  height: 52px;
+  padding: 16px 0;
+  margin-top: 30px;
+  border-radius: 2px;
+  box-shadow: inset 0 -2px 0 rgb(0 0 0 / 38%);
+  background-color: #0074e9;
+}
+.btn span {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fefefe;
+}
+
+
+
+/* ------------------------------------ */
+/* #footBox */
+#footBox {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+address p {
+  font-size: 0.75rem;
   color: #5a5a5a;
 }
