@@ -40,12 +40,29 @@ date: 2021-10-22-Friday
     <br /> 
 
   - 서브페이지 스케치 및 프로토타입 하나씩 완성           
-    - **스케치**: 
+    - **스케치 - 1**: 
     <img src="./images/subpage_ceo_introduction_sketch(1280px).jpeg" alt="빽다방 서브페이지 스케치 1" width="350px" height="" style="padding-left: px;" />
     <br />
 
-    - **프로토타입**: 
+    - **프로토타입 - 1**: 
     <img src="./images/subpage_ceo_introduction(1280px).png" alt="빽다방 서브페이지 피그마 프로토타입 1" width="350px" height="" style="padding-left: px;" />
+    <br />
+
+     - **스케치 - 2**: 
+    <!-- <img src="./images/subpage_ceo_introduction_sketch(1280px).jpeg" alt="빽다방 서브페이지 스케치 1" width="350px" height="" style="padding-left: px;" /> -->
+    <br />
+
+    - **프로토타입 - 2**: 
+    <img src="./images/subpage2_cs_box(1280px).png" alt="빽다방 서브페이지 피그마 프로토타입 2" width="350px" height="" style="padding-left: px;" />
+    <br />
+
+
+     - **스케치 - 3**: 
+    <!-- <img src="./images/subpage_ceo_introduction_sketch(1280px).jpeg" alt="빽다방 서브페이지 스케치 1" width="350px" height="" style="padding-left: px;" /> -->
+    <br />
+
+    - **프로토타입 - 3**: 
+    <img src="./images/subpage2_modal(1280px).png" alt="빽다방 서브페이지 피그마 프로토타입 3" width="350px" height="" style="padding-left: px;" />
 
 <br />
 
