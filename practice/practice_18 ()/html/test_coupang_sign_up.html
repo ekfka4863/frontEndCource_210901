@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/src/test_coupang_sign_up.css" />
+    <title>coupang sign up page</title>
+  </head>
+
+  <body>
+    <!-- layout -->
+    <div id="wrap">
+      <header id="headBox">
+        <h1>
+          <a href="http://www.coupang.com/">
+            <span>cou</span><span>p</span><span>a</span><span>n</span><span>g</span>
+          </a>
+        </h1>
+      </header>
+
+      <section id="signUpBox">
+        <h2>회원정보를 입력해주세요</h2>
+        <!-- form 시작 -->
+        <form action="#" method="POST">
+          <fieldset class="private">
+            <legend class="blind">개인 회원정보 입력</legend>
+            <ul>
+              <li>
+                <label for="userId">
+                  <i class="fas fa-envelope"></i>
+                  <span class="blind">사용자 아이디 및 이메일 작성</span>
+                </label>
+                <input type="text" id="userId" name="user__Id" value="" placeholder="아이디(이메일)" />
+                <!-- guide 메세지 -->
+                <div class="guide_message">
+                  <span class="blind">이메일을 입력하세요.</span>
+                </div>
+              </li>
+              <li>
+                <label for="userPw">
+                  <i class="fas fa-lock"></i>
+                  <span class="blind">사용자 계정 비밀번호</span>
+                </label>
+                <input type="password" id="userPw" name="user__Pw" value="" placeholder="비밀번호"/>
+                <!-- guide 메세지 -->
+                <div class="guide_message">
+                  <div>
+                    <span>
+                      <i class="fas fa-times"></i>
+                    </span>
+                    <span>
+                      영문/숫자/특수문자 2가지 이상 조합 (8~20자)
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class="fas fa-times"></i>
+                    </span>
+                    <span>
+                      3개 이상 연속되거나 동일한 문자/숫자 제외
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      <i class="fas fa-times"></i>
+                    </span>
+                    <span>
+                      아이디(이메일) 제외
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userPw2">
+                  <i class="fas fa-user-lock"></i>
+                  <span class="blind">사용자 계정 비밀번호 체크</span>
+                </label>
+                <input type="password" id="userPw2" name="user__Pw2" value="" placeholder="비밀번호 확인" />
+                <!-- guide 메세지 -->
+                <div class="guide_message">
+                  <div>
+                    <span>
+                      <i class="fas fa-times"></i>
+                    </span>
+                    <span>
+                      확인을 위해 새 비밀번호를 다시 입력해주세요.
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="userName">
+                  <i class="fas fa-user"></i>
+                  <span class="blind">사용자 이름</span>
+                </label>
+                <input type="text" id="userName" name="user__Name" value="" placeholder="이름" />
+                <!-- guide 메세지 -->
+                <div class="guide_message">
+                  <span>이름을 정확히 입력하세요.</span>
+                </div>
+              </li>
+              <li>
+                <label for="userPhone">
+                  <i class="fas fa-mobile-alt"></i>
+                  <span class="blind">사용자 휴대폰 번호</span>
+                </label>
+                <input type="text" id="userPhone" name="user__Phone" value="" placeholder="휴대폰 번호"/>
+                <!-- guide 메세지 -->
+                <div class="guide_message">
+                  <span>휴대폰 번호를 정확하게 입력하세요.</span>
+                </div>
+              </li>
+            </ul>
+          </fieldset>
+        </form><!-- // form -->
+      </section><!-- // #signUpBox -->
+
+      <section id="termsBox">
+        <h2>쿠팡 서비스약관에 동의해주세요</h2>
+        <div class="terms_wrapper">
+          <!-- 모두 동의합니다 체크란 -->
+          <div class="check_all">
+            <div class="check_all_btn">
+              <input type="checkbox" id="checkAll" name="checkAll" value="" onclick="selectAll(this)" />
+              <label for="checkAll">
+                <!-- 아이콘 -->
+                <i class="far fa-check-square"></i>
+                <span>모두 동의합니다</span>
+              </label>
+            </div>
+            <p class="check_all_message">
+              동의에는 필수 및 선택 목적(광고성 정보 수신 포함)에 대한 동의가 포함되어 있으며, 선택 목적의 동의를 거부하시는 경우에도 서비스 이용이 가능합니다.
+            </p>
+          </div>
+
+          <!-- 각각의 동의 항목들 -->
+          <div class="terms_resp">
+            <div>
+              <input type="checkbox" id="check1"  class="check_box_all" name="check__1" value="" />
+              <label for="check1">
+                <!-- 아이콘 -->
+                <i class="far fa-check-square"></i>
+                <span> &lsqb;필수&rsqb; 만 14세 이상입니다</span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="check2"  class="check_box_all" name="check__2" value="" />
+              <label for="check2">
+                <!-- 아이콘 -->
+                <i class="far fa-check-square"></i>
+                <span> &lsqb;필수&rsqb; 쿠팡 이용약관 동의</span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="check3"  class="check_box_all" name="check__3" value="" />
+              <label for="check3">
+                <!-- 아이콘 -->
+                <i class="far fa-check-square"></i>
+                <span> &lsqb;필수&rsqb; 전자금융거래 이용약관 동의</span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="check4"  class="check_box_all" name="check__4" value="" />
+              <label for="check4">
+                <!-- 아이콘 -->
+                <i class="far fa-check-square"></i>
+                <span> &lsqb;필수&rsqb; 개인정보 수집 및 이용 동의</span>
+              </label>
+            </div>
+            <div>
+              <input type="checkbox" id="check5"  class="check_box_all" name="check__5" value="" />
+              <label for="check5">
+                <!-- 아이콘 -->
+                <i class="far fa-check-square"></i>
+                <span> &lsqb;필수&rsqb; 개인정보 제3자 제공 동의</span>
+              </label>
+            </div>
+            <!-- 선택 서비스약관 -->
+            <div class="checkbox_optional">
+              <div>
+                <input type="checkbox" id="check6"  class="check_box_all" name="check__6" value="" />
+                <label for="check6">
+                  <!-- 아이콘 -->
+                  <i class="far fa-check-square"></i>
+                  <span> &lsqb;선택&rsqb; 마케팅 및 이벤트 목적의 개인정보 수집 및 이용동의</span>
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" id="check7"  class="check_box_all" name="check__7" value="" />
+                <label for="check7">
+                  <!-- 아이콘 -->
+                  <i class="far fa-check-square"></i>
+                  <span> &lsqb;선택&rsqb; 광고성 정보 수신 동의</span>
+                </label>
+                <div class="checkbox_optional_inner">
+                  <div>
+                    <input type="checkbox" id="check8"  class="check_box_all" name="check__8" value="" />
+                    <label for="check8">
+                      <!-- 아이콘 -->
+                      <i class="far fa-check-square"></i>
+                      <span> &lsqb;선택&rsqb; 이메일 수신 동의</span>
+                    </label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="check9"  class="check_box_all" name="check__9" value="" />
+                    <label for="check9">
+                      <!-- 아이콘 -->
+                      <i class="far fa-check-square"></i>
+                      <span> &lsqb;선택&rsqb; SMS, MMS 수신 동의</span>
+                    </label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="check10" class="check_box_all"  name="check__10" value="" />
+                    <label for="check10">
+                      <!-- 아이콘 -->
+                      <i class="far fa-check-square"></i>
+                      <span> &lsqb;선택&rsqb; 앱 푸시 수신 동의</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 동의하고 가입하기 버튼 -->
+        <fieldset class="sign_up_btn">
+          <legend class="blind">동의하고 가입하기 버튼</legend>
+          <div class="btn">
+            <button type="submit">
+              <span>동의하고 가입하기</span>
+            </button>
+          </div>
+        </fieldset>
+      </section><!-- // #termsBox -->
+
+      <footer id="footBox">
+        <h2 class="blind">coupang info</h2>
+        <address>
+          <p class="blind"></p>
+          <p class="blind"></p>
+          <p>&copy; Coupang Corp. All rights reserved.</p>
+        </address>
+      </footer><!-- // #fooBox -->
+
+    </div><!-- #wrap -->    
+
+    <!-- script -->
+    <script>
+      // https://bourbonkk.tistory.com/68
+      // https://hianna.tistory.com/432
+      const checkAll = document.querySelector('.check_all');
+      
+      function selectAll(selectAll) {
+        const checkBoxes = document.querySelectorAll('.check_box_all');
+
+        checkBoxes.forEach((checkBox) => {
+          checkBox.checked = selectAll.checked;
+        })
+      }
+      selectAll();
+    </script>
+  </body>
+
+</html>
