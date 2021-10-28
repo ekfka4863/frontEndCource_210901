@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://192.168.200.174:5503/html/b_05_form_question.html -->
+<html lang="ko-KR" class="js no-htmlimports no-proximity sizes no-flash transferables cookies cors customelements no-customprotocolhandler no-applicationcache blobconstructor blob-constructor customevent dataview eventlistener geolocation history no-ie8compat json messagechannel notification postmessage queryselector no-serviceworker svg templatestrings typedarrays websockets no-xdomainrequest webaudio cssescape focuswithin supports target no-microdata mutationobserver passiveeventlisteners picture es5array es5date es5function es5object strictmode es5string es5syntax es5undefined es5 es6array arrow es6collections generators es6math es6number es6object promises es6string no-devicemotion no-deviceorientation filereader beacon no-lowbandwidth eventsource fetch xhrresponsetype xhr2 speechsynthesis localstorage sessionstorage websqldatabase svgfilters urlparser urlsearchparams no-getusermedia websocketsbinary atobbtoa atob-btoa no-framed sharedworkers webworkers no-contains no-contextmenu cssall willchange classlist documentfragment svgasimg no-ambientlight hashchange inputsearchevent pointerevents audio canvas canvastext contenteditable emoji olreversed no-userdata video no-vml webanimations webgl adownload audioloop canvasblending todataurljpeg todataurlpng todataurlwebp canvaswinding bgpositionshorthand csscalc cubicbezierrange cssgradients multiplebgs opacity csspointerevents csspositionsticky cssremunit rgba preserve3d no-createelementattrs no-createelement-attrs dataset hidden outputelem progressbar meter ruby template no-time texttrackapi track unknownelements no-capture fileinput fileinputdirectory formattribute placeholder sandbox no-seamless srcdoc imgcrossorigin srcset inputformaction input-formaction inputformenctype input-formenctype inputformmethod no-inputformtarget no-input-formtarget scriptasync scriptdefer no-stylescoped inlinesvg textareamaxlength videocrossorigin videoloop videopreload mediaqueries hovermq pointermq no-hiddenscroll no-mathml no-touchevents unicoderange unicode checked displaytable display-table fontface generatedcontent no-hairline cssinvalid lastchild no-nthchild no-cssscrollbar siblinggeneral subpixelfont cssvalid details oninput formvalidation datalistelem no-localizednumber csschunit cssexunit hsla no-bdi cssvhunit cssvmaxunit cssvminunit cssvwunit xhrresponsetypearraybuffer xhrresponsetypeblob xhrresponsetypedocument xhrresponsetypejson xhrresponsetypetext svgclippaths svgforeignobject smil textshadow no-crypto no-batteryapi no-battery-api no-dart no-forcetouch fullscreen gamepads intl pagevisibility performance pointerlock quotamanagement requestanimationframe raf vibrate no-webintents no-lowbattery getrandomvalues backgroundblendmode objectfit object-fit no-regions no-wrapflow filesystem no-requestautocomplete speechrecognition bloburls peerconnection datachannel matchmedia ligatures cssanimations csspseudoanimations appearance backdropfilter backgroundcliptext bgpositionxy bgrepeatround bgrepeatspace backgroundsize bgsizecover borderimage borderradius boxshadow boxsizing csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside no-cssgridlegacy cssgrid no-displayrunin no-display-runin ellipsis cssfilters flexbox flexboxlegacy no-flexboxtweener flexwrap cssmask no-overflowscrolling cssreflections cssresize scrollsnappoints shapes textalignlast csstransforms csstransforms3d no-csstransformslevel2 csstransitions no-csspseudotransitions userselect variablefonts exiforientation webpalpha webpanimation webplossless webp apng no-jpeg2000 no-jpegxr webp-alpha webp-animation webp-lossless datauri videoautoplay audiopreload dataworkers blobworkers indexeddb no-csshyphens softhyphens softhyphensfind indexeddb-deletedatabase" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+  
+  <title>웹기초</title>
+  
+  
+  <script src="./웹기초_files/modernizr-custom.js"></script>
+<link rel="stylesheet" href="./웹기초_files/reset.css"><link rel="stylesheet" href="./웹기초_files/common.css"><link rel="stylesheet" href="./웹기초_files/b_05_form_question.css"><link rel="shortcut icon" href="http://192.168.200.174:5503/favicon.png" type="image/png"><link rel="apple-touch-icon" href="http://192.168.200.174:5503/favicon.png"></head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+      <h1><a href="http://192.168.200.174:5503/html/a_content.html">웹</a></h1>
+
+      <div class="part">
+        <h2>게시판 작성내용</h2>
+
+        <form action="http://192.168.200.174:5503/html/b_05_form_question.html#" method="POST">
+          <fieldset>
+            <legend>질문 내용</legend>
+
+            <div class="title_area">
+              <input type="text" name="write__Title" id="writeTitle" value="">
+              <label for="writeTitle">제목</label>
+            </div><!-- // .title_area -->
+            
+            <div class="content_area">
+              <label for="writeContent" class="blind">
+                상세내용을 작성하세요.
+              </label>
+              <textarea name="write__Content" id="writeContent" cols="30" rows="10"></textarea>
+            </div><!-- // .content_area -->
+
+          </fieldset>
+        </form>
+      </div><!-- // .part -->
+
+    </div><!-- // #wrap -->
+
+    <!-- script -->
+    <script src="./웹기초_files/jquery"></script>
+    <script>
+      // console.log($.fn);
+      var title = $('#writeTitle');
+      title.on('focus', function() {
+        title.addClass('action');
+      });
+
+      // 'blur' -> 포커스가 빠져나갔을 때를 의미 (cf. focusout)
+      title.on('blur', function() {
+        var titleVal = title.val().length;
+        // console.log(titleVal);     
+
+        if (titleVal === 0) {
+          title.removeClass('action');
+        } 
+      });
+
+
+    </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

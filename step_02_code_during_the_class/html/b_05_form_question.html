@@ -22,6 +22,7 @@
 
       <div class="part">
         <h2>게시판 작성내용</h2>
+
         <form action="#" method="POST">
           <fieldset>
             <legend>질문 내용</legend>
@@ -29,18 +30,20 @@
             <div class="title_area">
               <input type="text" name="write__Title" id="writeTitle" value="" />
               <label for="writeTitle">제목</label>
-            </div>
+            </div><!-- // .title_area -->
+            
             <div class="content_area">
               <label for="writeContent" class="blind">
                 상세내용을 작성하세요.
               </label>
               <textarea name="write__Content" id="writeContent" cols="30" rows="10"></textarea>
-            </div>
+            </div><!-- // .content_area -->
 
           </fieldset>
         </form>
       </div><!-- // .part -->
-    </div>
+
+    </div><!-- // #wrap -->
 
     <!-- script -->
     <script src="//unpkg.com/jquery"></script>

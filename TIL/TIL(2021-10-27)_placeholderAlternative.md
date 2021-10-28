@@ -175,11 +175,6 @@ date: 2021-10-27-Wednesday
         ```
              
       </details>   
-
-  <!-- - [x] menu `:hover`/`:focus` 시 전체 메뉴 또는 메뉴의 일부분만 보이게 css로 처리하는 방법 
-    - 연습 문제
-      <img src="" alt="" />
-    - 빽다방에 적용시켜보기  -->
     
 <br />
 
