@@ -19,94 +19,53 @@
   <div id="wrap">
     <h1><a href="./a_content.html">웹</a></h1>
 
-    <div class="head_area type1">
+    <div class="head_area">
       <h2>logo</h2>
+
       <!-- 네비게이션 -->
       <div class="nav">
-        <ul>
+        <ul class="clearfix">
+          <!-- li*4>(.title_link>a{link_$})+.sub_nav>a{sub_link_$$}*4 -->
           <li>
-            <div class="title_link"><a href="#">link_1</a></div>
+            <div class="title_link"><a href="">link_1</a></div>
             <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
+              <a href="">sub_link_01</a>
+              <a href="">sub_link_02</a>
+              <a href="">sub_link_03</a>
+              <a href="">sub_link_04</a>
             </div>
           </li>
           <li>
-            <div class="title_link"><a href="#">link_2</a></div>
+            <div class="title_link"><a href="">link_2</a></div>
             <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
+              <a href="">sub_link_01</a>
+              <a href="">sub_link_02</a>
+              <a href="">sub_link_03</a>
+              <a href="">sub_link_04</a>
             </div>
           </li>
           <li>
-            <div class="title_link"><a href="#">link_3</a></div>
+            <div class="title_link"><a href="">link_3</a></div>
             <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
+              <a href="">sub_link_01</a>
+              <a href="">sub_link_02</a>
+              <a href="">sub_link_03</a>
+              <a href="">sub_link_04</a>
             </div>
           </li>
           <li>
-            <div class="title_link"><a href="#">link_4</a></div>
+            <div class="title_link"><a href="">link_4</a></div>
             <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
+              <a href="">sub_link_01</a>
+              <a href="">sub_link_02</a>
+              <a href="">sub_link_03</a>
+              <a href="">sub_link_04</a>
             </div>
           </li>
         </ul>
-      </div>
-    </div><!-- //.head_area .type1 -->
+      </div><!-- // .nav -->
+    </div><!-- //.head_area -->
 
-    <div class="head_area type2" hidden>
-      <h2>logo</h2>
-      <div class="nav">
-        <ul>
-          <li>
-            <div class="title_link"><a href="#">link_1</a></div>
-            <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
-            </div>
-          </li>
-          <li>
-            <div class="title_link"><a href="#">link_2</a></div>
-            <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
-            </div>
-          </li>
-          <li>
-            <div class="title_link"><a href="#">link_3</a></div>
-            <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
-            </div>
-          </li>
-          <li>
-            <div class="title_link"><a href="#">link_4</a></div>
-            <div class="sub_nav">
-              <a href="#">sub_link_01</a>
-              <a href="#">sub_link_02</a>
-              <a href="#">sub_link_03</a>
-              <a href="#">sub_link_04</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div><!-- // .head_area .type2 -->
   </div><!-- // #wrap -->
 
   <!-- script -->
@@ -125,6 +84,7 @@
     $('.nav').on('mouseleave', function(){
       $('.sub_nav').stop().slideUp();
     });
+
   </script>
 </body>
 </html>
