@@ -10,9 +10,12 @@ date: 2021-10-29-Friday
     - 2. `패스 파인더(Pathfinder)`
     - 3. `클리핑 마스크(Clipping Mask)`:    
         
-<video src"./imagesA/how_to_use_clipping_mask.mp4" title="일러스트레이터에서 클리핑 마스크 사용하는 방법 예시 비디오" width="600px"></video>
+<video controls autoplay muted src"./imagesA/how_to_use_clipping_mask.mp4" title="일러스트레이터에서 클리핑 마스크 사용하는 방법 예시 비디오" width="600px"></video>
+
 <hr />
+
 <iframe src"./imagesA/how_to_use_clipping_mask.mp4" title="일러스트레이터에서 클리핑 마스크 사용하는 방법 예시 비디오" width="600px"></iframe>
+
 
   <br />      
 
