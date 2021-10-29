@@ -126,10 +126,12 @@ h2 {
   display: block;
 
   position: absolute;
-  /* left: calc(-100vw - 40px); */
-  /* left: calc(100vw); */
   bottom: 0;
+  /* .head_area 의 패딩값이 20px이라서 그만큼 옆으로 더 띄워주는건데, 
+  스크롤때문에 조금 더 띄운다해서 40px 더 띄움! */
   left: calc(-100vw - 40px);
+  /* left: calc(100vw); */
+  /* left: calc(-50%); */
   z-index: -1;
   transform: translate(50%);
 
