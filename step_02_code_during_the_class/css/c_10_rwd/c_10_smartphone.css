@@ -1,0 +1,40 @@
+/* 320px */
+/* (디자인기준: 320px) ~ 767px */
+/* @media all and (min-width: 320px) and (max-width: 767px) { */
+  @media all and (max-width: 767px) {
+    /* % 계산 방법
+    수치 / 기본값 * 100 
+      e.g. 
+      154px 
+  
+    */
+  
+    #wrap {
+      width: 100%;
+      min-width: 320px;
+      min-height: 600px;
+      /* background-color: #fda; */
+    }
+  
+      #headBox {
+        height: 100px;
+      }
+      #viewBox {
+        width: 48.125%;
+        min-width: 154px;
+        height: 400px;
+        background-color: #0af;
+      }
+      #conBox {
+        display: none;
+      }
+      #infoBox {
+        display: none;
+      }
+      #footBox {
+        height: 140px;
+        background-color: #afa;
+      }
+  
+  }/* (max-width: 767px) */
+  
