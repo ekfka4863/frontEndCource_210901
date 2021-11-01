@@ -1,0 +1,40 @@
+/* c_mobile_h.css*/
+
+/* @media all and (min-width: 480px) and (max-width: 767px) / design 기준: 480px */
+@media all and (min-width: 480px) and (max-width: 767px) {
+
+  #headBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-black);
+  }
+  #viewBox {
+    width: 100%;
+    height: 150vw;
+    min-height: 720px;
+    padding-top: 60px;
+    background-color: var(--color-deepY);
+  }
+  #contentBox {
+    width: 100%;
+    height: 150vw;
+    background-color: var(--color-deepGn);
+  }
+  #infoBox {
+    width: 100%;
+    height: 150vw;
+    background-color: var(--color-purple);
+  }
+  #footBox {
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-black);
+  }
+
+}/* @media all and (min-width: 480px) and (max-width: 767px) */
+

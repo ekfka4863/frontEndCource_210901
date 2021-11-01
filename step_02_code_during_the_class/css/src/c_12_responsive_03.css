@@ -1,0 +1,44 @@
+/* c_12_responsive_03.css*/
+
+@import url("../c_12_rwd/a_base.css");
+@import url("../c_12_rwd/b_mobile_v.css");
+@import url("../c_12_rwd/c_mobile_h.css");
+@import url("../c_12_rwd/d_tablet.css");
+@import url("../c_12_rwd/e_pc.css");
+
+
+/* 공통 */
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  background-color: #ddd;
+}
+
+/* ------------------------------------------------------------------ */
+/* @media all and (max-width: 479px) / design 기준: 320px */
+@media all and (max-width: 479px) {
+
+}/* @media all and (max-width: 479px) */
+
+
+/* ------------------------------------------------------------------ */
+/* @media all and (min-width: 480px) and (max-width: 767px) / design 기준: 480px */
+@media all and (min-width: 480px) and (max-width: 767px) {
+
+}/* @media all and (min-width: 480px) and (max-width: 767px) */
+
+
+/* ------------------------------------------------------------------ */
+/* @media all and (min-width: 768px) and (max-width: 959px)  / design 기준: 768px */ 
+@media all and (min-width: 768px) and (max-width: 959px) {
+
+}/* @media all and (min-width: 768px) and (max-width: 959px) */
+
+
+/* ------------------------------------------------------------------ */
+/* @media all and (min-width: 960px)  / design 기준: 960px */
+@media all and (min-width: 960px) {
+
+}/* @media all and (min-width: 960px) */
+/* ------------------------------------------------------------------ */

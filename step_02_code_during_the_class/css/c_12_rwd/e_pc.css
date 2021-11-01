@@ -1,0 +1,26 @@
+/* e_pc.css*/
+
+/* @media all and (min-width: 960px)  / design 기준: 960px */
+@media all and (min-width: 960px) {
+
+
+  #headBox {
+    height: 60px;
+  }
+  #viewBox {
+    height: 720px;
+    padding-top: 60px;
+  }
+  #contentBox {
+    max-width: 960px;
+    height: 450px;
+  }
+  #infoBox {
+    max-width: 960px;
+    height: 540px;
+  }
+  #footBox {
+    height: 120px;
+  }
+
+}/* @media all and (min-width: 960px) */
