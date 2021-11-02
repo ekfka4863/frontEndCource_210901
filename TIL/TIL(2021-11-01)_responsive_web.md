@@ -64,7 +64,6 @@ e.g.
       }
     }
   ```
-  <!-- 위에꺼 맞는지 쌤한테 확인...  -->
 
 - 이때, 위에서 `all` 이란 단어가 `@media`와 함께 사용되는데, 이는 미디어타입(media type)을 언급해 주는 것이다.        
 대표적인 미디어 타입은 아래와 같다: 
@@ -135,8 +134,7 @@ html 문서에 가서도 \<link> 태그로 해당 `base.css`를 연결 시켜줘
 <details>
 <summary>CLICK ME!</summary>  
 
-- cf.  
-  - ✨ Only 선생님's 강의 ✨
+- cf. 
   - https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=anedthh&logNo=221308534408
   - https://skydoor2019.tistory.com/8
   - https://velog.io/@yunsungyang-omc/CSS-%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9-%EB%AF%B8%EB%94%94%EC%96%B4-%EC%BF%BC%EB%A6%ACmedia-query
