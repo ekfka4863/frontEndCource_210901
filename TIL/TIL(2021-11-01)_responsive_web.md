@@ -1,10 +1,10 @@
 ---
-date: 2021-11-01-Monday
+date: 2021-11-01-Monday ~ 2021-11-03-Wednesday
 ---
 
 # TIL
 
-## 미디어쿼리(`@media`)로 `responsive web` 만들기
+## 미디어쿼리(@media)로 **responsive web** 만들기
 <br />
 
 > **WHY** 반응형 웹? 
@@ -20,7 +20,7 @@ date: 2021-11-01-Monday
 - CSS의 스타일시트에서 `@media`를 사용하면 지정한 뷰포트 크기에 반응하여 스타일링에 변화를 주는 **반응형웹**을 만들수 있다.      
 <br />
 
->> `@media` 사용하는 방법
+>> @media 사용하는 방법
 - `@media` 기본 문법:        
 ```css 
   @media 미디어타입 and (조건) {
@@ -109,15 +109,14 @@ e.g.
 - 아래와 같은 구조로 ~~css 파일 내로 가서~~ 해당 웹 페이지 ~~반응형~~ 레이아웃들에 적용할 
 css 스타일시트들을 하나의 파일로 만들어서 모아둔다.        
 e.g.        
-<span style="padding-left: 5px; font-weight: 700;">file 이름: c_12_rwd</span><br />        
+<span style="padding-left: 5px; font-weight: bold;">file 이름: c_12_rwd</span><br />        
 <img src="./images/media_query_several_css_files.png" alt="미디어쿼리를 사용해서 만든 하나의 스타일시트 파일을 여러개로 분할하는 방법 1" width="350px" height="px" style="padding-left: 10px;" />
 <br />
-<br />
+
 - 해당 파일 안에 ...        
 `base.css`를 만들어 모든 css에 공통으로 적용되는 css 코드를 모아둔다     
 <br />
 <img src="./images/media_query_base_css_file.png" alt="미디어쿼리를 사용해서 만든 하나의 스타일시트 파일을 여러개로 분할하는 방법 2" width="350px" height="px" style="padding-left: 10px;" />
-<br />
 <br />
 
 - 기타 다른 다양한 뷰포트 크기에 맞춰서 미디어쿼리를 적용한 만큼 
@@ -131,9 +130,6 @@ e.g.
 html 문서에 가서도 \<link> 태그로 해당 `base.css`를 연결 시켜줘야한다는 사실 잊지말기!     
 <img src="./images/media_query_import_css_files.png" alt="미디어쿼리를 사용해서 만든 하나의 스타일시트 파일을 여러개로 분할하는 방법 4" width="350px" height="px" style="padding-left: 10px;" />
 <br />  
-
-
-<br />
 
 ---
 <details>
