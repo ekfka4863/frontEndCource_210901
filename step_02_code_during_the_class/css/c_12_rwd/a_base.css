@@ -1,7 +1,17 @@
 /* a_base.css*/
 
-/* variables */
+/* 기능 처리에 따른 내용 */
+/* .gnb 영역에 `.action` 부여시 gnb 내부 버튼 및 .gnb_list 나타나게 js로 처리 */
+@import url("../c_12_rwd/b_mobile_v.css");
+@import url("../c_12_rwd/c_mobile_h.css");
+@import url("../c_12_rwd/d_tablet.css");
+@import url("../c_12_rwd/e_pc.css");
+
+
+/* variables 
+--------------------------------------------*/
 :root {
+  --color-white: #fff;
   --color-black: #333;
   --color-deepGn: #547d77;
   --color-lightGn: #33b88f;
@@ -10,8 +20,11 @@
   --color-deepY: #ba7;
 }
 
-/* common-layout */
+/* common-layout 
+--------------------------------------------*/
 .container {
+  position: relative;
+
   width: 100%;
   height: 100%;
   max-width: 960px;
@@ -26,6 +39,9 @@
   background-color: #ddd;
 }
 
+
+/* #headBox 
+--------------------------------------------*/
 #headBox {
   position: fixed;
   top: 0;
@@ -35,19 +51,128 @@
   width: 100%;
   background-color: var(--color-black);
 }
+  h1 {
+    float: left;
+    width: 180px;
+    height: 40px;
+    background-color: var(--color-deepGn);
+  }
+  #navigation {
+    float: right;
+    width: 500px;
+    height: auto;
+    padding-top: 6px;
+  }
+    .gnb {
+      float: right;
+      width: 430px;
+      height: 33px;
+      background-color: var(--color-deepY);
+    }
+      .close_btn {
+        display: none;
+      }
+      .gnb_list {
+        display: none;
+      }
+      /* mobile영역 .gnb 구현시 처리되는 부분 */
+      .gnb_btn {
+        width: 100%;
+        height: 100%;
+      }      
+        .gnb_btn > button {
+          width: 100%;
+          height: 100%;
+          font-size: 0.5rem;
+        }      
+      /* 햄버거 바메뉴 누르면 열리는 메뉴 구현 */
+      .gnb_list {
+        position: fixed;
+        top: 0;
+        right: 0;
+
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        padding-top: 3rem;
+        background-color: #fff;
+      }
+      .gnb_list ul {
+        width: 100%;
+        height: auto;
+      }
+      .gnb_list li {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+        
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--color-deepGn);
+        text-transform: capitalize;
+      }
+      .gnb_list a {
+        color: inherit;
+      }
+
+
+      /* event: gnb에 action 클래서 첨부시처리 내용 */
+      .action .open_btn {
+        display: none;
+      }
+      .action .close_btn {
+        display: block;
+        color: var(--color-white);
+      }
+      .action .gnb_btn {
+        position: relative;
+        z-index: 100;
+        background-color: var(--color-black);
+      }
+      .action .gnb_list {
+        display: block;
+      }
+
+
+    .unb {
+      float: left;
+      width: 30px;
+      height: 34px;
+      background-color: var(--color-white);
+    }
+
+/* #viewBox 
+--------------------------------------------*/
 #viewBox {
   width: 100%;
   background-color: var(--color-deepY);
 }
+.indicator {}
+.indi_list {}
+.indi_list p {}
+
+/* #contentBox 
+--------------------------------------------*/
 #contentBox {
   width: 100%;
   background-color: var(--color-deepGn);
 }
+
+/* #infoBox 
+--------------------------------------------*/
 #infoBox {
   width: 100%;
   background-color: var(--color-purple);
 }
+
+/* #footBox 
+--------------------------------------------*/
 #footBox {
   width: 100%;
   background-color: var(--color-black);
 }
+
+
+
+
+/* 이거랑 관련된 파일 이랑 html 코드 나중에 채워넣기.. */
