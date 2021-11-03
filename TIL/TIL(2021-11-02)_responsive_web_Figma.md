@@ -34,7 +34,7 @@ date: 2021-11-02-Tuesday
       - 가로나 세로로 같은 요소가 반복되어/같은 간격을 두고 나열 될 경우 `auto layout`을 적극 활용한다.
       - 또, 같은 요소가 반복되어 사용되면 해당 요소는 `component`로 지정하여, 부모 컴포넌트를 기준으로 자식 컴포넌트들을 일괄적으로 스타일링 할 수 있게 한다.
       - responsive하게 움직이는 하나의 frame/layout을 만들고 싶다면 [Responsive](https://www.figma.com/community/plugin/840727678445998968/Responsive)이라는 plugin을 적극 활용한다.       
-      <img src="./images/responsive_figma_plugin.png" alt="피그마 플러그인 소개 이미지" width="500px" />
+      <img src="./images/responsive_figma_plugin.png" alt="피그마 플러그인 소개 이미지" width="00px" />
 
      
 <br />
