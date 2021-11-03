@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* weegle.css*/
+
+
+/* common.css 
+-------------------------------- */
+.blind {
+  display: block; position:absolute; z-index:-1;
+  clip:rect(0, 0, 0, 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+/* layout 1
+--------------------------- */
+.first_box {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+  /* margin: auto; */
+}
+.first_box div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 500px;
+  height: 300px;
+  background-image: url();
+}
+
+
+/* layout 2
+--------------------------- */
+.search_box_area {
+  position: relative;
+
+  /* background-color: #ffa; */
+  width: auto;
+  height: 30px;
+}
+
+/* input */
+#searchBox {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 400px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  text-indent: 15px;
+}
+/* label */
+.search_box_area label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  width: 400px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border-radius: 30px;
+  /* background-color: #fad; */
+}
+
+.icon_set {
+  position: relative;
+
+  display: block;
+  width: 400px;
+  height: auto;
+  margin: auto;
+  /* background-color: #ed5; */
+}
+.icon_set i {
+  position: absolute;
+  top: 0;
+
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  /* background-color: #fed; */
+}
+  .fa-search {
+    left: 20px;
+  }
+  .fa-keyboard {
+    right: 40px;
+  }
+  .fa-microphone {
+    right: 10px;
+    color: rgb(33, 110, 255);
+  }
+
+/* 질문 */
+/* hover시 서치박스 안 아이콘이 사라기게 하는 event */
+#searchBox:active + .icon_set,
+#searchBox:focus + .icon_set {
+  display: none;
+  /* z-index: -1; */
+}
+#searchBox:active,
+#searchBox:focus {
+  outline: 3px solid #ccc;
+}
+
+
+
+/* layout 3
+--------------------------- */
+.btn_area {
+  position: relative;
+
+  width: 100%;
+  height: 100px;
+  /* background-color: #fed; */
+}
+  .btn_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+    .btn {
+      width: auto;
+      height: auto;
+      padding: 15px 10px;
+      border: 0;
+      border-radius: 3px;
+      color: #777;
+      background-color: #eee;
+      cursor: pointer;
+    }
+      /* .btn:nth-child(1) {}
+      .btn:nth-child(2) {} */
+
+
+
+/* layout 4
+--------------------------- */
+.service_provided {
+  width: 100%;
+  height: 50px;
+  /* background-color: #fad; */
+}
+  .service_inner {
+    width: 190px;
+    height: auto;
+    margin: auto;
+    padding: 16px 0;
+    /* background-color: #fea; */
+  }
+    /* .text_area {} */
+      .text_area:after,
+      .text_area::after {
+        display: inline-block;
+        content: ':';
+        overflow: hidden;
+        line-height: 10px;
+
+      }
+      .text_uppercased {
+        text-transform: uppercase;
+      }
+    .service_provided a {
+      text-decoration: none;
+      color: rgb(33, 110, 255);
+    }

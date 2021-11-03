@@ -1,0 +1,91 @@
+@charset "UTF-8";
+/* weegle.css*/
+
+
+/* common.css 
+-------------------------------- */
+.blind {
+  display: block; position:absolute; z-index:-1;
+  clip:rect(0, 0, 0, 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+
+/* layout 1
+--------------------------- */
+.first_box {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+  /* margin: auto; */
+}
+.first_box div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 500px;
+  height: 300px;
+  background-image: url();
+}
+
+
+/* layout 2
+--------------------------- */
+.search_box_area {
+  position: relative;
+
+  background-color: #ffa;
+  width: auto;
+  height: 30px;
+}
+
+/* input */
+#searchBox {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 400px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  text-indent: 15px;
+}
+/* label */
+.search_box_area label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  width: 30px;
+  height: 30px;
+  margin-left: -180px;
+}
+.search_box_area label i{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* event */
+#searchBox:active + label[for="searchBox"] i,
+#searchBox:focus + label[for="searchBox"] i {
+  width: 0;
+  height: 0;
+}
+
+
+/* layout 1
+--------------------------- */
+
+/* layout 1
+--------------------------- */
