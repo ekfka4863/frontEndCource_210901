@@ -226,8 +226,6 @@ date: 2021-11-04-Thursday
 <br />
 <!-- <img src="./images/responsive_figma_plugin.png" alt="피그마 플러그인 소개 이미지" width="00px" /> -->
 
-
-
      
 <br />
 <br />
