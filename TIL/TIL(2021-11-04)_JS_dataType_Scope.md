@@ -279,7 +279,6 @@ date: 2021-11-04-Thursday
 
 - cf.  
   - ✨ Only 선생님's 강의 ✨
-  - https://heropy.blog/2018/11/24/css-flexible-box/
 
 </detials>   
 
