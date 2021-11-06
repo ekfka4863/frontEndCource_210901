@@ -124,7 +124,7 @@ var rockPaperScissors = ((player1, player2) => {
 
   if ( (player1 === "✌🏻" && player2 === "✋🏻") 
       || (player1 === "👊🏻" && player2 === "✌🏻") 
-      || (player1 === "✋🏻" && player2 === "👊🏻") ) {
+      || (player1 === "✋🏻" && player2 === "👊🏻") ) {  
     winner = `player1: ${player1}, player2: ${player2} ➡️➡️➡️➡️➡️ player1 승!!`;
   } else if (player1 === player2) {
     // 무승부
