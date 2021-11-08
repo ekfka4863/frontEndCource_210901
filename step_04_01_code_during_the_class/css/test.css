@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* css 주석과 동일하기에 주석도 변환되어 넘어감 */
+body {
+  background-color: #fa0;
+}
+
+#wrap {
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  background-color: #fff;
+}
+
+h1 {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(50, 240, 50, 0.5);
+  color: #404040;
+}
+
+h1 > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 > a:hover {
+  color: #ffcc66;
+}
+
+h1 > a:focus {
+  color: white;
+}

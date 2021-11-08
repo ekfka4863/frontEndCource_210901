@@ -139,24 +139,24 @@ var rockPaperScissors = ((player1, player2) => {
 rockPaperScissors(player1, player2);
 
 
-function func(player1, player2) {       // 매개변수
-  let result; 
+// function func(player1, player2) {       // 매개변수
+//   let result; 
 
-  if (조건) {
-    // result = ;
-    // 결과를 도출하는 식
-  } else if (조건2) {
-    // result = ;
-    // 결과를 도출하는 식 2
-  } else {
-    // result = ;
-    // 위의 조건1, 2가 모두 false일 때 실행
-  }
+//   if (조건) {
+//     // result = ;
+//     // 결과를 도출하는 식
+//   } else if (조건2) {
+//     // result = ;
+//     // 결과를 도출하는 식 2
+//   } else {
+//     // result = ;
+//     // 위의 조건1, 2가 모두 false일 때 실행
+//   }
 
-  return result;        // 값을 리턴
-}
+//   return result;        // 값을 리턴
+// }
 
-func(player1, player2);                 // 함수 호출시 인자를 넘긴다
+// func(player1, player2);                 // 함수 호출시 인자를 넘긴다
 
 
 

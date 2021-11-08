@@ -57,13 +57,16 @@ var text = '글자입력';
 console.log(text);        // '글자입력'
 
 
-// 함수
+// 함수 호이스팅
+fn();                     // '함수 호출!!!'
 
-fn();                     // undefined
 function fn() {
   console.log('함수 호출!!!');
 }
 fn();                     // '함수 호출!!!'
+
+
+
 
 
 /*

@@ -1,0 +1,53 @@
+// 주석다는 방법
+/* css 주석과 동일하기에 주석도 변환되어 넘어감 */ 
+// 한줄 주석은 css에 없는 주석이라 변환이 처리되지 않는다!
+
+
+
+// 변수 - scss
+$yellow: #fa0;
+$white: #fff;
+$green: #32f032;
+
+// 변수 - 원래 css (option)
+// :root {
+//   --color-white: #fff;
+//   --color-yellow: #fa0;
+//   --color-green-op: rgba(20, 200, 30, 0.5);
+// }  
+
+
+
+// ------------------------------------------------------------
+body {
+  // background-color: var(--color-yellow);
+  background-color: $yellow;
+}
+
+#wrap {
+  width: 90%;
+  height: 100px;
+  margin: auto;
+  // background-color: var(--color-white);
+  background-color: $white;
+}
+
+h1 {
+  width: 100%;
+  height: 50px;
+  background-color: rgba($green, 0.5);    // 자동으로 분할해서 opacity 자동처리 해줌!
+  color: darken($white, 75%);
+  
+  // 중첩 - cf. 사람이 헷갈리니까 최대 4번까지만 권장!
+  & > a {
+    color: inherit;
+    text-decoration: none;
+    // &:hover {color: darken($yellow, 20%);}   // 여기서 &가 의미하는 것은 h1이 아닌 a태그!!!
+    // &:focus {color: darken($yellow, 50%);}   // 여기서 &가 의미하는 것은 h1이 아닌 a태그!!!
+    &:hover {color: lighten($yellow, 20%);}   // 여기서 &가 의미하는 것은 h1이 아닌 a태그!!!
+    &:focus {color: lighten($yellow, 50%);}   // 여기서 &가 의미하는 것은 h1이 아닌 a태그!!!
+    // cf. http://scg.ar-ch.org/
+  }
+}
+
+// ------------------------------------------------------------
