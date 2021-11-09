@@ -1,0 +1,206 @@
+// b_02_scss_list_dic.scss
+/* b_02_scss_list_dic.css */
+
+// ----------------------------------
+// color
+$yellow: #fa0;
+$blue: (#00f, #0af, #02f, #7af, #adf);   // list -> 다만 괄호의 차이점만 있음!
+$pseudoCode: (
+  "hover": #87f, 
+  "focus": #4f3, 
+  "active": #fda, 
+  "selected": #dfd
+);   // dic(map) -> 다만 괄호의 차이점만 있음!
+
+
+// ----------------------------------
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: lighten($yellow, 30%);
+}
+
+.list_area {
+  width: 100%;
+  height: auto;
+  & > li {
+    width: 100%;
+    background-color: nth($blue, 1);
+    color: nth($blue, 4);
+    &:hover {
+      background-color: map-get($pseudoCode, "hover");
+    }
+    &:focus {
+      background-color: map-get($pseudoCode, "focus");
+    }
+  }// li
+}// .list_area
+
+
+
+// -------------------------------------
+// e.g. 
+$coffee: ("espresso", "latte", "choco", "vanilla", "other");
+// #{변수명/숫자} -> 인터폴레이션 기법으로 내용을 담을 수 있게 처리하는 (cf. js의 탬플릿 리터럴에서 `${}`과 같은 것!)
+.coffee_#{nth($coffee, 1)} {
+  width: 100%;
+}
+.coffee_#{2} {
+  width: 100%;
+}
+
+// 위의 예시 SCSS 반복문이란 개념이랑 합쳐보기!
+// SCSS 반복문 
+// 기본 문법 ->  @for $i from 시작숫자 through 마무리숫자 {}  -> 마지막 숫자까지 
+// 기본 문법 ->  @for $i from 시작숫자 to 마무리숫자 {}  -> 마지막 숫자 미만까지 
+@for $key from 1 through 5 {         // 숫자 1부터 5까지 5번 반복수행하면서 해당 숫자는 $key -> 단, 이때 해당 숫자는 매개변수 $key에 임의 할당
+  .coffee_#{ nth($coffee, $key) } {   // .area_espresso {}  .area_latte {}. .area_choco {} ...의 형태로 .area_ 의 글자에 $coffee 변수 내부에 있는 이름을 각각 할당하기 위해서 (문자)보간법이라고 하는 #{} 를 사용했다.
+    width: #{$key * 10%};             // 배열(list)형식을 사용하기 위해서는 nth(변수명, 순번)을 활용해야한다.
+    background-color: nth($blue, $key);
+  }
+  .area_#{ nth($coffee, $key) } {
+    // width: $key * 10%;
+    height: 100%;
+    // background-color: nth($blue, $key);
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+
+// e.g. 
+$device: 768;
+#viewBox {
+  width: 100%;
+  // height: 500 / 768 * 100vw;
+  height: 600 / $device * 100vw;
+}
+
+/* ----------------------------------------------- */
+// 핵심적인 SCSS 기능 
+// 변수 ->  $변수명:값;
+// 중첩 ->  #box { & > li { }}
+// @mixin / @include -> 코드의 재사용 가능
+
+@mixin blind() {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;  
+
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+}// @mixin blind();
+
+@mixin bar() {
+  &:after, &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}// @mixin bar();
+
+@mixin full() {
+  display: block;
+  width: 100%;
+  height: 100%;
+  @content;
+  // 세번쨰 시도
+  & > span {
+    @include blind();
+  }
+}// @mixin full();
+
+
+
+
+.nav_area {
+  float: right;
+  width: 960px;
+  height: auto;
+  & > li {
+    float: left;
+    width: auto;
+    height: 30px;
+    a {
+      // display: block;
+      // width: 100%;
+      // height: 100%;
+      // @include full(); background-color: $yellow;   // 이것도 가능! 하지만 항상 가능한것이 아님.. 그래서 아래와 같이 믹스인에 @content; 를 넣고 아래와 같이 @include() {여기다가 코드를 추가하는 방식으로 css 스타일링을 적용하는 것...};
+      @include full() { background-color: $yellow; };
+    }
+    // 두번째 시도 
+    // span {
+    //   @include blind();   // .blind
+    // }
+  }
+  // 첫번째 시도 
+  // &:after, &::after {    // .clearfix
+  //   content: "";
+  //   display: block;
+  //   clear: both;
+  // }
+  @include bar();
+}// .nav_area
+
+
+
+// e.g. 
+@mixin MakeCard() {
+  li {
+    float: left;
+    width: 100%;
+    height: 200px;
+    margin: 10px;
+    & > a {
+      @content;
+    }
+  }
+}// @mixin MakeCard(); 
+
+.card {
+  width: 100%;
+  height: auto;
+  @include MakeCard() {
+    background-image: url("../../img/bar.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    & > i {
+      @include full();
+    }
+  };
+  @include bar();
+}
+
+
+
+
+// e.g. 
+@mixin mobile() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}// .@mixin mobile();
+
+#wrap {
+  width: 100%;
+  min-width: 900px;
+  background-color: $yellow;
+  @include mobile {
+    min-width: auto;
+    background-color: #adf;
+  }
+}
+
+
+//-------------------------
+// 오늘 수업때 배운 내용 정리
+// list  -> $var: (v1, v2, v3);   & 사용 방법  -> nth($var, 숫자/순번)
+// map  -> $map: (a: v1, b:v2, c:v3);   & 사용 방법  -> map-get($map, key)
+// @for -> @for $i from through lastNum {} 
+// #{}  -> 숫자나, 이름을 있는 형태 그대로 사용할 때... (주로 선택자에 사용!!!)   & 사용 방법  -> #{변수명/숫자}
+// @mixin -> 기능을 만들때, 그리고 사용할 때는 @include를 기능을 사용할 때
+// @content  -> @mixin 내부에서 기능을 추가할 때 걸어주는 기능 

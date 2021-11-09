@@ -296,4 +296,3 @@ console.log(x);   // hero
 ckFn2();
 console.log(x);   // hero
 
-

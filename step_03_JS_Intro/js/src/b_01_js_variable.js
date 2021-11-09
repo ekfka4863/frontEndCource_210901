@@ -47,7 +47,38 @@ console.clear();
 */ 
 
 
+
 // -------------------------------------------------------------------------------------------
+// 변수 호이스팅 
+var variable = 10; 
+
+// var variable;        // undefined
+// variable = 10;       // 10
+
+
+// var variable;   
+console.log(variable);    // undefined
+
+var variable = 10;        // 10
+
+console.log(variable);    // 10
+
+
+
+
+// 함수 호이스팅 - 함수선언식
+Fn();             // 함수 호출!!!
+
+function Fn() {
+  console.log('함수 호출!!!');
+}
+
+Fn();               // 함수 호출!!!
+
+
+
+
+
 
 // var text;
 console.log(text);        // undefined

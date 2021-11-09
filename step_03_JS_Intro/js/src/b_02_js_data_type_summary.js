@@ -1,9 +1,10 @@
 // --------------------------------------------------------------------------
-// (function(){})()    // 즉시실행함수: 익명함수의 기다림없이 바로 실행 
-// (function(){}())    // 즉시실행함수: 익명함수의 기다림없이 바로 실행 
+// (  function(){}  )()   // 즉시실행함수: 익명함수의 기다림없이 바로 실행 
+// (  function(){}  ())    // 즉시실행함수: 익명함수의 기다림없이 바로 실행 
 
 // e.g.
 var body = document.querySelector('body');
+
   (function(int) {
     var wrap = document.createElement('div');
     wrap.setAttribute('id', 'wrap');
@@ -76,7 +77,7 @@ random_sentence.unshift('내일도 또 다시!!!');
 
 var user = function(user) {
 
-  var random_num = Math.floor(Math.random() * random_sentence.length);
+  var random_num = (Math.random() * random_sentence.length);
 
   return user + ' ' + random_sentence[random_num];;
 };
@@ -241,4 +242,13 @@ mul(a, b);          // 곱셈: 'a * b = ' 값
 divide(a, b);       // 나눗셈: 'a / b = ' 값   -> 정수값만 도출 
 avg(a, b);          // 평균: 'a * b / 2 = ' 값
 remainder(a, b);    // 나머지: 'a % b = ' 값
+
+
+
+
+
+var arr = [];
+arr = [1, 2, 6, 3, 7, 8, 9];
+
+arr[0];
 

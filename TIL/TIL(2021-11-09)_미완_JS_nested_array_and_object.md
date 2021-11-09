@@ -1,27 +1,25 @@
 ---
-date: 2021-11-08-Monday
+date: 2021-11-09-Tuesday
 ---
 
 # TIL
 - 📝 오늘 배운 내용 ✏️ : 
-  - [x] `연산자 (operator)` 
-    - **사칙 연산자 (+, -, *, /, %)**
-    - **할당 연산자 (+=, -=, /=, +=)**
-    - **증감 연산자(++a, a++, --a, b--)**
-    - **비교 연산자(||, &&, |, &)**
-    - **삼항 연산자((조건) ? 참일때 실행 코드: 거짓일때 실행 코드)**
-    - **동치 연산자(===, !==)**
+  - [x] `배열과 객체` 
+    - 배열 내 배열 
+    - 객체 내 객체 
+    - 배열과 객체의 혼합형
+    <!-- https://yjshin.tistory.com/entry/JavaScript-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-for-%EB%AC%B8-for-in-%EB%AC%B8-for-of-%EB%AC%B8
+    https://medium.com/@hongkevin/js-5-es6-map-set-2a9ebf40f96b
+    http://blog.302chanwoo.com/2017/08/javascript-array-method/
+     -->
+    - 엑셀 파일로 .csv 파일 만들고 json 파일로 컨버트 하는 방법 
   - [x] `SCSS` 기초 문법 
-    - 변수 사용법
-      - `$변수이름`
-    - nesting 기법 
-      - `선택자 { 선택자 { &:hover { } } }`
-    - 코드의 재활용 `@mixin`, `@include`
+    - 
 
 <br />
 <br />
 
-### 자바스크립트 데이터 타입 (총 7가지)
+### 배열과 객체
 <br />
 <!-- <img src="./images/js_data_types.png" alt="JS 7개의 데이터 타입" width="500px" style="padding-left: 20px;" /> -->
 <br />
