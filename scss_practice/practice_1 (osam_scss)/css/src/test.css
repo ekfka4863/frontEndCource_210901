@@ -1,0 +1,141 @@
+/* test.css */
+#wrap {
+  width: 100%;
+  height: 100%;
+  background-color: #c4c4c4;
+}
+
+#headBox {
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  background-color: #fff;
+}
+
+#viewBox {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  background-color: #757575;
+}
+
+#menuBox {
+  width: 100%;
+  height: auto;
+  min-height: 2019px;
+  background-color: #fff;
+}
+
+.tab_menu_area {
+  width: 1100px;
+  height: 57px;
+  margin: auto;
+  background-color: #eda;
+}
+
+.tab_menu_area > ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.tab_menu_area > ul > li {
+  width: auto;
+  min-width: 180px;
+  height: 100%;
+  font-weight: bold;
+  font-size: 22px;
+  color: #757575;
+  line-height: 57px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #c4c4c4;
+}
+
+.tab_menu_area > ul:after, .tab_menu_area > ul::after {
+  position: absolute;
+  bottom: -21px;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #c4c4c4;
+}
+
+.menu_con_area {
+  width: 1098px;
+  height: 1640px;
+  margin: auto;
+  margin-top: 38px;
+  margin-bottom: 129px;
+  background-color: #dfa;
+}
+
+.menu_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 410px;
+  padding: 30px;
+  background-color: #fff;
+  outline: 1px solid #0b7171;
+}
+
+.menu_detail > div {
+  width: 240px;
+  height: 350px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+}
+
+.menu_detail dl dt {
+  position: relative;
+  font-weight: 500;
+  font-size: 22px;
+  color: #171717;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+
+.menu_detail dl dt:after, .menu_detail dl dt::after {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #757575;
+}
+
+.menu_detail dl  dd {
+  width: 193px;
+}
+
+.menu_detail_img {
+  width: 218px;
+  height: 220px;
+  border-radius: 3px;
+  background-color: #c4c4c4;
+}
+
+#footBox {
+  width: 100%;
+  height: auto;
+  min-height: 450px;
+  background-color: #333;
+}

@@ -247,7 +247,279 @@ findSmallestElement(arr);   // 호출시 매개변수 자리에 인자를 넣어
 
 
 
- 
+
+
+// ----------------------------------------------
+// ----------------------------------------------
+// ----------------------------------------------
+var storeHistory = [];
+// var i = 0;
+
+// var storeVisitors = function() {};
+
+
+// step - 1: 조건문 
+switch(visitor) {
+  case 'a':
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    break;
+  case 'b':
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    break;
+  case 'c':
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    break;
+  case 'd':
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    storeHistory.push('');
+    break;
+  default:
+    storeHistory.push('사용기록 없음');
+}
+
+console.log(storeHistory);
 
 
 
+// step - 2: 호출해서 기능을 수행해야하니까 함수를 생성해서 조건문을 안에 넣어준다 
+var recordStoreHistory = function(visitor) {
+  switch(visitor) {
+    case 'a':
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      break;
+    case 'b':
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      break;
+    case 'c':
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      break;
+    case 'd':
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      storeHistory.push('');
+      break;
+      default:
+      storeHistory.push('사용기록 없음');
+  }
+};
+
+
+
+// step - 3: 재귀함수를 이용하여 중복을 줄일 수 있는 코드는 없애버린다 
+var recordStoreHistory = function(visitor) {
+  switch(visitor) {
+    case 'a':
+      recordStoreHistory('start');
+      storeHistory.push('');
+      recordStoreHistory('end');
+      break;
+    case 'b':
+      recordStoreHistory('start');
+      storeHistory.push('');
+      recordStoreHistory('end');
+      break;
+    case 'c':
+      recordStoreHistory('start');
+      storeHistory.push('');
+      recordStoreHistory('end');
+      break;
+    case 'd':
+      recordStoreHistory('start');
+      storeHistory.push('');
+      recordStoreHistory('end');
+      break;
+    case 'start':
+      storeHistory.push('');
+      storeHistory.push('');
+      break;
+    case 'end':
+      storeHistory.push('');
+      storeHistory.push('');
+      break;
+    default:
+      storeHistory.push('사용기록 없음');
+  }
+};
+
+
+
+// step - 4: 해당 함수의 로직이 외부에 노출되지 않게 또 다른 함수로 감싸서 은닉시켜준다 -> 클로져 / 람다식
+var recordStoreHistoryConcealed = function() {
+
+  var recordStoreHistory = function(visitor) {
+    switch(visitor) {
+      case 'a':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'b':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'c':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'd':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'start':
+        storeHistory.push('');
+        storeHistory.push('');
+        break;
+      case 'end':
+        storeHistory.push('');
+        storeHistory.push('');
+        break;
+      default:
+        storeHistory.push('사용기록 없음');
+    }
+  };
+};
+
+
+// 여기부터 다시 ...!!!!
+
+// step - 5: 사용자와 사용자가 아래의 조건에 맞을 때 진행하는 일련의 절차를 출력하는 "데이터"를 객체와 배열의 형태로 반환시켜보자  
+var userHistoryPrinted = {};    // "데이터"가 담길 객체 {};
+// var userSequence = [];          // 위의 데이터 중 "사용자가 편의점에 가서 하는 모든 행동을 일련의 절차로 담은 배열"
+// // Q: userSequence왜 두번 선언되는가!? 
+// // 일단은 이 아이는 후에 나올 아니랑은 다른 아이다! 
+// // 하지만 반환을 하지만 ... 
+
+
+// step - 6: 위에서 선언한 아이들을 함수 recordStoreHistoryConcealed 안에 넣어주기 ... 같이 내부에 로직인 은닉 되어야 하니까~ 
+var recordStoreHistoryConcealed = function(visitor) {
+  var userSequence = []; 
+  
+  var recordStoreHistory = function(visitor) {
+    switch(visitor) {
+      case 'a':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'b':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'c':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'd':
+        recordStoreHistory('start');
+        storeHistory.push('');
+        recordStoreHistory('end');
+        break;
+      case 'start':
+        storeHistory.push('');
+        storeHistory.push('');
+        break;
+      case 'end':
+        storeHistory.push('');
+        storeHistory.push('');
+        break;
+      default:
+        storeHistory.push('사용기록 없음');
+    }
+  };
+  return userSequence;
+};
+
+
+
+
+
+
+// step - 7: 함수를 또 다른 함수로 감싸서 외부에서 접근하여 함수 내부의 로직이나 값을 수정하지 못하게 한다
+
+
+var recordStoreHistoryConcealed = function(user, visitor) {
+  // 정보의 안전을 위해 - 수정할 수 없게! 
+  var userCheck = {};                      // e.g. {name: '사용자', content:[]};
+  var storeHistory = [];
+
+
+  var recordStoreHistory = function(visitor) {   
+    
+    // 조건문 -----------------------
+    switch(visitor) {
+      case 'a':
+        recordStoreHistory('start');
+        storeHistory.push('3. 카드 결재를 한다 ');
+        recordStoreHistory('end');
+        break;
+      case 'b':
+        recordStoreHistory('start');
+        storeHistory.push('3. 카드 입금을 받는다 ');
+        recordStoreHistory('end');
+        break;
+      case 'c':
+        recordStoreHistory('start');
+        storeHistory.push('3. 카드 입금을 받는다 (취소)');
+        recordStoreHistory('end');
+        break;
+      case 'd':
+        recordStoreHistory('start');
+        storeHistory.push('3. 결제 에러발생');
+        recordStoreHistory('end');
+        break;                      
+      case 'start':
+        storeHistory.push('1. 물건을 고른다');
+        storeHistory.push('2. 카드를 낸다');
+        break;                      
+      case 'end':
+        storeHistory.push('4. 카드를 돌려받는다');
+        storeHistory.push('5. 내역을 확인한다');
+        break;                      
+      default:
+        storeHistory.push('사용 기록 없음.');
+    } 
+    // -----------------------------
+  
+    return storeHistory;        
+  };// recordStoreHistory(visitor);
+};// recordStoreHistoryConcealed(visitor);
+
+
+
+
+
+// step - 8: 함수를 또 다른 함수로 감싸서 외부에서 접근하여 함수 내부의 로직이나 값을 수정하지 못하게 한다
