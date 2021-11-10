@@ -296,30 +296,3 @@ console.log(storeHistoryPerVisitor);
 
 
 
-var testFn = function(value) {
-  var answer = ""; 
-
-  switch(value) {
-    case 1:
-    case 2:
-    case 3:
-      answer = "1 or 2 or 3";
-      break;
-    case 4:
-    case 5:
-    case 6:
-      answer = "4 or 5 or 6";
-      break;
-    case 7:
-    case 8:
-    case 9:      
-      answer = "7 or 8 or 9";
-      break;
-    default:
-      answer = "no answer exists!"
-  }
-  
-  return answer;
-};
-
-testFn(5);      // "4 or 5 or 6"
