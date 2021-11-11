@@ -1,4 +1,9 @@
 /* test_with_teacher.css */
+@import url('wrap.css');
+@import url('headBox.css');
+@import url('contentBox.css');
+@import url('footBox.css');
+
 .container {
   width: 1100px;
   height: 100%;

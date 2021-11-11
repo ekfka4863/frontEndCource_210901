@@ -579,3 +579,96 @@ box1();
 
 // --------------------
 console.clear();
+
+
+
+
+
+
+
+// --------------------
+// 전역 변수 
+var i = 0;
+var storeHistoryPerVisitor = [];
+
+// 함수 - 1: recodeStoreHistory을 감싼 또 다른 함수 
+var recodeStoreHistoryConcealed = function(visitor) {
+  var storeHistory = [];
+
+  var recordStoreHistory = function(visitor) {   
+    
+    // 조건문 -----------------------
+    switch(visitor) {
+      case 'a':
+        recordStoreHistory('start');
+        storeHistory.push('3. 카드 결재를 한다 ');
+        recordStoreHistory('end');
+        break;
+      case 'b':
+        recordStoreHistory('start');
+        storeHistory.push('3. 카드 입금을 받는다 ');
+        recordStoreHistory('end');
+        break;
+      case 'c':
+        recordStoreHistory('start');
+        storeHistory.push('3. 카드 입금을 받는다 (취소)');
+        recordStoreHistory('end');
+        break;
+      case 'd':
+        recordStoreHistory('start');
+        storeHistory.push('3. 결제 에러발생');
+        recordStoreHistory('end');
+        break;                      
+      case 'start':
+        storeHistory.push('1. 물건을 고른다');
+        storeHistory.push('2. 카드를 낸다');
+        break;                      
+      case 'end':
+        storeHistory.push('4. 카드를 돌려받는다');
+        storeHistory.push('5. 내역을 확인한다');
+        break;                      
+      default:
+        storeHistory.push('사용 기록 없음.');
+    } 
+    // -----------------------------
+  
+  };// recordStoreHistory(visitor);
+  
+  recordStoreHistory(visitor);
+
+  return storeHistory;
+};// recodeStoreHistoryConcealed(visitor);
+
+
+// recodeStoreHistoryConcealed('a');  
+
+
+
+// 함수 - 2
+var storeFn = function(visitor, user) {
+  var userCheck = {};
+  var userSequence = [];
+
+  userSequence = recodeStoreHistoryConcealed(visitor);
+
+  i++;
+
+  userCheck.user = user || 'noNameUser_' + i;
+  userCheck.content = userSequence;
+
+  storeHistoryPerVisitor.push(userCheck);
+
+  // return ;
+  return userCheck;
+};
+
+
+// 출력
+console.log(storeFn('a'));
+console.log(storeFn('b', 'user2'));
+console.log(storeFn('c', 'user3'));
+console.log(storeFn('d'));
+console.log(storeHistoryPerVisitor);
+
+
+

@@ -63,7 +63,7 @@ var storeHistoryPerVisitor = [];             // 외부용 - 외부에서 사용�
 // [
 //   {
 //     user: '',
-//     history: [, , , ]
+//     history: [1, 2, 3, 4, 5]
 //   },
 //   {
 //     user: '',
@@ -75,7 +75,7 @@ var storeHistoryPerVisitor = [];             // 외부용 - 외부에서 사용�
 //   },
 //   {
 //     user: '',
-//     history: [, , , ]
+//     content: [, , , ]
 //   }
 // ];
 
@@ -171,11 +171,7 @@ console.log(storeHistoryPerVisitor);
 
 
 
-
-
-
-
-
+// --------------------------------------------------
 // with 선생님
 
 // step - 1 & 2:  

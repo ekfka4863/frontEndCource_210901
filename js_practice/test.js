@@ -520,6 +520,4 @@ var recordStoreHistoryConcealed = function(user, visitor) {
 
 
 
-
-
 // step - 8: 함수를 또 다른 함수로 감싸서 외부에서 접근하여 함수 내부의 로직이나 값을 수정하지 못하게 한다
