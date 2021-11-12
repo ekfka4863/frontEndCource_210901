@@ -116,5 +116,3 @@ var getFind = function(word, sentence) {
 const output = getFind("a", "I am a hacker");
 console.log(output);      // 2
 
-
-

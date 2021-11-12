@@ -1,0 +1,36 @@
+/* b_03_scss_mixin_function.css */
+#wrap {
+  background-image: url(url___.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: initial; }
+
+p {
+  width: 100px;
+  width: 6.25rem;
+  height: 3.125rem; }
+
+.div1 {
+  width: 11.1111111111vw; }
+
+.box2 {
+  width: px(320);
+  width: 20rem;
+  height: px(640);
+  height: 40rem;
+  border-radius: px(10);
+  border-radius: 0.625rem;
+  padding: px(10);
+  padding: 0.625rem;
+  margin: px(30);
+  margin: 1.875rem; }
+
+.box3 {
+  width: px(300);
+  width: 18.75rem;
+  height: px(500);
+  height: 83.3333333333vw;
+  min-height: px(500);
+  min-height: 31.25rem; }
+
+/*# sourceMappingURL=b_03_scss_mixin_function.css.map */

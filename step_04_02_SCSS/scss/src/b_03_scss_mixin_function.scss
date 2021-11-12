@@ -1,0 +1,48 @@
+// b_03_scss_mixin_function.scss
+/* b_03_scss_mixin_function.css */
+
+@import "../common/mixin";
+// @import "bourbon/bourbon"; -> ?? how to use...? 
+
+// 중요! 차이점: scss에서도 url()을 사용할 수 있다. 하지만... 
+// @import url();    // css - css 파일을 별도로 분리하여 참조하는 기능이고 
+// @import ;       // scss - scss 파일을 불러와서 css 변환시 1개의 파일로 결합하는 것에서 큰 차이가 있음!! 
+
+// e.g. 
+// @import url("b_01_scss_basic.css");    // 이미 변환된 css 파일을 참조만 하는 것
+
+
+#wrap {
+  // @include bgImg("../../images/___.png", no-repeat, 50% 50%, cover)
+  @include bgImg("___.png")
+}
+
+p {
+  @include unit(width, 100); 
+  height: rem(50);
+}
+
+.div1 {
+  width: vw(40);
+}
+
+// 사용 방법 예시 
+.box2 {
+  @include unit2(width, 320);
+  @include unit2(height, 640);
+  @include unit2(border-radius, 10);
+  @include unit2(padding, 10);
+  @include unit2(margin, 30);
+}
+
+
+.box3 {
+  // width: 300px;
+  // height: 500px;   // vw로 하고 싶으면 -> 500px / 600px * 100
+  // height:;
+  // min-height: 500px;
+  // min-height: 500rem;
+
+  @include unit2(width, 300);
+  @include vw2(height, 500);
+}

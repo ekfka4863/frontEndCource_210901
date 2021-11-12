@@ -113,8 +113,8 @@ for (; yy >= targetY; yy -= 1) {
 // e.g. 날짜와 관련된 함수
 // var date = Date();        
 // console.log(date);        // 'Fri Nov 12 2021 11:45:36 GMT+0900 (대한민국 표준시)' -> 그냥 함수를 변수에 넣어 호출
-var date = new Date();    // 2021-11-12T02:45:42.414Z -> 복제한다 + 객체로 사용한다  
-console.log(date);        // 2021-11-12T02:45:42.414Z
+var date = new Date();       // 2021-11-12T02:45:42.414Z -> 복제한다 + 객체로 사용한다  
+console.log(date);          // 2021-11-12T02:45:42.414Z
 
 // console.log(date.getFullYear());   // 2021
 
