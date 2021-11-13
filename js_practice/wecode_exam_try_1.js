@@ -135,10 +135,10 @@ console.log(find_longest_word(["PHP", "Exercises", "Backend"]));
 ```
 */
 
-var find_longest_word = function(array) {
-  var maxLength = Number.MIN_SAFE_INTEGER;
-  var index = -1;
-  var arrLength = [];   
+let find_longest_word = function(array) {
+  let maxLength = Number.MIN_SAFE_INTEGER;
+  let index = -1;
+  let arrLength = [];   
 
   array.forEach(word => {
     arrLength.push(word.length);
@@ -151,7 +151,7 @@ var find_longest_word = function(array) {
     }
   });
 
-    return arr[index];
+    return array[index];
 };
 
 
