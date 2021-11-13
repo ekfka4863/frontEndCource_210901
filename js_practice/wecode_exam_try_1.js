@@ -1,3 +1,7 @@
+// 날짜: 2021-11-12-금
+
+
+// ================================================
 // 문제 1번:  짝수인지 판별하는 함수 `isEven`을 작성해주세요
 var isEven = function(num) {
   if(num % 2 === 0) {
@@ -116,3 +120,39 @@ var getFind = function(word, sentence) {
 const output = getFind("a", "I am a hacker");
 console.log(output);      // 2
 
+
+
+// ================================================
+// 문제 5번: 
+/*
+`find_longest_word` 함수를 만들어 주세요.
+
+주어진 리스트안에 있는 단어중 가장 긴 단어를 찾을수 있도록 함수를 완성해주세요.
+
+```js
+console.log(find_longest_word(["PHP", "Exercises", "Backend"]));
+// --> "Exercises"
+```
+*/
+
+var find_longest_word = function(array) {
+  var maxLength = Number.MIN_SAFE_INTEGER;
+  var index = -1;
+  var arrLength = [];   
+
+  array.forEach(word => {
+    arrLength.push(word.length);
+  });
+
+  arrLength.forEach(length => {
+    if (length > maxLength) {           // arrLength = [3, 9, 7]
+      maxLength = length;
+      index++; 
+    }
+  });
+
+    return arr[index];
+};
+
+
+console.log(find_longest_word(["PHP", "Exercises", "Backend"]));   // "Exercises"
