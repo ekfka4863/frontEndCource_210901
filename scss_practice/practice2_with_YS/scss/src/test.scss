@@ -1,0 +1,21 @@
+// test.scss 
+/* test.css */ 
+
+@import "../common/_mixin.scss";
+@import "../common/_variable.scss";
+
+// ================================================== 
+
+#wrap {
+  @include widthHeight;
+  border: 1px solid $gray1;
+  background-color: #fca;
+
+  & > div {
+    @include widthHeight;
+  }
+}
+
+
+7
+// ================================================== 

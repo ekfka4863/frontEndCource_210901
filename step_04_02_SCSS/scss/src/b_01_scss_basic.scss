@@ -61,7 +61,7 @@ $border: $line $style $gray;
   outline: $border;
 }
 
-// @mixin - 재활용 하는 일종의 함수 + @include랑 항상 같이 사용된다
+// @mixin - 코드의 재활용을 가능하게 하는 일종의 함수 + @include랑 항상 같이 사용된다
 @mixin full($full: 100%) {
   width: $full; height: $full;
   min-width: 90px; min-height: 100px;
