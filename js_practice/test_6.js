@@ -234,3 +234,160 @@ var iceCon = {};
 
 
 
+
+
+
+
+// --------------------------------------------------
+var ar1 = ['딸기','포도','바나나','오렌지'];  
+var copyAr1 = [];
+
+var deepCopyAr1Fn = function(ar1) {
+  var tmp = [];
+
+  // cf. forEach -> 배열의 값들을 순회하는 메서드/기능/함수 
+  ar1.forEach(function(data, index){
+    tmp[index] = data;
+  });      
+
+  return tmp;
+};
+
+copyAr1 = deepCopyAr1Fn(ar1);
+
+// --------------------------------------------------
+var ob1 = {
+  'fruits': ['딸기','포도','바나나','오렌지']
+};
+var cOb1 = {};     // 깊은 복사를 한 값을 넣어줄 객체를 먼저 생성해준다... 
+
+
+ob1['drink'] = 'coffee';
+console.log(ob1);
+// { fruits: [ '딸기', '포도', '바나나', '오렌지' ], drink: 'coffee' }
+console.log(cOb1);
+
+// // for (var 임의변수 in 객체명) {}
+// for (var key in ob1) {
+//   cOb1[key] = ob1[key];
+// }
+// console.log(cOb1 === ob1);   // false -> 깊은복사 
+
+
+// // 문제 제기! 
+// ob1.fruits.push('멜론');     // ob1['fruits'] 는 배열이란 점을 유의! 
+
+
+// 해결책 
+for (var key in ob1) {
+  // cOb1[key] = ob1[key];
+  
+  // tip! var condition = Array.isArray(ob1[key]);
+  if(Array.isArray(ob1[key])) {
+    cOb1[key] = [];    
+
+    ob1[key].forEach(function(data, index) {
+      cOb1[key][index] = data;
+    }); 
+
+  } else {
+    cOb1[key] = ob1[key];  
+  }
+}
+
+ob1.fruits.push('멜론'); 
+console.log(ob1);
+{ fruits: [ '딸기', '포도', '바나나', '오렌지', '멜론' ], drink: 'coffee' }
+console.log(cOb1);
+{ fruits: [ '딸기', '포도', '바나나', '오렌지' ], drink: 'coffee' }
+
+
+
+
+
+// 선생님이 알려주신 방법 ----> 성공!!!! 
+// -----------
+// 방법 2 - 함수 미리 선언해서 호출만 따로 ... 
+var deepCopyAr1Fn = function(ar1) {
+  var tmp = [];
+
+  // cf. forEach -> 배열의 값들을 순회하는 메서드/기능/함수 
+  ar1.forEach(function(data, index){
+    tmp[index] = data;
+  });      
+
+  return tmp;
+};
+
+// -----------
+// 방법 2 
+
+var ob1 = {
+  'fruits': ['딸기','포도','바나나','오렌지']
+};
+var cOb1 = {};     // 깊은 복사를 한 값을 넣어줄 객체를 먼저 생성해준다... 
+
+
+ob1['drink'] = 'coffee';
+
+console.log(ob1);
+console.log(cOb1);
+
+for (var key in ob1) {
+  if(Array.isArray(ob1[key])) {
+    cOb1[key] = deepCopyAr1Fn(ob1[key]);
+  } else {
+    cOb1[key] = ob1[key];  
+  }
+}
+
+console.log(ob1);
+console.log(cOb1);
+
+ob1.fruits.push('멜론'); 
+
+console.log(ob1);
+// { fruits: [ '딸기', '포도', '바나나', '오렌지', '멜론' ], drink: 'coffee' }
+console.log(cOb1);
+// { fruits: [ '딸기', '포도', '바나나', '오렌지', '멜론' ], drink: 'coffee' }
+
+
+// -----------
+// 쉬운 방법 - 3
+// 객체 내 배열... 이런식으로 딥카피가 까다로운 경우 ... 아래와 같이 진행! 
+// with Json! 
+// JSON.stringify();
+// JSON.parse();
+
+var ob1 = {
+  'fruits': ['딸기','포도','바나나','오렌지'],
+  drink: 'coffee'
+};
+
+// step 0 - 깊은 복사를 해서 원본 객체인  ob1의 사본을 담을 빈객체를 생성한다 
+var cOb1 = {};     
+
+// step 1 
+var textObj = JSON.stringify(ob1);            // '{"fruits":["딸기","포도","바나나","오렌지"],"drink":"coffee"}'
+var parsedJsonObj = JSON.parse(textObj);      // { fruits: [ '딸기', '포도', '바나나', '오렌지' ], drink: 'coffee' }
+
+cOb1 = parsedJsonObj;
+
+ob1.fruits.push('홍시');
+
+console.log(ob1);
+// { fruits: [ '딸기', '포도', '바나나', '오렌지', '홍시' ], drink: 'coffee' }
+console.log(cOb1);
+// { fruits: [ '딸기', '포도', '바나나', '오렌지' ], drink: 'coffee' }
+
+
+/* json... 
+- json의 정의?  = 자바스크립트 객체 표기(방)법  
+- json이 필요한 이유? 
+브라우저를 통해 어떤 사이트를 들어가면, 사이트를 렌더링 하기 위해 필요한 관련 데이터들이 있다.
+해당 데이터를 받아오기 위해 데이터를 담는 경량의 정보 처리 방식? 표기법이 필요했는데 
+현재 채택하고 있는 방식은 json이다.  
+- json 메서드 2가지 - 각각의 기능 
+  JSON.stringify();   
+  JSON.parse();
+*/ 

@@ -4,7 +4,6 @@
 // 배열 메소드는 배열 형식을 이용하여 처리하는 다양한 기능을 가진 함수
 // 일부는 배열 메소드가 아닌 것도 존재(property, 다른 곳에서도 사용가능한 범용)
 
-// 
 
 var array = ['maker', 'remote', 'pen'];
 
@@ -100,11 +99,7 @@ var conArray = array.concat(array2);
 console.log(conArray);
 
 
-// 응용:
-array.splice(0, 0, array2);
-array.flat();
 // ----------------
-
 
 var arrayN = [10, 5, 2, 50, 80, 90, 200];
 
@@ -139,7 +134,7 @@ var nList = [1, 2, 3, 4, 5, 6, 7];
 var filterList = [];
 
 // 방법 1
-nList.forEach(function(d, i) {
+nList.forEach(function(d) {
   if (d > 4) {
     filterList.push(d);
   }

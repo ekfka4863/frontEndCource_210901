@@ -38,6 +38,7 @@ var ob1 = {
 var cOb1 = {};
 
 
+
 // 원래 객체를 깊은 복사 할 때 for in 
 var obt = {'a': 1, 'b': 2};
 var cObt = {};
@@ -91,15 +92,15 @@ for(var prop in ob1) {
   
   // ob1의 프로퍼티에 들어있는 배열을 확인하여 copy
   //   ob1이 배열인지 확인하는 방법 1
-  //   if (typeof ob1[prop] === 'object') {}
+    // if (typeof ob1[prop] === 'object') {}
   //   배열인지 확인하는 방법 2
-  //   if (Array.isArray(ob1[prop])) {}    // true나 false 반환 
+    if (Array.isArray(ob1[prop])) {}    // true나 false 반환 
   //   배열인지 확인하는 방법 3
-  //   ob1[prop].constructor === Array
+    // ob1[prop].constructor === Array
 
   if (ob1[prop].constructor === Array) {
     // 진짜 딥 카피를 위해 ...   // -> 이거가 맞는데 너무 복잡해지니까 ... 그니까 arFn() 함수로 뺀것!
-    var tmpArr = [];
+    var tmpArr = [];   
     //  수정 필요 ..
     
     // ob1의 프로퍼티에 들어있는 배열을 확인하여 copy
@@ -123,21 +124,21 @@ console.log(ob1);         // { fruits: [ '딸기', '포도', '바나나', '오�
 
 // -----------------------
 // 응용: 함수로 만들어서 함수를 호출 ... 
-// var arFn = function(arr){
-//   var arEx = [];
-//   arr.forEach(function(data, index){
-//     arEx[index] = data;
-//   });
-//   return arEx;
-// };
+var arFn = function(arr){
+  var arEx = [];
+  arr.forEach(function(data, index){
+    arEx[index] = data;
+  });
+  return arEx;
+};
 
-// for(var prop in ob1) {
-//   if (ob1[prop].constructor === Array) {
-//     cOb1[prop] = arFn(ob1[prop]);
-//   } else {
-//     cOb1[prop] = ob1[prop];    
-//   }
-// }
+for(var prop in ob1) {
+  if (ob1[prop].constructor === Array) {
+    cOb1[prop] = arFn(ob1[prop]);
+  } else {
+    cOb1[prop] = ob1[prop];    
+  }
+}
 // -----------------------
 
 
