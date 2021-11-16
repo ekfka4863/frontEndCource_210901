@@ -87,3 +87,150 @@ var awesomeFn = function(str) {
 awesomeFn(str);
 
 //  =============================================================================================
+//  =============================================================================================
+// 2021-11-15-월
+// 1. 얕은 복사 
+// 2. 깊은 복사 
+
+var favoriteColor = ['emerald green', 'coral', 'hot pink', 'city blue', 'brown gray'];
+
+// var copyColor = favoriteColor;    // 얕은 복사 -> 메모리 주소만 공유하는 것. 그래서 서로 변화가 있을 때 서로에게 영향을 미친다.
+
+// console.log(favoriteColor === copyColor);  
+
+// 깊은복사? -> 힌트: 얕은 복사는 메모리 주소만 카피를 했다는 뜻, 깊은 복사는 favoriteColor 안에 있는 값 자체를 복사해야한다.
+
+// var copyColor = [];
+// copyColor[0] = favoriteColor[0];
+// copyColor[1] = favoriteColor[1];
+// copyColor[2] = favoriteColor[2];
+// copyColor[3] = favoriteColor[3];
+// copyColor[4] = favoriteColor[4];
+
+
+
+
+var copyColor = [];
+
+
+// for 반복문 -> 깊은복사
+for(var i = 0; i < 5; i++) {    
+  copyColor[i] = favoriteColor[i];    
+}
+
+// console.log(favoriteColor === copyColor);    // false 
+
+
+favoriteColor.push('yellow');
+copyColor.push('yellow');
+
+
+favoriteColor.push('sky');
+copyColor.push('deep orange');
+
+
+
+
+
+// 객체에 프로퍼트를 어떻게 추가하는지 아는가? 
+// -> 2가지 방법 (마침표 표기법 / 대괄호 표기법)
+// var obj = {};
+obj.name = "daye";
+// obj['age'] = 26;
+
+
+
+
+var pc = {
+  'dell' : '프리시전',
+  'hp' : 'z시리즈',
+  'apple' : 'mac book',
+  'samsung' : 'galaxy book'
+};
+
+var clonePc = {};
+
+pc.lg = 'gear';
+clonePc.lg = 'gear';
+
+console.log(pc, clonePc); 
+
+// 값자체에 접근하기 
+for (var key in pc) {
+  clonePc[key] = pc[key];   // 깊은 복사 
+}
+
+console.log(pc, clonePc);
+// console.log(pc === clonePc);
+
+
+pc.asus = 'gen book';
+clonePc.lenovo = 'think pad';
+
+// 대괄호 표기법
+pc['asus'] = 'gen book';
+clonePc.lenovo = 'think pad';
+
+
+
+// ========================================================================================
+// 숙제 
+
+// 문제 1: 깊은 복사를 한 뒤, 원하는 제품 하나를 추가하세요.
+var cookie = ['초코칩', '칙촉', '빼빼로', '호빵', '촉촉한초코칩', '칸초', '홈런볼', '엄마손'];
+var cloneCookie = [];
+
+// 깊은 복사 
+for (var i = 0; i < cookie.length; i++) {
+  cloneCookie[i] = cookie[i];
+}
+
+cookie.push('양파링');
+// [ '초코칩', '칙촉', '빼빼로', '호빵', '촉촉한초코칩', '칸초', '홈런볼', '엄마손', '양파링' ]
+cloneCookie.push('오징어집');
+// [ '초코칩', '칙촉', '빼빼로', '호빵', '촉촉한초코칩', '칸초', '홈런볼', '엄마손', '오징어집' ]
+
+
+
+
+// ---------------------
+var snack= {'농심': '새우깡', '해태': '맛동산', '오리온': '고래밥', '크라운': '산도'};
+var cloneSnack = {};
+
+// 깊은복사 
+for (var key in snack) {
+  cloneSnack[key] = snack[key];
+}
+
+snack.롯데 = '빈츠';
+cloneSnack['삼우식품'] = '찰떡파이';
+
+// console.log(snack);
+// { '농심': '새우깡', '해태': '맛동산', '오리온': '고래밥', '크라운': '산도', '롯데': '빈츠' }
+// console.log(cloneSnack);
+// { '농심': '새우깡', '해태': '맛동산', '오리온': '고래밥', '크라운': '산도', '삼우식품': '찰떡파이' }
+
+
+
+
+
+
+
+// 정아
+var ice = [{'롯데': ['폴라포', '수박바']}, {'해태': '브라보'}, {'허쉬': '민트초코'}, {'빙그레': '투게더'}];
+var ice2 = [];
+
+// var icelen = ice.length;
+var iceCon = {};
+
+// if( e < ice.length ){
+  for(e = 0 ; e < ice.length ; e++){
+    ice2[e]=ice[e];       // 배열에다가만 하는 거 ... 
+  }
+
+// }else{
+  ice['ice22Add'] = 'ice2에 넣는 값';
+
+
+
+

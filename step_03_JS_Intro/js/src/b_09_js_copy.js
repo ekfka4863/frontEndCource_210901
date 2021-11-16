@@ -28,6 +28,7 @@ console.log(cloneColor);        // ['emerald green', 'coral', 'hot pink', 'city 
 // ------------------------------------------
 // 방법 2
 let cloneColor = [...favoriteColor];
+
 favoriteColor.push('sky');
 console.log(favoriteColor); 
 
@@ -57,8 +58,8 @@ console.log(cloneColor);
 // ------------------------------------------
 // 선생님's solution
 
-var i =0;
-var len = favoriteColor.length;
+// var i = 0;
+// var len = favoriteColor.length;
 
 // for (; i < len; i+=1) {
 //   cloneColor.push(favoriteColor[i])
@@ -69,13 +70,15 @@ var len = favoriteColor.length;
 
 
 // 응용: 반복문 안에서 전부 다 해치워버리기!
-for (; i <= len; i+=1) {
+for (var i = 0; i <= favoriteColor.length; i+=1) {
+
   if(i !== len) {
     cloneColor.push(favoriteColor[i])
   } else {
     favoriteColor.push('sky');
     cloneColor.push('deep orange');
   }
+
 }
 
 
@@ -83,21 +86,25 @@ for (; i <= len; i+=1) {
 // 선생님's solution 2
 
 // 나 
-// let cloneColor = [];
-// favoriteColor.forEach(color => {
-//   cloneColor.push(color);
-// });
-// favoriteColor.push('sky');
-// cloneColor.push('deep orange');
+let cloneColor = [];
 
-// console.log(favoriteColor === cloneColor);   // false
+favoriteColor.forEach(color => {
+  cloneColor.push(color);
+});
+
+favoriteColor.push('sky');
+cloneColor.push('deep orange');
+
+console.log(favoriteColor === cloneColor);   // false
 
 
 // 쌤 
 let cloneColor = []; 
+
 favoriteColor.forEach(function(data, index){
   cloneColor[index] = data;
 });
+
 favoriteColor.push('sky');
 cloneColor.push('deep orange');
 
@@ -115,6 +122,7 @@ var pc = {
 };
 
 var clonePc = {};
+
 pc.lg = 'gear';
 clonePc.lg = 'gear';
 console.log(pc, clonePc); 
@@ -143,6 +151,10 @@ pc.lenovo = 'think pad';
 
 console.log(pc, clonePc);
 console.log(pc === clonePc);
+
+
+
+// ========================================================================================
 
 // ========================================================================================
 // 숙제 
@@ -185,12 +197,13 @@ console.log(snack, cloneSnack);
 
 // ice -----------------------------------------
 var ice = [{'롯데': ['폴라포', '수박바']}, {'해태': '브라보'}, {'허쉬': '민트초코'}, {'빙그레': '투게더'}];
+// {'롯데': ['폴라포', '수박바']}, {'해태': '브라보'}, {'허쉬': '민트초코'}, {'빙그레': '투게더'}
 
 var cloneIce = [];
-var cloneIceInnerObj = {};
+var cloneIceInnerObj;
 
-for(var i = 0; i < ice.length; i++) {
-  cloneIceInnerObj = {};
+for(var i = 0; i < ice.length; i++) {  
+  cloneIceInnerObj = [];
   for (var key in ice[i]) {
     cloneIceInnerObj[key] = ice[i][key];
     cloneIce.push(cloneIceInnerObj);
@@ -217,3 +230,83 @@ console.log(ice, cloneIce);
 //   { '허쉬': '민트초코' },
 //   { '빙그레': '투게더' }
 // ]
+
+
+var ice = [{'롯데': ['폴라포', '수박바']}, {'해태': '브라보'}, {'허쉬': '민트초코'}, {'빙그레': '투게더'}];
+
+var cloneIce = [];
+var cloneIceInnerObj;
+var cloneIceInnerArr;
+
+for(var i = 0; i < ice.length; i++) {  
+  cloneIceInnerObj = [];
+  for (var key in ice[i]) {
+    cloneIceInnerObj[key] = ice[i][key];
+    cloneIce.push(cloneIceInnerObj);
+  }
+}
+
+
+
+// 시도 1
+// ???? 
+for(var i = 0; i < ice.length; i++) {  
+  cloneIceInnerObj = [];
+
+  if(ice[i][key] === 'object') {
+    cloneIceInnerArr = [];
+    for (var j = 0; j < ice[i][key].length; j++) {
+      cloneIceInnerArr[j] = ice[i][key][j];
+      cloneIce[i].push(cloneIceInnerArr[j]);
+    } 
+  } else {
+    for (var key in ice[i]) {
+      cloneIceInnerObj[key] = ice[i][key];
+      cloneIce.push(cloneIceInnerObj);
+    }
+  }
+}
+
+
+
+
+// 시도 2 - 최신문법 
+let ice = [{'롯데': ['폴라포', '수박바']}, {'해태': '브라보'}, {'허쉬': '민트초코'}, {'빙그레': '투게더'}];
+
+let cloneIce = [];
+// let cloneIce1 = [];
+// let cloneIce2 = [];
+let cloneIceInnerObj = {};
+let cloneIceInnerArr = [];
+
+
+ice.forEach(obj => {
+  cloneIce1.push(obj);
+});
+
+cloneIce1
+for (const [key, value] of Object.entries(obj))
+
+ice.forEach(obj => {
+  for (const [key, value] of Object.entries(obj)) {
+    if (typeof value === 'object') {
+      cloneIceInnerObj[`{${key}`] = `${value}`; 
+      cloneIce.push(cloneIceInnerObj);
+    } else {
+      cloneIceInnerObj[`{${key}`] = `${value}`; 
+      cloneIce.push(cloneIceInnerObj);
+    }
+  }
+});
+
+
+
+
+
+for(var i = 0; i < ice.length; i++) {  
+  cloneIceInnerObj = [];
+  for (var key in ice[i]) {
+    cloneIceInnerObj[key] = ice[i][key];
+    cloneIce.push(cloneIceInnerObj);
+  }
+}
