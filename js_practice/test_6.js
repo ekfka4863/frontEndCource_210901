@@ -267,12 +267,6 @@ console.log(ob1);
 // { fruits: [ '딸기', '포도', '바나나', '오렌지' ], drink: 'coffee' }
 console.log(cOb1);
 
-// // for (var 임의변수 in 객체명) {}
-// for (var key in ob1) {
-//   cOb1[key] = ob1[key];
-// }
-// console.log(cOb1 === ob1);   // false -> 깊은복사 
-
 
 // // 문제 제기! 
 // ob1.fruits.push('멜론');     // ob1['fruits'] 는 배열이란 점을 유의! 
@@ -297,9 +291,9 @@ for (var key in ob1) {
 
 ob1.fruits.push('멜론'); 
 console.log(ob1);
-{ fruits: [ '딸기', '포도', '바나나', '오렌지', '멜론' ], drink: 'coffee' }
+// { fruits: [ '딸기', '포도', '바나나', '오렌지', '멜론' ], 'drink': 'coffee' }
 console.log(cOb1);
-{ fruits: [ '딸기', '포도', '바나나', '오렌지' ], drink: 'coffee' }
+// { fruits: [ '딸기', '포도', '바나나', '오렌지' ], 'drink': 'coffee' }
 
 
 

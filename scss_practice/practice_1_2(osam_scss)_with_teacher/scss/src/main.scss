@@ -1,0 +1,11 @@
+// main.scss
+/* main.css */ 
+
+// 임포트 scss에서 원본 파일이름에 언더바 _가 있어도 변환하지 않곘다는 의미니까 여기서는 언더바 필요 없음. 확장자도 원래 필요없음.
+@import "../common/variable";
+@import "../common/mixin";
+
+
+body {
+  background-color: #fda;
+}
