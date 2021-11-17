@@ -67,16 +67,66 @@ isEvenOdd();
 // 생성자함수 이해하기  - JS는 객체를 만드는 다양한 방법을 제공한다 
 var obj = {};   // 1. 빈객체 생성 - 객체 리터럴
 
-var person = new Object(); // 2. 빈객체 생성 - Object() 생성자함수 (cf. 내장함수/빌트인객체)
+var person = new Object(); // 2. 빈객체 생성 - Object() 생성자함수 (cf. 내장함수/빌트인객체/원시함수)
 
 
 function Person(name, age) {     // 3. 생성자 함수 (cf. 객체의 추상화 - 붕어빵틀과 붕어빵들)   
   this.name = name; 
   this.age = age; 
+  // console.log(this);
 }
 
-var daye = new Person('daye', 26);
+var daye = new Person('daye', 26);  // {name: 'daye', age : 26} -> 인스턴스 
 var youngsun = new Person('youngsun', 28);
+
+
+
+// 혼란!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 혼란!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// 혼란!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// // 생성자 함수 vs 내장함수 (feat. 인스턴스)
+// 생성자 함수는 내장함수일수도 있고 아닐 수도 있다.
+// 만약 생성자 함수이면서 내장함수라면 -> Math.random, console.log() 요론 아이들 -- 우리가 만든적은 없지만, 이미 js에 
+// 내장이 되어 있는 -- 다른 말로 하면 빌트인 함수들의 의미한다.
+// 하지만 생성자 함수는 개발자가 직접 정의 할 수도 있다. 
+// e.g. 
+// function Person(name, age) {     // 3. 생성자 함수 (cf. 객체의 추상화 - 붕어빵틀과 붕어빵들)   
+//   this.name = name; 
+//   this.age = age; 
+// }
+// 이런 "생성자"함수는 왜 생성자 함수일까? 
+// 무언가를 생성해서 이다. 그게 뭐냐면 새로운 "객체"이다.
+// 생성자 함수에 의해 생성된 객체를 우리는 "인스턴스" 라고 칭한다. 아래와 같이 ... 
+
+// var daye = new Person('daye', 26);  // {name: 'daye', age : 26} -> 인스턴스 
+// var youngsun = new Person('youngsun', 28);
+
+
+// // 원시 함수(그대로 가져다 쓸 수 없다) vs 내장함수(그대로 가져다 쓸 수 있다) 
+// 우선 우리가 그동안 이런 형태의 함수같지만 직접적으로 메서드/내장함수처럼 사용할 수는 없는 아래와 같은 형태들을 종종 보았을 것이다. 
+// e.g. Number, String, Boolean, Date, Function, Object, Array, ... -> 원시 객체 (?? 질문 -> 이 아이는 콘솔창에 찍어보면 f가 뜬다. 그러면 이것은 원시 객체인가? 
+//   아니면 ... 원시 함수인가? 그리고 만약 Number -> 이런 형태가 원시 객체/원시 함수라면 Number와 Number();의 차이점은 무엇인가? )
+
+
+// e.g. Number(), String(), Boolean(), Date(), Function(), Object(), Array(), ...
+// Number.MAX_SAFE_INTEGER -> 속성 
+// Number.isNaN() -> 메서드 
+// Date - 원시 객체 
+// Date(); -> 직접 사용 불가 
+// 그럼 어떻게 사용? 
+// Date.getFullYear(); -> 괄호는 Date라는 원시 객체의 속성값으로 들어있는 getFullYear라는 함수 즉 메서드를 호출하는 것이기 때문에 일반 함수를 호출하듯이 ()를 열고 닫아준다. 
+
+// var arr = [];
+// Array.length;     // 속성 ( 값 ) -> 상태를 나타낸다/ 값을 가지고 있다 
+// Array.isArray();  // 질문: 메서드 (함수 ) = 내장함수? 
+// arr.isArray();  // 질문: 메서드 (함수 ) = 내장함수? 
+
+
+
+
+
+
 
 
 // cf.  https://victorydntmd.tistory.com/51
