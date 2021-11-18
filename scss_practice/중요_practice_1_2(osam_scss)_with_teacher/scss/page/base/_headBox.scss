@@ -1,0 +1,14 @@
+// headBox
+
+$headH: 50px !global;  // 찾아보기! //  error scss/page/base/_headBox.scss (Line 3: Invalid flag "!glabal".)
+$headH2: $headH * 2; 
+
+@at-root #headBox {    // #headBox가 #wrap 안에서 @import 돼서 여기서 @at-root를 사용한 것!
+  position: fixed; top: 0; left: 0; z-index:1000;
+  width: 100%; height: $headH; background-color: #fff;
+
+  // @include mobile{}
+  @include tablet{ height: $headH; }
+  @include laptop{ height: $headH2;}
+  @include pc{ height: $headH2;}
+}// #headBox

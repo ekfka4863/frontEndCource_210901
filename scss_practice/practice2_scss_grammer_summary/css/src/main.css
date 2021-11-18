@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* main.css -> css로 넘어가는 주석 */
+/* reset.css */
+/* -------------------------- */
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+/* -------------------------- */
+.li_espresso {
+  width: 10%;
+  height: 100%;
+  background-color: #00f;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+.li_latte {
+  width: 20%;
+  height: 100%;
+  background-color: #0af;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+.li_choco {
+  width: 30%;
+  height: 100%;
+  background-color: #0df;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+.li_vanilla {
+  width: 40%;
+  height: 100%;
+  background-color: #7af;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+.li_other {
+  width: 50%;
+  height: 100%;
+  background-color: #adf;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+.li_vanilla {
+  border: 1px solid #333; }
+
+#wrap {
+  width: 100%;
+  height: auto;
+  background-color: #00f; }
+  #wrap > #headBox {
+    width: 100%;
+    height: 100px;
+    background-color: #0af; }
+  #wrap > #viewBox {
+    width: 100%;
+    height: 400px;
+    background-color: #0df; }
+  #wrap > #contentBox {
+    width: 100%;
+    height: 200px;
+    background-color: #7af; }
+  #wrap > #asideBox {
+    width: 100%;
+    height: 100px;
+    background-color: #adf; }
+  #wrap > #footBox {
+    width: 100%;
+    height: 100px;
+    background-color: #dfd; }
+    #wrap > #footBox:hover {
+      background-color: #87f; }
+    #wrap > #footBox:active {
+      background-color: #fda; }
+
+.mixin_test:after, .mixin_test::after {
+  content: "";
+  display: block;
+  clear: both; }
+.mixin_test > li {
+  float: left;
+  width: 100px;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #fad; }
+  .blind_to_span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #859;
+    font-weight: 700;
+    text-decoration: none; }
+    .blind_to_span > span {
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      z-index: -1;
+      clip: rect(0 0 0 0);
+      overflow: hidden; }
+
+/*# sourceMappingURL=main.css.map */
