@@ -1,0 +1,43 @@
+// mixin.scss
+
+// mixin 만드는 방법 
+// @mixin 믹스인이름 (매개변수: 기본값) {
+//   // css 코드 작성 
+// }
+
+// mixin 사용 방법 
+// @include 믹스인이름(매개변수에 넣을 값);
+
+// ==============================
+// common mixin 
+
+// blind 믹스인 
+@mixin blind() {
+  display:block; 
+  width: 0; 
+  height: 0;
+  position:absolute; 
+  z-index:-1; 
+  clip:rect(0 0 0 0); 
+  overflow: hidden;
+}// @mixin blind();
+
+
+// clearfix 믹스인 
+@mixin clearfix() {
+  &:after, &::after{
+    content:""; display: block; clear: both;
+  }
+}// @mixin clearfix();
+
+
+// full 믹스인 
+@mixin full() {
+  display: block; width: 100%; height: 100%;
+  & > span{ @include blind(); }
+}// @mixin full();
+
+
+
+
+
