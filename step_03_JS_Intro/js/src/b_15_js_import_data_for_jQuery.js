@@ -62,10 +62,17 @@ cf.  https://okky.kr/article/279353
     console.log(dataFile);
   }, 10);                      // 이것은 작동! 왜? 외부에서 데이터를 불러오는 시간이 필요해서 그렇다~ 모든 비동식은 이런식! 기억! 
 
+  // -------------------------------
+  // 다시 ... 
+  // var jsonPath = '../data/person_card.json'; 
+  // $.ajax({
+  //   url: jsonPath
+  // }).done(function(data) {
+  //   var dataList = data;
+  //   console.log(dataList);
+  // });
 
 })(jQuery);
-
-
 
 
 

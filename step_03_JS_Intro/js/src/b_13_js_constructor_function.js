@@ -121,7 +121,7 @@ console.log(coffeeList[0].title);  // 겨울에 어울리는 음료
 
 console.clear();
 // --------------------------------------
-// e.g. 
+// e.g. 유사배열객체를 배열로 만들어서 배열 메서드 사용하게 만들기 
 var ul = document.querySelector('ul');  
 var list = ul.children;
 console.log(list);   
@@ -318,9 +318,9 @@ console.clear();
 var Phone = function (brand, product) {
   this.brand = brand;
   this.product = product;
-  this.set = function() {
-    return this.brand + ' ' + this.product;
-  }
+  // this.set = function() {
+  //   return this.brand + ' ' + this.product;
+  // };
 };
 
 // var setFn = function(brand, product) {
