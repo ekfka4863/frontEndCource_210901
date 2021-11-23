@@ -8,12 +8,18 @@
 //         -> css의 @import 처럼 url("") 함수를 필수로 사용할 필요 없음.
 
 @import "../common/reset";
+@import "../common/common";
 @import "../common/_mixin";
+@import "../common/_variable";
+
+@import "../page/base/headBox";
+// @import "../";
+// @import "../page/base/footBox";
 
 // -----------------------------------
 // 기본 변수 선언 
-$yellow : #fa0;
-$blue: (#00f, #0af, #0df, #7af, #adf);   // list 
+// $yellow : #fa0;
+// $blue: (#00f, #0af, #0df, #7af, #adf);   // list 
 
 // list를 사용하는 방법 1 - nth(리스트명, 몇번째인지 -> 1부터 시작) 함수 사용 
 // 식별자 {
@@ -62,12 +68,12 @@ $coffee: ("espresso","latte","choco","vanilla","other");
 
 // dictionary를 사용하는 방법 - map-get($map: , $key: ); 함수 사용
 // map-get($map: $psuedoCode, $key: hover);
-$psuedoCode: (
-  "hover":#87f,
-  "focus":#4f3,
-  "active":#fda,
-  "select":#dfd
-); // dic(map)
+// $psuedoCode: (
+//   "hover":#87f,
+//   "focus":#4f3,
+//   "active":#fda,
+//   "select":#dfd
+// ); // dic(map)
 
 // -----------------------------------
 
@@ -75,27 +81,38 @@ $psuedoCode: (
   width: 100%;
   height: auto;
   background-color: nth($blue, 1);
-  & > #headBox {
-    width: 100%;
-    height: 100px;
-    background-color: nth($blue, 2);
-  }
-  & > #viewBox {
+
+  // @at-root #headBox {
+  //   width: 100%;
+  //   height: 100px;
+  //   background-color: nth($blue, 2);
+
+  //   @include mobile {}
+  //   @include tablet {}
+  //   @include laptop {}
+  //   @include pc {}
+  // }
+
+  @at-root #viewBox {
     width: 100%;
     height: 400px;
     background-color: nth($blue, 3);
   }
-  & > #contentBox {
+  @at-root #contentBox {
     width: 100%;
     height: 200px;
     background-color: nth($blue, 4);
   }
-  & > #asideBox {
+  @at-root #asideBox {
     width: 100%;
     height: 100px;
     background-color: nth($blue, 5);
+
+    @include mobile {
+      background-color: red;
+    };
   }
-  & > #footBox {
+  @at-root #footBox {
     width: 100%;
     height: 100px;
     background-color: map-get($map: $psuedoCode, $key: "select");

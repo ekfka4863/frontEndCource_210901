@@ -1,0 +1,58 @@
+// headBox.scss
+
+@at-root #headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  // left: 50%;
+  // transform: translate(-50%);
+  z-index: 1000;
+  width: 100%;
+  height: 100px;
+  background-color: nth($blue, 2);
+
+  @at-root h1 > a {
+    @include full;
+    background-color: $white;
+  }
+
+  @include mobile {
+    @at-root h1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      @include unit(width, 80);
+      @include unit(height, 50);
+    }
+    @at-root .nav_inner {
+      float: right;
+      width: auto;
+      height: auto;
+      @include unit(max-width, 150);
+      @include unit(max-height, 50);
+      @include clearfix;
+      background-color: nth($gray, 5);
+      @at-root .nav_btn {
+        @include unit(width, 40);
+        @include unit(height, 30);
+        padding: 4px 1px 0 3px;
+        box-sizing: border-box;
+        background-color: $yellow;
+
+        & > button {
+          border: none;
+          border-radius: 3px;
+          color: $white;
+          background-color: nth($gray, 2);
+        }
+      }
+      // .nav_wrap {}
+    }
+  }
+  @include tablet {}
+  @include laptop {}
+  @include pc {}
+}

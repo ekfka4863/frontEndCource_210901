@@ -1,6 +1,16 @@
 @charset "UTF-8";
 /* main.css -> css로 넘어가는 주석 */
 /* reset.css */
+:root {
+  font-size: 16;
+}
+
+/* -------------------------- */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
 /* -------------------------- */
 ul, li {
   list-style: none;
@@ -9,6 +19,76 @@ ul, li {
 }
 
 /* -------------------------- */
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100px;
+  background-color: #0af;
+}
+h1 > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+h1 > a > span {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media all and (max-width: 767px) {
+  h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    width: 5rem;
+    height: 50px;
+    height: 3.125rem;
+  }
+
+  .nav_inner {
+    float: right;
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    max-width: 9.375rem;
+    max-height: 50px;
+    max-height: 3.125rem;
+    background-color: #ddd;
+  }
+  .nav_inner:after, .nav_inner::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .nav_btn {
+    width: 40px;
+    width: 2.5rem;
+    height: 30px;
+    height: 1.875rem;
+    padding: 4px 1px 0 3px;
+    box-sizing: border-box;
+    background-color: #fa0;
+  }
+  .nav_btn > button {
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #777;
+  }
+}
 .li_espresso {
   width: 10%;
   height: 100%;
@@ -63,35 +143,38 @@ ul, li {
   height: auto;
   background-color: #00f;
 }
-#wrap > #headBox {
-  width: 100%;
-  height: 100px;
-  background-color: #0af;
-}
-#wrap > #viewBox {
+#viewBox {
   width: 100%;
   height: 400px;
   background-color: #0df;
 }
-#wrap > #contentBox {
+
+#contentBox {
   width: 100%;
   height: 200px;
   background-color: #7af;
 }
-#wrap > #asideBox {
+
+#asideBox {
   width: 100%;
   height: 100px;
   background-color: #adf;
 }
-#wrap > #footBox {
+@media all and (max-width: 767px) {
+  #asideBox {
+    background-color: red;
+  }
+}
+
+#footBox {
   width: 100%;
   height: 100px;
   background-color: #dfd;
 }
-#wrap > #footBox:hover {
+#footBox:hover {
   background-color: #87f;
 }
-#wrap > #footBox:active {
+#footBox:active {
   background-color: #fda;
 }
 

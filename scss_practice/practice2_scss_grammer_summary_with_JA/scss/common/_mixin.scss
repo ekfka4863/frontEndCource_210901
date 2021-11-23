@@ -1,4 +1,6 @@
 // mixin.scss
+@use "sass:math"; 
+
 
 // mixin 만드는 방법 
 // @mixin 믹스인이름 (매개변수: 기본값) {
@@ -7,6 +9,10 @@
 
 // mixin 사용 방법 
 // @include 믹스인이름(매개변수에 넣을 값);
+
+// ==============================
+// $baseSize: 16;
+
 
 // ==============================
 // common mixin 
@@ -38,6 +44,61 @@
 }// @mixin full();
 
 
+// ==============================
+// unit mixin 
+
+// 단위를 px과 rem 모두 작성해주는 unit mixin 생성 
+@mixin unit($attr, $unit) {
+  #{$attr}: $unit + px;
+  #{$attr}: math.div($unit, $baseSize) + rem;
+}
 
 
 
+
+// ==============================
+// mediaquery mixin 
+
+// cf. veiwport size 
+$mobile: 320;
+$tablet: 768;
+$laptop: 1200;
+$pc: 1440;
+// $pc_full: 1920;
+
+@mixin mobile() {
+  @media all and (max-width: #{$tablet - 1} + px) {
+    @content;
+  }
+}
+@mixin tablet() {
+  @media all and (min-width: $tablet + px) and (max-width: #{$laptop - 1} + px) {
+    @content;
+  }
+}
+@mixin laptop() {
+  @media all and (min-width: $laptop + px) and (max-width: #{$pc - 1} + px) {
+    @content;
+  }
+}
+@mixin pc() {
+  @media all and (min-width: $pc + px) {
+    @content;
+  }
+}
+
+
+
+
+
+
+// ==============================
+// background-image mixin 
+
+
+
+
+
+
+
+// ==============================
