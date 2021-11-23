@@ -177,6 +177,11 @@ var xhr = new XMLHttpRequest();
 xhr.open('GET', '../data/person_card.json', true);   // 자료 찾아서 신청 
 xhr.send();
 
+// setTimeout -> 함수 호출 지연 정해진 ms만큼 
+// 문법: setTimeout(지연된시간후실행될함수, 딜레이시간ms);
+// setTimeout(function() {
+// }, 10);
+
 setTimeout(function() {
   var data = JSON.parse(xhr.responseText);
   var dataList = [];
@@ -186,13 +191,55 @@ setTimeout(function() {
     this.link = link;
   };
 
-  data.forEach(function(value, index) {
+  data.forEach(function(value) {
     var title = value.title;
     var url = value.link;
-    var obj = new SetFn(title, url);
+    var obj = new SetFn(title, url);    // [{title: "~~~", url: "http://~~~.com"}, {title: "~~~", url: "http://~~~.com"}, ...]
     dataList.push(obj);
   });
   
-  console.log(dataList);
+  console.log(dataList);          // [{title: "~~~", url: "http://~~~.com"}, {title: "~~~", url: "http://~~~.com"}, ...]
 }, 10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function() {
+  var data = JSON.parse(xhr.responseText);    // xhr.responseText를 json화 하겠다~ 
+  var dataList = [];         
+  
+  var SetFn = function(title, link) {    // 너 뭐하는 얘야?
+    // 생성자 함수 SetFn으로 매개변수 title, link를 받아와, 인스턴스를 생성할 수 있고, 
+    // 아래의 생성자 함수 내의 this는 앞으로 생성될 인스턴스를 가리키고 있기때문에 매개변수로 받아온 각각의 값이 
+    // 인스턴스의 프로퍼티로 간다. 
+    this.title = title;
+    this.link = link;
+  };
+  
+  data.forEach(function(value) {
+    var title = value.title;
+    var url = value.link;
+    var obj = new SetFn(title, url);    // [{title: "~~~", url: "http://~~~.com"}, {title: "~~~", url: "http://~~~.com"}, ...]
+
+    dataList.push(obj);
+  });
+
+  console.log(dataList);          // [{title: "~~~", url: "http://~~~.com"}, {title: "~~~", url: "http://~~~.com"}, ...]
+}
+
+
+
+
+
+
 
