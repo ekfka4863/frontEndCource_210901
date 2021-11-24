@@ -214,7 +214,7 @@ setTimeout(function() {
 
 
 
-function() {
+function Fn() {
   var data = JSON.parse(xhr.responseText);    // xhr.responseText를 json화 하겠다~ 
   var dataList = [];         
   
