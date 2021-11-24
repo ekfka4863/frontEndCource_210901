@@ -3,10 +3,6 @@
   display: block;
 }
 
-.main_menu > li:nth-child(3).show {
-  height: 188px;
-}
-
 #wrap {
   width: 100%;
   min-width: 320px;

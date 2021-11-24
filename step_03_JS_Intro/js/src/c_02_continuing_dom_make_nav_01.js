@@ -47,29 +47,3 @@ naviBtn.addEventListener('click', function(e) {
 
 
 
-
-// --------------------------------------------
-// 변수 영역 ----------------------------------
-var dropBtn = document.querySelector('.drop_btn');
-var subMenu = document.querySelector('.sub_menu');
-// var navOn = 'on';
-
-
-// 이벤트 영역 --------------------------------
-// 메뉴가 열렸을 때, dropdown을 누르면 또 하나의 서브 메뉴가 보이게/사라지게 하라 
-dropBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-
-  var checkClassName = subMenu.classList.contains(navOn);
-
-  (!checkClassName) ? subMenu.classList.add(navOn) : subMenu.classList.remove(navOn);
-  // if (!checkClassName) {
-  //   subMenu.classList.add(navOn);
-  // } else {
-  //   subMenu.classList.remove(navOn);
-  // }
-});
-// --------------------------------------------
-
-
-
