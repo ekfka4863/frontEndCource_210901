@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css_common/reset.css">
+  <link rel="stylesheet" href="./src/css_common/common.css">
+  <link rel="stylesheet" href="./src/css_src/c_04_dom_accordian_menu.css">
+  <title>test</title>
+  <style>
+    /* #contentBox {display:block; height: 30rem; background-color: #adf;} */
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 2rem;
+    }
+    #subBox {
+      width: 90%;
+      background-color: #57a;
+    }
+    #subBox > h2 {
+      background-color: #eee;
+    }
+    .sub_box_btn {
+      display: flex;
+      justify-content: space-around;
+    }
+    .sub_box_btn > button {
+      padding: 10px;
+      background-color: #aff;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+    .sub_box_btn > button:hover {
+      background-color: #333;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    .sub_box_btn > button.on {
+      background-color: #2af;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    .content_area {
+      background-color: #eee;
+      /* 중요! */
+      overflow-y: hidden; 
+    }
+    .content_area li {
+      height: 2rem;
+      border-bottom: 1px solid #57a;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1><a href="">웹기초</a></h1>
+
+    <article id="contentBox" style="display: none;">
+      <button type="button" class="btn">start</button>
+      <p>count: <span></span></p>
+    </article>
+
+    <section id="subBox">
+      <h2>버튼 클릭시 내용 나타나게 만들기</h2>
+      <div class="sub_box_btn">
+        <button type="button" class="open">open</button>
+        <button type="button" class="close">close</button>
+        <button type="button" class="open2">open2</button>
+      </div>
+      <div class="content_area">
+        <ul>
+          <li><a href="#">list_01</a></li>
+          <li><a href="#">list_02</a></li>
+          <li><a href="#">list_03</a></li>
+          <li><a href="#">list_04</a></li>
+          <li><a href="#">list_05</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./test_10.js"></script>
+</body>
+</html>

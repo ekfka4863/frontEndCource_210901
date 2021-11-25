@@ -129,7 +129,7 @@ console.log(sortMin[last]);      // 450
 var arrNumber = [90, 5, 30, 60, 450, 250, 3, 60, 8];
 var i = 0;
 var arrLength = arrNumber.length;
-var minNumber = arrNumber[0];
+var minNumber = arrNumber[0];  
 
 for (; i < arrLength; i++) {
   if (minNumber > arrNumber[i]) {
@@ -364,20 +364,9 @@ btn.addEventListener('click', function(e) {
 // 선택자.innerHTML = ''; : 선택자 내부에 요소 (태그) 삽입 
 // 선택자.innerText = ''; : 선택자 내부에 글자를 삽입 
 
-pSpan.innerHTML = 'text';
-pSpan.innerText = 'text';
-// 는 똑같이 텍스트가 들어간다! 하지만 ..
-pSpan.innerHTML = '<text></text>';
-// 는 요소가 들어가는 것
-
-
-
-// ====================================
-// ====================================
-// e.g. 숙제 jQuery로 풀이 해주심
-
-
-
-
-
+// pSpan.innerHTML = 'text';
+// pSpan.innerText = 'text';
+// // 는 똑같이 텍스트가 들어간다! 하지만 ..
+// pSpan.innerHTML = '<text></text>';
+// // 는 요소가 들어가는 것
 

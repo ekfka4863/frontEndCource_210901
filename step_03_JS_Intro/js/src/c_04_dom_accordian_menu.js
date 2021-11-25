@@ -102,31 +102,9 @@ closeBtn.addEventListener('click', function(e) {
   slideUp(conHeightNum);
 });
 
-// open2 버튼 
-var duration = 500;
-open2Btn.addEventListener('click', function(e) {
-  e.preventDefault();
-  
-  if (getComputedStyle(contentArea).display === 'none' || contentArea.style.display === 'none') {
-    contentArea.classList.add('show');
-    // contentArea.style.height = 'auto';
-
-    // var height = contentArea.clientHeight + 'px';
-
-    setTimeout(function() {
-      contentArea.style.height = getComputedStyle(contentArea).display;
-    }, 350);
-
-  } else {
-    contentArea.classList.remove('show');
-    contentArea.style.height = '0px';
-  }
-});
 
 
-
-
-
+// ------------
 // HW
 // 힌트: 
 // 접히면 display: none; 펼치면  display: block;
@@ -139,9 +117,7 @@ open2Btn.addEventListener('click', function(e) {
 // + .subMenu의 높이값을 조정하면 된다!
 // .main_menu > li:nth-child(3).show {
 //   height: 188px;
-
 // }
-
 
 
 // // event -> 2가지 
