@@ -30,13 +30,13 @@
 // ---------------------------------------
 // e.g. 
 // 구구단 
-// for (var i = 2; i < 10; i++) {
-//   console.log();
-//   console.log(i + '로 시작하는 구구단 =================');
-//   for (var j = 1; j < 10; j++) {
-//     console.log(i + ' x ' + j + ' = ' + (i*j));
-//   }
-// }
+for (var i = 2; i < 10; i++) {
+  console.log();
+  console.log(i + '로 시작하는 구구단 =================');
+  for (var j = 1; j < 10; j++) {
+    console.log(i + ' x ' + j + ' = ' + (i*j));
+  }
+}
 
 
 
@@ -64,8 +64,8 @@
 // printFn();
 
 
-// step2: 
-// DOM
+// // step2: 
+// // DOM
 // var btn = document.querySelector('.btn');
 // var pSpan = document.querySelector('p > span');
 
@@ -95,42 +95,42 @@
 
 
 // step3: 
-// var btn = document.querySelector('.btn');
-// var pSpan = document.querySelector('p > span');
+var btn = document.querySelector('.btn');
+var pSpan = document.querySelector('p > span');
 
 
-// // btn 클릭시 printFn 함수가 실행이 되고, 
-// // printFn 함수가 실행될 때, pSpan 안에 text 형식으로 숫자가 들어가게 만든다. 
-// var startNum = 500;
-// var endNum = 250;
-// var currentNum = startNum;
-// var startPossible = true;    // timer가 끝나고도 재시작 할 수 있게하는 조건.
+// btn 클릭시 printFn 함수가 실행이 되고, 
+// printFn 함수가 실행될 때, pSpan 안에 text 형식으로 숫자가 들어가게 만든다. 
+var startNum = 500;
+var endNum = 250;
+var currentNum = startNum;
+var startPossible = true;    // timer가 끝나고도 재시작 할 수 있게하는 조건.
 
 
-// var countFn = function(currentNum) {
+var countFn = function(currentNum) {
   
-//   if (startPossible) {
-//     startPossible = false;
+  if (startPossible) {
+    startPossible = false;
   
-//     var intervalFn = setInterval(function () {
-//       if (currentNum >= endNum) {
-//         pSpan.innerText = currentNum;
-//         currentNum--;
-//       } else {
-//         pSpan.innerText = "끝!!!!";
-//         clearInterval(intervalFn);
-//         startPossible = true;
-//       }
-//     }, 10)
+    var intervalFn = setInterval(function () {
+      if (currentNum >= endNum) {
+        pSpan.innerText = currentNum;
+        currentNum--;
+      } else {
+        pSpan.innerText = "끝!!!!";
+        clearInterval(intervalFn);
+        startPossible = true;
+      }
+    }, 10)
 
-//   }
-// };
+  }
+};
 
 
-// btn.addEventListener('click', function(e) {
-//   e.preventDefault();
-//   countFn(startNum);
-// });
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
+  countFn(startNum);
+});
 
 
 // console.clear();
@@ -167,7 +167,7 @@
 console.clear();
 // ============================================
 // ============================================
-// vanilla javascript
+// vanilla javascript로 accordion menu slideUp/slideDown 하기 
 
 // DOM
 var subBoxBtn = document.querySelector('.sub_box_btn');
