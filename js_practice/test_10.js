@@ -179,7 +179,7 @@ var contentArea = document.querySelector('.content_area');
 // var heightStrInCss = getComputedStyle(contentArea).height;  // '160px'
 // var heightNumInCss = parseInt(heightStrInCss);              // 160
 var heightNumInCss = contentArea.clientHeight;                // 160
-var currentHeight = contentArea.style.height;    
+var currentHeight = contentArea.style.height;   
 var duration = 5;   // 지연시간
 // -----------
 
@@ -220,15 +220,17 @@ var slideDown = function(currentHeight) {
 
 // slideToggle
 // var slideToggle = function() {};
-// var slideToggle = function(currentHeight) {
-//   var intervalFn = setInterval(function() {
-//     if (currentHeight < heightNumInCss) {  // ___ < 160
-//       slideDown(currentHeight);
-//     } else {
-//       slideUp(currentHeight);
-//     }
-//   }, duration)
-// };
+var slideToggle = function() {
+
+  if (contentArea.clientHeight === '') {  // 1 < 160
+    slideUp(heightNumInCss);
+  } else if (contentArea.clientHeight === 0) {
+    slideDown(currentHeight);
+  } else {
+    slideUp(heightNumInCss);
+  }
+
+};
 
 
 
@@ -249,7 +251,26 @@ openBtn.addEventListener('click', function(e) {
 // slideToggle
 open2Btn.addEventListener('click', function(e) {
   e.preventDefault();
-  // slideToggle();
+  slideToggle();
 });
 
 
+
+
+// -------------------
+// 유량 언니 숙제 
+// const onlyEvenNumFn = function () {
+
+//   let tmp = [];
+  
+//   for (let i = 1; i <= 50; i++) {
+//     if (i % 2 === 0) {
+//       tmp.push(i);
+//     }
+//   }
+  
+//   return tmp;
+// };
+
+// onlyEvenNumFn();
+// -------------------
