@@ -3,6 +3,10 @@
   display: block;
 }
 
+.sub_menu.show {
+  transition: max-height 350ms ease-in;
+}
+
 #wrap {
   width: 100%;
   min-width: 320px;

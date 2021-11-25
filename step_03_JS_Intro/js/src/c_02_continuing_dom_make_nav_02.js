@@ -74,21 +74,15 @@ console.log(window.getComputedStyle(subMenu).display);
 
 
 
-
-
+// --------------------------------------------
+// --------------------------------------------
 // HW
 // 힌트: 
-// 접히면 display: none; 펼치면  display: block;
+// + 접히면 display: none; 펼치면  display: block;
 // + .subMenu의 높이값을 조정하면 된다!
 
-
-// HW
-// 힌트: 
-// 접히면 display: none; 펼치면  display: block;
-// + .subMenu의 높이값을 조정하면 된다!
 // .main_menu > li:nth-child(3).show {
 //   height: 188px;
-
 // }
 
 
@@ -110,3 +104,53 @@ console.log(window.getComputedStyle(subMenu).display);
 
 // // cf. 선택자.querySelector('.main_menu > li:nth-child(3)');
 // // cf. 선택자.querySelectorAll('.main_menu > li')[2];
+
+
+
+
+// -----------------
+// 목표: .sub_menu가 처음에는 안보이는 상탠데, 이걸 
+// ___가 클릭되면 display: block;으로 바꿔준다  
+
+// 변수 
+var dropBtnWrapper = document.querySelector('.drop_btn');
+var dropBtn = dropBtnWrapper.querySelector('button');
+var subMenu = document.querySelector('.sub_menu');
+
+
+// height
+// var originalHeight = 40; 
+// var longerHeight = 132;
+var originalHeight = window.getComputedStyle(dropBtn).height;
+var longerHeight = window.getComputedStyle(subMenu).height;
+// console.log(originalHeight);  // 100%
+// console.log(longerHeight);    // auto
+
+
+
+// 콜백 함수 따로/미리 생성 
+var slideDown = function() {
+  subMenu.classList.add('show');   // display + transition
+  subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+};
+var slideUp = function() {
+  subMenu.classList.remove('show');
+  subMenu.style.maxHeight = '0px';
+};
+
+var openSubMenu = function() {
+  var checkClassName = subMenu.classList.contains('show');
+
+  if (!checkClassName) {
+    slideDown();
+  } else {
+    setTimeout(slideUp(), 100);
+  }
+};
+
+
+
+// event 
+dropBtn.addEventListener('click', openSubMenu);
+
+

@@ -8,6 +8,10 @@
   display: block;
 }
 
+.sub_menu.show {
+  transition: max-height 350ms ease-in;
+}
+
 //---------
 
 
