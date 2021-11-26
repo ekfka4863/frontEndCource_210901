@@ -5,10 +5,13 @@ date: 2021-11-26-Friday
 # TIL
 - 📝 오늘 배운 내용 ✏️ : 
   - [x] ``       
-    -
     -     
   - [x] ``            
-  - [x] ``            
+  - [x] jQuery 사용할 때 `(function($) {})(jQuery)`를 사용하는 이유/ 역할       
+
+  <!-- https://okky.kr/article/279353 -->
+
+
   ```js      
   ```
   <img src="./images/" width="400px" height="" style="" />   

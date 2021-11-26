@@ -1,0 +1,48 @@
+// c_05_dom_sample_02.scss
+/* c_05_dom_sample_02.css */
+
+#wrap {
+  width: 95%;
+  height: auto;
+  min-height: 500px;
+  margin: auto;
+}
+h1 {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #777;
+}
+
+#viewBox {
+  width: 90%;
+  height: 400px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #79f;
+
+  .slide_area {
+    width: 100%;
+    // height: 100%;
+    height: auto;
+    background-color: #fff;
+    > div {
+      height: 300px;
+      padding: 1rem;
+      &:nth-child(1) {
+        background-color: rgba(#42CAD2, 0.5);
+      }
+      &:nth-child(2) {
+        background-color: rgba(#CDEE37, 0.5);
+      }
+      &:nth-child(3) {
+        background-color: rgba(#747973, 0.5);
+      }
+      &:nth-child(4) {
+        background-color: rgba(#8032CD, 0.5);
+      }
+      // &:nth-child(5) {
+      //   display: none;
+      // }
+    }
+  }// .slide_area 
+}// #viewBox 

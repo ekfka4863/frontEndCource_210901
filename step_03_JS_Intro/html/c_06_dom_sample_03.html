@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- c_06_dom_sample_03.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/common/modernizr-custom.js"></script>
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/c_06_dom_sample_03.css">
+  <title>웹기초</title>
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+
+      <header id="headBox">
+        <h1><a href="./a_content.html">js-dom</a></h1>
+      </header>
+
+      <article id="contentBox">
+        <h2>탭메뉴 구성하기</h2>
+        <div class="tab_area">
+          <div class="tab_title_inner">
+            <ul>
+              <li class="on"><button type="button">tab title 01</button></li>
+              <li><button type="button">tab title 02</button></li>
+              <li><button type="button">tab title 03</button></li>
+              <li><button type="button">tab title 04</button></li>
+            </ul>
+          </div>
+          <div class="tab_content_inner">
+            <!-- .tab_content_part*4>h3{tab content titile $$}+p{lorem$0}+.link>a[href=#]{자세히보기} -->
+            <div class="tab_content_part on">
+              <h3>tab content titile 01</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, nobis!</p>
+              <div class="link"><a href="#">자세히보기</a></div>
+            </div>
+            <div class="tab_content_part">
+              <h3>tab content titile 02</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus perspiciatis pariatur alias tenetur facere labore minima expedita soluta modi at.</p>
+              <div class="link"><a href="#">자세히보기</a></div>
+            </div>
+            <div class="tab_content_part">
+              <h3>tab content titile 03</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto inventore itaque exercitationem vel? Aperiam, quaerat in ea doloremque, voluptate quia nobis porro iusto fuga minima, ut consequatur! Hic, iste cum.</p>
+              <div class="link"><a href="#">자세히보기</a></div>
+            </div>
+            <div class="tab_content_part">
+              <h3>tab content titile 04</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, nemo? Odit quidem, sed voluptatem, labore nihil nostrum maiores necessitatibus consequuntur obcaecati sapiente numquam ducimus sequi mollitia delectus laudantium accusantium, voluptatum quibusdam sunt dolorem molestias nam rerum. Laudantium officia autem vitae.</p>
+              <div class="link"><a href="#">자세히보기</a></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div><!--// #wrap -->
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <script src="../js/src/c_06_dom_sample_03.js"></script>
+</body>
+</html>

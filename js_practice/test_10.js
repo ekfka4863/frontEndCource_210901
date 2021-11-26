@@ -214,7 +214,7 @@ var slideDown = function(currentHeight) {
     } else {
       clearInterval(intervalFn);
     }
-  }, duration)
+  }, duration);;
 };
 
 
