@@ -1,4 +1,10 @@
 /* test_11.css */
+html > body a:focus,
+html > body button:focus {
+  outline: 3px solid orange;
+  border-radius: 5px;
+}
+
 #wrap {
   position: relative;
   width: 100%;
@@ -47,7 +53,7 @@ h1 > a {
   border-radius: 5px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .close_btn_wrapper {
@@ -59,7 +65,7 @@ h1 > a {
   width: 30px;
   height: 30px;
   padding: 5px 8px;
-  background-color: #afe;
+  color: #fff;
 }
 .close_btn_wrapper > button:hover {
   font-size: 1.1rem;

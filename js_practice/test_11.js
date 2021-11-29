@@ -1,5 +1,16 @@
 // test_11.js
 
+// ------------------------------------------------------
+// 주말 숙제 guidelines
+// 샘플 사이트: fancybox -> http://fancybox.net/
+// 샘플 사이트 2: https://webpublisher-jquery-sample.vercel.app/html/ex_03_modal.html
+// hint: 
+// cpacity: 100%; -> opacity: 0; display: none;
+// display: block; -> opacity: 100%;
+// 이런 구조로 만들기 !!
+// ------------------------------------------------------
+
+
 // DOM 
 var imgCardWrapper = document.querySelector('.img_card_wrapper');
 var imgCards = imgCardWrapper.querySelectorAll('.img_card');   // NodeList 
@@ -26,15 +37,17 @@ imgCards.forEach(elem => {
   buttonElem.addEventListener('click', function(e) {
     e.preventDefault();
 
-    // console.log('it works!');
     modalBg.style.display = 'block';
+
+    // tabIndex
+    // closeBtn.tabIndex = 0;   // -> not workind...
+    // focus를 강제로 줄 것? class로?!
+    // console.dir(closeBtn);
 
     // opacity
     var currentOp = Number(modalBg.style.opacity);  // 0
-    // console.log(currentOp);
     modalBg.style.opacity = '1';
     currentOp = modalBg.style.opacity;
-    // console.log(currentOp);
 
 
     // ---------------------------------
@@ -49,27 +62,18 @@ imgCards.forEach(elem => {
       "https://images.unsplash.com/photo-1637988936322-016302f3226d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
     ];
     
-    // 여기부터 다시 !! 
-    // check!!!
-    // check!!!
-    // check!!!
-    // check!!!
-    // check!!!
-    // check!!!
-    console.log(textValue);
-    // console.log(modalConZoomed.style.backgroundImage);
-    console.log(getComputedStyle(modalConZoomed).backgroundImage);
 
+    // console.log(textValue);
     // textValue로 이미지가 들어갈 자리를 파악 -> url을 각 카드마다 따로 지정!
     switch (textValue) {
       case 'img_1':
-        modalConZoomed.style.backgroundImage = imageUrls[0];
+        modalConZoomed.style.backgroundImage = `url(${imageUrls[0]})`;
         break;
       case 'img_2':
-        modalConZoomed.style.backgroundImage = imageUrls[1];
+        modalConZoomed.style.backgroundImage = `url(${imageUrls[1]})`;
         break;
       case 'img_3':
-        modalConZoomed.style.backgroundImage = imageUrls[2];
+        modalConZoomed.style.backgroundImage = `url(${imageUrls[2]})`;
         break;
       default:
         modalConZoomed.style.backgroundColor = '#fe2';
@@ -77,8 +81,6 @@ imgCards.forEach(elem => {
     }// switch문
 
   });
-
-
 
 });
 
@@ -89,10 +91,6 @@ closeBtn.addEventListener('click', function(e) {
   e.preventDefault();
   
   // opacity
-  // var originalOp = Number(getComputedStyle(modalBg).opacity);   // 1
-
-  // console.log(modalBg.style.opacity);         // ''
-  // console.log(Number(modalBg.style.opacity));  // 0
   var currentOp = Number(modalBg.style.opacity);  // 0
 
   var removeOpacity = setInterval(function() {
@@ -111,21 +109,8 @@ closeBtn.addEventListener('click', function(e) {
       currentOp = modalBg.style.opacity;
     }
   }, 50);
-  // https://stackoverflow.com/questions/29017379/how-to-make-fadeout-effect-with-pure-javascript
-
 });
 
 
 
-// 이미지 삽입 이벤트 -> 변수 선언? scss 리스트화? 
-// if (imgCards)
 
-// ------------------------------------------------------
-// ------------------------------------------------------
-// 주말 숙제 
-// 샘플 사이트: fancybox -> http://fancybox.net/
-// 샘플 사이트 2: https://webpublisher-jquery-sample.vercel.app/html/ex_03_modal.html
-// hw
-// cpacity: 100%; -> opacity: 0; display: none;
-// display: block; -> opacity: 100%;
-// 이런 구조로 만들기 

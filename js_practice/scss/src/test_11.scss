@@ -10,7 +10,13 @@ $imgUrls: (
   'https://images.unsplash.com/photo-1637967885705-a60e3fea266d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60', 
 );
 
-
+// -----------------------------------------------
+// common 
+html > body a:focus,
+html > body button:focus {
+  outline: 3px solid orange;
+  border-radius: 5px;
+}
 
 // -----------------------------------------------
 #wrap {
@@ -71,12 +77,14 @@ $imgUrls: (
       height: 100%;
       border-radius: 5px;
 
-      // 이미지 삽입
-      // background-image: '';
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      // background-color: #fff;
+      background: {
+        // 이미지 삽입
+        // image: url('http://');
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+        // color: #fff;
+      };
     }
     @at-root .close_btn_wrapper {
       position: absolute;
@@ -88,7 +96,8 @@ $imgUrls: (
         width: 30px;
         height: 30px;
         padding: 5px 8px;
-        background-color: #afe;
+        color: #fff;
+        // background-color: #afe;
       }
       > button:hover {
         font-size: 1.1rem;
@@ -113,11 +122,13 @@ $imgUrls: (
       height: 300px;
       margin: auto;
       border-radius: 5px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-origin: 0 0;
-      background-size: cover;
-      // background-color: #fff;
+      background: {
+        repeat: no-repeat;
+        position: 50% 50%;
+        origin: 0 0;
+        size: cover;
+        // color: #fff;
+      };
       > button {
         width: 100%;
         height: 100%;
@@ -137,19 +148,7 @@ $imgUrls: (
       transform: scale(0.985);
       box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.5);
     }
-    > .img_card:focus {
-      // check!
-      outline: 3px solid orange;
-    }
   }// .img_card_wrapper
 }// .modal_img_area
-
-
-// modal 
-// .modal_con_area {
-//   width: 100%;
-//   height: 100vh;
-//   background-color: rgba(255, 255, 255, 0.5);
-// }
 
 
