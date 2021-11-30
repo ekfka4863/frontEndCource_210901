@@ -35,45 +35,56 @@ headH1.style.fontSize = "1.2rem";
 // -----------------------------------
 
 // 자식 선택자 
-var h1 = wrap.getElementsByTagName("h1")[0];
+var h1 = wrap.getElementsByTagName("h1")[0];  
+// getElement"s"ByTagName 처럼 element가 아닌 elements를 구하는 선택자에게는 반드시 몇번째의 요소인지를 명시. 
+// 요소가 하나만 있어도 인덱스를 꼭 명시해줘야 한다!!
 h1.style = "width: 100px; height: 30px; background-color: #dfd;";
 
-var h1Link = h1.children;  // HTMLCollection [a]
-// var h1Link = h1.children[0];  //
+var h1Link = h1.children;           // HTMLCollection [a, span]
+// var h1Link = h1.children[0];     // <a href="./a_content.html">js - <abbr title="document object model">DOM</abbr></a>
 h1Link[0].style = "padding: 0.5rem; color: #05f;";
 h1Link[1].classList.add("blind");
-// console.log(h1Link);
+// console.log(h1Link);             // HTMLCollection(2) [a, span.blind]
 
-var h1Insert = headH1.childNodes;
-// console.log(h1Insert);
+// cf. 이때, children과 childNodes의 차이점 비교
+var h1Insert = h1.childNodes;
+// console.log(h1Insert);           // NodeList(5) [text, a, text, span.blind, text]
 
 
+
+// nav 파트
 var navArea = wrap.getElementsByClassName("nav_area");
 // navArea.style = "width: 100%";
 // 이때도 복수를 의미하는 배열 형식으로 반환되는 HTML collection이니까 인덱스 명시 필수! 
 navArea[0].style = "width: 100%";
 // 이때, getElementsByClassName는 IE에서 지원 안함. 그래서 ... 이때는 ... 
-var navArea2 = wrap.getElementsByTagName('nav')[0].className === "nav_area";  // true 
+// var navArea2 = wrap.getElementsByTagName('nav')[0].className === "nav_area";  // true 
 // https://bytenota.com/javascript-how-to-use-getelementsbyclassname-in-ie8-or-below/
 
-var navArea3 = headBox.querySelector(".nav_area");
-navArea3.style.height = "30px;";
-navArea3.style.backgroundColor = "#eee";
+var navArea2 = headBox.querySelector(".nav_area");
+navArea2.style.height = "30px;";
+navArea2.style.backgroundColor = "#eee";
 
-var navUl = navArea3.children;
-// console.log(navUl);
+var navUl = navArea2.children;
+console.log(navUl);       // HTMLCollection [ul]
 navUl[0].style = "display: flex; justify-content: space-between;";
 var navLiTags = navUl[0].children;
-// console.log(navLiTags);
+console.log(navLiTags);   // HTMLCollection(4) [li, li, li, li]
 
 // navLiTags[0].style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
 // navLiTags[1].style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
 // navLiTags[2].style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
 // navLiTags[3].style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
 
-for (var i = 0; i < navLiTags.length; i++ ) {
-  navLiTags[i].style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
-}
+// for (var i = 0; i < navLiTags.length; i++ ) {
+//   navLiTags[i].style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
+// }
+
+navLiTags = Array.prototype.slice.call(navLiTags);
+// console.log(navLiTags);   // [li, li, li, li]
+navLiTags.forEach(function(elem) {
+  elem.style = "width: 200px; border: 1px solid #333; padding: 2px 5px;";
+});
 
 // ----------------------------------
 // article id="conBox"
