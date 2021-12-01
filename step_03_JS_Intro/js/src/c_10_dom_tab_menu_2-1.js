@@ -1,10 +1,9 @@
 // c_10_dom_tab_menu_2-1.js
 
-// 방법 1: 아예 한줄로 만들기 
-var innerCode = '<a href="#" data-id><h4 class="event_title">summer flavor</h4><p class="event_narration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla quas! Laudantium fuga nesciunt accusamus sunt harum odio aliquid! Necessitatibus ullam enim adipisci provident delectus distinctio blanditiis laudantium qui alias?</p><dl class="date"><dt class="blind">기간</dt><dd></dd></dl><dl class="event_check success"><dt>이벤트 진행 상태</dt><dd>이벤트 종료</dd></dl></a>';
+// 방법 1: 아예 한줄로 만들기 - 진짜 json으로 데이터를 불러올 떄... 
+var innerCode = '<a href="#" data-id><h4 class="event_title"></h4><p class="event_narration"></p><dl class="date"><dt class="blind">기간</dt><dd></dd></dl><dl class="event_check success"><dt></dt><dd></dd></dl></a>';
 
-
-// 방법 2: 역슬러쉬 쓰고 띄어쓰기 일정 하지 말기 (단, 들여쓰기 가능!)
+// 방법 2: 역슬러쉬 쓰고 띄어쓰기 일정 하지 말기 (단, 들여쓰기 가능!) - 지금 연습용으로 사용할 것. 원래 json으로 데이터 받아올라면 태그 사이에 텍스트는 없어야 할 부분은 다 없애줘야함!
 var innerCode2 = '\
 <a href="#" data-id>\
   <h4 class="event_title">summer flavor</h4>\

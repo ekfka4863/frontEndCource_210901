@@ -1,10 +1,10 @@
 ---
-date: 2021-11-26-Friday
+date: 2021-11-30-Tuesday
 ---
 
 # TIL
 - 📝 오늘 배운 내용 ✏️ : 
-  - [x] `return문` 사용할 때
+  - [x] js로 cardlist `fade in / fade out` 처리
 
     <img src="./images/return.png" alt="return문을 사용하고 안하고의 차이, 언제 사용하는지에 대한 예시"  width="400px" height="" style="" />   
 

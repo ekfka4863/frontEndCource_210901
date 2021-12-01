@@ -46,6 +46,16 @@ $imgPath:'../img/';
   }
 }
 
+// blind
+@mixin blind(){
+  display: block; width: 0; height: 0;
+  position: absolute; z-index:-1;
+  clip:rect(0,0,0,0);
+  overflow: hidden;
+}
+
+
+
 // unit
 $baseSize: 16;
 @mixin remUnit($name, $unit){
@@ -57,18 +67,6 @@ $deviceBase : 400;
 @function makeVw($size, $deviceWidth:$deviceBase){
     @return ( math.div($size,$deviceWidth) * 100 ) + vw;
 }
-
-// blind
-@mixin blind() {
-  display: block;
-  width: 0;
-  height: 0;
-  position: absolute;
-  z-index: -1;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 
 // @media query --------------------------------------
 $mobile : 320px;
@@ -107,3 +105,5 @@ $pc:1440px;
     @content;
   }
 }
+
+
