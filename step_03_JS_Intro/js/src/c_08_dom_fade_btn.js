@@ -41,7 +41,7 @@ var displayFn =  function(view){
 var intervalBtn = card[0];
 
 // 함수
-var intervalFn = function(){
+var intervalFn = function(){ 
   var value = 0;
   var interval;
   interval = setInterval(function(){
@@ -145,11 +145,11 @@ closeBtn.addEventListener('click', function(event){
 
 console.clear();
 // 카드 클릭시 모달창 띄우면서 focus는 해당버튼으로 focus처리되도록 처리
-
+// https://homzzang.com/b/js-1244
+// 모달창 탭 인덱스 닫기버튼 먼저 포커스되는지 확인할 것!!! 
 
 
 // ==========================================================
-// 모달창 탭 인덱스 닫기버튼 먼저 포커스되는지 확인할 것!!! 
 
 
 

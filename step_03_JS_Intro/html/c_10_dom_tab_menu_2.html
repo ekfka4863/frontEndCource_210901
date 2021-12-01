@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- c_10_dom_tab_menu_2.html -->
+<html lang="ko-KR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <script src="../js/common/modernizr-custom.js"></script> -->
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/c_10_dom_tab_menu_2.css">
+  <link rel="stylesheet" href="../css/particle/event_content_list_particle.css">
+  <title>탭메뉴 및 모달 윈도우 만들기</title>
+  <!-- <link rel="shortcut icon" href="../../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../../favicon.png"> -->
+</head>
+
+<body>
+    <!-- layout -->
+    <div id="wrap">
+      <header id="headBox">
+        <h1><a href="./a_content.html">웹</a></h1>
+      </header>
+      <!-- ==================================== -->
+      <article id="eventBox">
+        <div class="width_full">
+          <div class="title_area">
+            <h2>event</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br /> 
+              Earum, officia eveniet voluptates corrupti perferendis odio, repellendus, dolor quia porro ab dolorum. Cumque ad labore doloremque. Cumque nam iure aliquid laudantium.
+            </p>
+          </div>
+        </div><!--// .width_full -->
+
+        <div class="event_area">
+          <div class="title_inner">
+            <ul>
+              <li class="on"><button type="button">2021년</button></li>
+              <li><button type="button">2020년</button></li>
+              <li><button type="button">2019년</button></li>
+              <li><button type="button">2018년</button></li>
+            </ul>
+          </div>
+          <div class="content_inner">
+            <div class="year_part">
+              <h3>2021년도 이벤트</h3>
+              <ul class="event_particle">
+                <li>event_01 (제목, 내용, 기간, 진행여부, 배경이미지, 불러올 링크 data)</li>
+                <li>
+                  <!-- e.g. -->
+                  <a href="../event/y20042_data.json" data-id="event_21042">
+                    <h4 class="event_title">summer flavor</h4>
+                    <p class="event_narration">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nulla quas! Laudantium fuga nesciunt accusamus sunt harum odio aliquid! Necessitatibus ullam enim adipisci provident delectus distinctio blanditiis laudantium qui alias?</p>
+                    <dl class="date">
+                      <dt class="blind">기간</dt>
+                      <dd>2022. 01. 05 - 2022. 02. 15</dd>
+                    </dl>
+                    <dl class="event_check success">
+                      <dt>이벤트 진행 상태</dt>
+                      <dd>이벤트 종료</dd>
+                    </dl>
+                  </button>
+                </li>
+                <li>event_03</li>
+                <li>event_04</li>
+                <li>event_05</li>
+              </ul>
+            </div>
+            <div class="year_part">
+              <h3>2020년도 이벤트</h3>
+              <ul class="event_particle">
+                <li>event_01</li>
+                <li>event_02</li>
+                <li>event_03</li>
+                <li>event_04</li>
+                <li>event_05</li>
+              </ul>
+            </div>
+            <div class="year_part">
+              <h3>2019년도 이벤트</h3>
+              <ul class="event_particle">
+                <li>event_01</li>
+                <li>event_02</li>
+                <li>event_03</li>
+                <li>event_04</li>
+                <li>event_05</li>
+              </ul>
+            </div>
+            <div class="year_part">
+              <h3>2018년도 이벤트</h3>
+              <ul class="event_particle">
+                <li>event_01</li>
+                <li>event_02</li>
+                <li>event_03</li>
+                <li>event_04</li>
+                <li>event_05</li>
+              </ul>
+            </div><!--// .year_part -->
+          </div><!--// .content_inner -->
+        </div><!--// .event_area -->
+      </article>
+
+      <!-- ==================================== -->
+      <footer id="footBox">
+        <h2>site information</h2>
+        
+      </footer>
+    </div>
+    <!-- ==================================== -->
+
+    <div id="test_wrap">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <!-- script -->
+    <script src="../js/src/c_10_dom_tab_menu_2.js"></script>
+    <script src="../js/src/c_10_dom_tab_menu_2-1.js"></script>
+</body>
+</html>

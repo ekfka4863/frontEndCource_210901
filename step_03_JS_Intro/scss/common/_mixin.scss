@@ -58,6 +58,18 @@ $deviceBase : 400;
     @return ( math.div($size,$deviceWidth) * 100 ) + vw;
 }
 
+// blind
+@mixin blind() {
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 // @media query --------------------------------------
 $mobile : 320px;
 $tablet : 600px;
