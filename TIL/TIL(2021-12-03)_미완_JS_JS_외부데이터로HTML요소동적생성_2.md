@@ -4,6 +4,33 @@ date: 2021-12-02-Thursday
 
 # TIL
 - 📝 오늘 배운 내용 ✏️ : 
+  - [x] `git commit message prefix` 컨벤션 알아보기 
+    - 커밋 메세지 커벤션을 통해 일관성 있게 코드에 대한 정보를 작성할 수 있다.     
+    (cf. 유다시티의 커밋 메세지 스타일 참고)
+    <details>
+      <summary>CLICK ME TO SEE MORE!</summary>
+      <br />
+
+      > Commit Type 
+      - feat: 
+      - fix: 
+      - docs: 
+      - style: 
+      - refactor: 
+      - test: 
+      - chore: 
+
+
+
+
+
+
+    </details>
+
+
+
+
+<!-- reference: https://doublesprogramming.tistory.com/256      -->
   - [x] `prepend` vs `append/appendChild` 차이점 
   <!-- 
   https://baessi.tistory.com/87
